@@ -26,7 +26,7 @@ Look at the premium version with amazing additional features :
 
 **[PREMIUM VERSION](http://yithemes.com/themes/plugins/yith-woocommerce-advanced-reviews/)**
 
-Please, read the the **[official plugin documentation](http://yithemes.com/themes/plugins/yith-woocommerce-advanced-reviews/)** to know all plugin features.
+Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith_woocommerce_advanced_reviews/)** to know all plugin features.
 
 = Installation =
 
