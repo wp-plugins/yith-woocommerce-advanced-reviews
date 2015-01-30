@@ -69,6 +69,10 @@ YITH WooCommerce Advanced Reviews will add a new tab called "Advanced Reviews" i
 
 * Initial release
 
+== Upgrade Notice ==
+
+Last Stable Tag 1.0.3 - Released on Jan 30, 2015
+
 == Suggestions ==
 
 If you have suggestions about how to improve YITH WooCommerce Advanced Reviews, you can [write us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle them into YITH WooCommerce Advanced Reviews.
