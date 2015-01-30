@@ -40,8 +40,8 @@ YITH WooCommerce Advanced Reviews will add a new tab called "Advanced Reviews" i
 
 == Screenshots ==
 
-1. This is the settings page for the plugin, you can find it inside the YIT Plugins menu item. You can configure what to show and some layout values.
-2. Submit form is extended to allow users to add a title and one or more attachments files.
+1. Submit form is extended to allow users to add a title and one or more attachments files.
+2. This is the settings page for the plugin, you can find it inside the YIT Plugins menu item. You can configure what to show and some layout values.
 3. How an advanced review look like with additionals title and attachments thumbnail.
 4. Reviews summary is shown before the review list, showing statistics about the rating chosen by users submitting a review.
 
