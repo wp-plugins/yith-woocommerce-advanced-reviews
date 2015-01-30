@@ -20,7 +20,7 @@ Discover all the features of the plugin and install it in your theme: the result
 
 Working demo are available:
 
-**[LIVE DEMO](http://live.yithemes.com/nielsen/product/kingaci-smart/)**
+**[LIVE DEMO](http://live.yithemes.com/nielsen/product/kingaci-smart)** 
 
 Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith_woocommerce_advanced_reviews/)** to know all plugin features. 
 
