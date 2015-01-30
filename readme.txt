@@ -22,7 +22,7 @@ Working demo are available:
 
 **[LIVE DEMO](http://plugins.yithemes.com/yith-woocommerce-advanced-reviews/product/flying-ninja/#tab-reviews)**
 
-Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith_woocommerce_advanced_reviews/)** to know all plugin features.
+Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith_woocommerce_advanced_reviews/)** to know all plugin features. 
 
 = Installation =
 
