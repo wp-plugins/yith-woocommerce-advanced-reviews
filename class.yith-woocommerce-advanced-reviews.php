@@ -128,6 +128,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @author Lorenzo giuffrida
 		 */
 		public function enqueue_scripts() {
+
 //  register and enqueue ajax calls related script file
 			wp_register_script( "attachments-script", YITH_YWAR_URL . 'assets/js/ywar-attachments.js', array( 'jquery' ) );
 
@@ -347,14 +348,16 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 				return $comment_form;
 			}
 
-			$comment_form['comment_field'] .= "
-			<p class=\"upload_section\">
-				<label for=\"uploadFile\">" . __( 'Attachments', 'ywar' ) . "</label>
-				<input type=\"file\" name=\"uploadFile[]\" id=\"uploadFile\" accept=\"image/*\" multiple=\"2\"></p>
+			$comment_form['comment_field'] .= '
+				<p class="upload_section">
+					<label for="uploadFile">' . __( 'Attachments', 'ywar' ) . '</label>
+					<input type="button" value="' . __( 'Choose file(s)', 'ywar' ) . '" id="do_uploadFile" />
+					<input type="file" name="uploadFile[]" id="uploadFile" accept="image/*" multiple="2" />
+				</p>
 
-			<p>
-			<ul id=\"uploadFileList\"></ul>
-			</p>";
+				<p>
+				<ul id="uploadFileList"></ul>
+				</p>';
 
 			return $comment_form;
 		}
@@ -392,18 +395,21 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			$thumbnail_div     = '';
 			$review_thumbnails = get_comment_meta( $comment->comment_ID, 'thumb_ids', true );
 			if ( isset ( $review_thumbnails ) && is_array( $review_thumbnails ) ) {
-				$thumbnail_div = '<hr><div style="padding-top: 10px;padding-bottom: 10px;overflow:hidden">';
+				$thumbnail_div = ' < hr><div style = "padding-top: 10px;padding-bottom: 10px;overflow:hidden" > ';
 				foreach ( $review_thumbnails as $thumb_id ) {
 					$file_url = wp_get_attachment_url( $thumb_id );
 					// $image_thumb = wp_get_attachment_image($thumb_id, array(100, 100), true );
 					$image_thumb = wp_get_attachment_image_src( $thumb_id, array( 100, 100 ), true );
 
-					$thumbnail_div .= "<a href='$file_url'><img src='{$image_thumb[0]}' width='{$image_thumb[1]}'
-	                                            height='{$image_thumb[2]}'</a>";
+					$thumbnail_div .= "<a href='$file_url'><img src='{
+				$image_thumb[0]}' width='{
+				$image_thumb[1]}'
+	                                            height='{
+				$image_thumb[2]}'</a>";
 
 					//$thumbnail_div .= wp_get_attachment_image( $thumb_id, array(100,100),true, );
 				}
-				$thumbnail_div .= '</div>';
+				$thumbnail_div .= ' </div > ';
 			}
 
 			echo $title_paragraph . $thumbnail_div;
@@ -412,7 +418,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		/**
 		 * Add a metabox on review page for review's title
 		 *
-		 * @return  void
+		 * @return void
 		 *
 		 * @since  1.0
 		 * @author Lorenzo giuffrida
@@ -682,11 +688,13 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @use plugin_row_meta
 		 */
 		public function plugin_row_meta( $plugin_meta, $plugin_file, $plugin_data, $status ) {
-			if ( ( defined( 'YITH_YWAR_INIT' ) && ( YITH_YWAR_INIT == $plugin_file ) ) || 
-				 ( defined( 'YITH_YWAR_FREE_INIT' ) && ( YITH_YWAR_FREE_INIT == $plugin_file ) )) {
+			if ( ( defined( 'YITH_YWAR_INIT' ) && ( YITH_YWAR_INIT == $plugin_file ) ) ||
+			     ( defined( 'YITH_YWAR_FREE_INIT' ) && ( YITH_YWAR_FREE_INIT == $plugin_file ) )
+			) {
 
 				$plugin_meta[] = '<a href="' . $this->_official_documentation . '" target="_blank">' . __( 'Plugin Documentation', 'ywar' ) . '</a>';
 			}
+
 			return $plugin_meta;
 		}
 

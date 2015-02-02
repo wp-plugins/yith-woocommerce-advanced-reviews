@@ -102,7 +102,7 @@ if ( ! class_exists( 'YIT_Theme_Licence' ) ) {
         public function add_submenu_page() {
 
             $admin_tree = array(
-                    'parent_slug' => 'yit_panel',
+                    'parent_slug' => apply_filters( 'yit_licence_parent_slug', 'yit_panel'),
                     'page_title'  => __( 'Licence Activation', 'yit' ),
                     'menu_title'  => __( 'Licence Activation', 'yit' ),
                     'capability'  => 'manage_options',

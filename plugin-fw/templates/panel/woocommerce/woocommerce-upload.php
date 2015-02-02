@@ -24,10 +24,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <tr valign="top">
-    <th scope="row" class="image_upload plugin-option">
+    <th scope="row" class="image_upload">
         <label for="<?php echo $id ?>"><?php echo $name ?></label>
     </th>
-    <td class="forminp forminp-color">
+    <td class="forminp forminp-color plugin-option">
 
         <div id="<?php echo $id ?>-container" class="yit_options rm_option rm_input rm_text rm_upload" <?php if ( isset( $option['deps'] ) ): ?>data-field="<?php echo $id ?>" data-dep="<?php echo $this->get_id_field( $option['deps']['ids'] ) ?>" data-value="<?php echo $option['deps']['values'] ?>" <?php endif ?>>
             <div class="option">

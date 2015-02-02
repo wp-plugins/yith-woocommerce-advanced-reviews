@@ -3,8 +3,8 @@
 Contributors: yithemes
 Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, advanced review,
 Requires at least: 4.0
-Tested up to: 4.1.0
-Stable tag: 1.0.3
+Tested up to: 4.1
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ Working demo are available:
 
 **[LIVE DEMO](http://live.yithemes.com/nielsen/product/kingaci-smart)** 
 
-Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith_woocommerce_advanced_reviews/)** to know all plugin features. 
+Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith_woocommerce_advanced_reviews/)** to know all plugin features.
 
 = Installation =
 
@@ -40,12 +40,15 @@ YITH WooCommerce Advanced Reviews will add a new tab called "Advanced Reviews" i
 
 == Screenshots ==
 
-1. Submit form is extended to allow users to add a title and one or more attachments files.
-2. This is the settings page for the plugin, you can find it inside the YIT Plugins menu item. You can configure what to show and some layout values.
+1. This is the settings page for the plugin, you can find it inside the YIT Plugins menu item. You can configure what to show and some layout values.
+2. Submit form is extended to allow users to add a title and one or more attachments files.
 3. How an advanced review look like with additionals title and attachments thumbnail.
 4. Reviews summary is shown before the review list, showing statistics about the rating chosen by users submitting a review.
 
 == Changelog ==
+
+= VERSION 1.0.4 - RELEASED: FEB 02, 2015 =
+* Fixed: Minor bugs
 
 = VERSION 1.0.3 - RELEASED: JAN 30, 2015 =
 * Tweak: Plugin core framework
@@ -67,7 +70,7 @@ YITH WooCommerce Advanced Reviews will add a new tab called "Advanced Reviews" i
 
 == Upgrade Notice ==
 
-Last Stable Tag 1.0.3 - Released on Jan 30, 2015
+Last Stable Tag 1.0.4 - Released on Feb 02, 2015
 
 == Suggestions ==
 

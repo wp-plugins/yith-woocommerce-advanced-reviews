@@ -1,6 +1,10 @@
 jQuery(document).ready(function ($) {
     $('#commentform').attr('enctype', "multipart/form-data");
 
+    $('#do_uploadFile').click(function () {
+        $('#uploadFile').click();
+    })
+
     $('#uploadFile').on('change', function () {
         var input = document.getElementById("uploadFile");
         if ((ywar.limit_multiple_upload > 0) && (input.files.length > ywar.limit_multiple_upload)) {
@@ -34,6 +38,8 @@ jQuery(document).ready(function ($) {
             ul.appendChild(li);
         }
     });
+
+
 
     // Prevent submission if limit is exceeded.
     $('#commentform').submit(function () {

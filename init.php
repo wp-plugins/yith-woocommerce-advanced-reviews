@@ -4,8 +4,8 @@ Plugin Name: YITH WooCommerce Advanced Reviews
 Plugin URI: http://yithemes.com/themes/plugins/yith-woocommerce-advanced-reviews/
 Description: With this extension you will allow the user to write a review in an innovative and efficient way, giving the right space to whoever is satisfied by a purchase on your shop.
 Author: Yithemes
-Text Domain: YWAR
-Version: 1.0.3
+Text Domain: ywar
+Version: 1.0.4
 Author URI: http://yithemes.com/
 */
 
@@ -57,7 +57,7 @@ if ( ! defined( 'YITH_YWAR_FREE_INIT' ) ) {
 }
 
 if ( ! defined( 'YITH_YWAR_VERSION' ) ) {
-	define( 'YITH_YWAR_VERSION', '1.0.3' );
+	define( 'YITH_YWAR_VERSION', '1.0.4' );
 }
 
 if ( ! defined( 'YITH_YWAR_FILE' ) ) {
@@ -100,4 +100,5 @@ register_activation_hook( __FILE__, 'yith_plugin_registration_hook' );
 
 require_once( YITH_YWAR_DIR . 'class.yith-woocommerce-advanced-reviews.php' );
 
-$YWAR_Instance = new YITH_WooCommerce_Advanced_Reviews();
+global $YWAR_AdvancedReview;
+$YWAR_AdvancedReview = new YITH_WooCommerce_Advanced_Reviews();
