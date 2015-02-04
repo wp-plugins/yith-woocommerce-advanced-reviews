@@ -1,7 +1,7 @@
 === YITH WooCommerce Advanced Reviews ===
 
 Contributors: yithemes
-Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, advanced review,
+Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, advanced review, social reviews, woocommerce add-ons, woocommerce addons, woocommerce extensions, WooCommerce Plugins, woocommerce product reviews, woocommerce reviews
 Requires at least: 4.0
 Tested up to: 4.1
 Stable tag: 1.0.4
