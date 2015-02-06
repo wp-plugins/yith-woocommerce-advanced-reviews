@@ -132,7 +132,7 @@ if ( ! class_exists( 'YIT_Metabox' ) ) {
 
             add_action( 'add_meta_boxes', array( $this, 'register_metabox' ) );
             add_action( 'save_post', array( $this, 'save_postdata' ) );
-            add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
+            add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ), 15 );
 
         }
 
@@ -159,17 +159,7 @@ if ( ! class_exists( 'YIT_Metabox' ) ) {
 
             if( function_exists( 'WC' ) ){
                 wp_enqueue_script( 'woocommerce_admin' );
-                wp_enqueue_script( 'wc-admin-meta-boxes' );
                 wp_enqueue_script('ajax-chosen');
-                wp_enqueue_script( 'wc-admin-product-meta-boxes', WC()->plugin_url() . '/assets/js/admin/meta-boxes-product.min.js', array( 'wc-admin-meta-boxes' ), WC_VERSION );
-
-                $params = array(
-                    'search_products_nonce'         => wp_create_nonce("search-products"),
-                    'ajax_url'                     => admin_url('admin-ajax.php'),
-
-                );
-                wp_localize_script( 'wc-admin-meta-boxes', 'woocommerce_admin_meta_boxes', $params );
-
             }
         }
 

@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
 
     $('#uploadFile').on('change', function () {
         var input = document.getElementById("uploadFile");
-        if ((ywar.limit_multiple_upload > 0) && (input.files.length > ywar.limit_multiple_upload)) {
+        if ((attach.limit_multiple_upload > 0) && (input.files.length > attach.limit_multiple_upload)) {
             alert('Too many files selected.');
             this.value = '';
             return;
@@ -39,11 +39,10 @@ jQuery(document).ready(function ($) {
         }
     });
 
-
-
     // Prevent submission if limit is exceeded.
     $('#commentform').submit(function () {
-        if ((ywar.limit_multiple_upload > 0) && (this.files.length > ywar.limit_multiple_upload))
+        var input = document.getElementById("uploadFile");
+        if ((attach.limit_multiple_upload > 0) && (input.files.length > attach.limit_multiple_upload))
             return false;
     });
 });

@@ -132,7 +132,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 //  register and enqueue ajax calls related script file
 			wp_register_script( "attachments-script", YITH_YWAR_URL . 'assets/js/ywar-attachments.js', array( 'jquery' ) );
 
-			wp_localize_script( 'attachments-script', 'ywar', array(
+			wp_localize_script( 'attachments-script', 'attach', array(
 				'limit_multiple_upload' => $this->attachments_limit
 			) );
 			wp_enqueue_script( 'attachments-script' );
@@ -142,6 +142,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * Initialize plugin options
 		 *
 		 * @since  1.0
+		 * @access public
 		 * @access public
 		 * @return void
 		 * @author Lorenzo Giuffrida
@@ -501,7 +502,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
                     <div class="star-rating" title="' . sprintf( __( "Rated %s out of 5", 'ywar' ), $average ) . '">
                         <span  style="width:' . ( ( $average / 5 ) * 100 ) . '%"></span>
                     </div>
-                    <a href="#reviews" class="ywar_filter_reviews" data-id_product="' . $product->id . '" data-stars="0" rel="nofollow"><span itemprop="reviewCount">' . $count . '</span>' . _n( " review", " reviews", $count, 'ywar' ) . ' </a><span class="review-rating-value"> ' . esc_html( $average ) . ' ' . __( "out of 5 stars", 'ywar' ) . '</span>
+                    <span class="ywar_review_count">' . sprintf("%d %s", $count, _n( " review", " reviews", $count, 'ywar' )) . '</span><span class="review-rating-value"> ' . esc_html( $average ) . ' ' . __( "out of 5 stars", 'ywar' ) . '</span>
                 </div>';
 			}
 		}
@@ -522,17 +523,22 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			}
 
 			global $product;
-			$divSize = 100;
 
+			global $review_stats;
 			$review_stats = $this->get_comments_stats( $product->id );
 
-			$review1_perc = ( $review_stats[0] == '0' ) ? 0 : floor( $review_stats[1] / $review_stats[0] * 100 );
-			$review2_perc = ( $review_stats[0] == '0' ) ? 0 : floor( $review_stats[2] / $review_stats[0] * 100 );
-			$review3_perc = ( $review_stats[0] == '0' ) ? 0 : floor( $review_stats[3] / $review_stats[0] * 100 );
-			$review4_perc = ( $review_stats[0] == '0' ) ? 0 : floor( $review_stats[4] / $review_stats[0] * 100 );
-			$review5_perc = ( $review_stats[0] == '0' ) ? 0 : floor( $review_stats[5] / $review_stats[0] * 100 );
+			global $review_perc_array;
 
-			include( 'templates/ywar-single-product-reviews.php' );
+			$review1_perc = ( $review_stats[5] == '0' ) ? 0 : floor( $review_stats[0] / $review_stats[5] * 100 );
+			$review2_perc = ( $review_stats[5] == '0' ) ? 0 : floor( $review_stats[1] / $review_stats[5] * 100 );
+			$review3_perc = ( $review_stats[5] == '0' ) ? 0 : floor( $review_stats[2] / $review_stats[5] * 100 );
+			$review4_perc = ( $review_stats[5] == '0' ) ? 0 : floor( $review_stats[3] / $review_stats[5] * 100 );
+			$review5_perc = ( $review_stats[5] == '0' ) ? 0 : floor( $review_stats[4] / $review_stats[5] * 100 );
+
+			$review_perc_array = array($review1_perc, $review2_perc, $review3_perc, $review4_perc, $review5_perc);
+
+			wc_get_template( 'ywar-single-product-reviews.php', null, YITH_YWAR_TEMPLATES_DIR, YITH_YWAR_TEMPLATES_DIR );
+			//include( 'templates/ywar-single-product-reviews.php' );//cambia in wc_get_template
 
 			return $template;
 		}
@@ -580,7 +586,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 
 			$total = $review1 + $review2 + $review3 + $review4 + $review5;
 
-			return array( $total, $review1, $review2, $review3, $review4, $review5 );
+			return array( $review1, $review2, $review3, $review4, $review5, $total );
 		}
 
 
@@ -691,7 +697,6 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			if ( ( defined( 'YITH_YWAR_INIT' ) && ( YITH_YWAR_INIT == $plugin_file ) ) ||
 			     ( defined( 'YITH_YWAR_FREE_INIT' ) && ( YITH_YWAR_FREE_INIT == $plugin_file ) )
 			) {
-
 				$plugin_meta[] = '<a href="' . $this->_official_documentation . '" target="_blank">' . __( 'Plugin Documentation', 'ywar' ) . '</a>';
 			}
 
@@ -700,7 +705,6 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 
 		public function register_pointer() {
 			if ( ! class_exists( 'YIT_Pointers' ) ) {
-
 				include_once( 'plugin-fw/lib/yit-pointers.php' );
 			}
 

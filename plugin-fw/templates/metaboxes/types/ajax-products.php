@@ -20,7 +20,7 @@ $multiple = ( $is_multiple ) ? ' multiple' : '';
 
     <label for="<?php echo $id ?>"><?php echo $label ?></label>
 
-    <select id="<?php echo $id ?>" name="<?php echo $name ?><?php if( $is_multiple ) echo "[]" ?>" class="ajax_chosen_select_products" multiple="multiple" data-placeholder="<?php _e('Search for a product…','yit') ?>">
+    <select id="<?php echo $id ?>" name="<?php echo $name ?><?php if( $is_multiple ) echo "[]" ?>" class="ajax_chosen_select_products" multiple="multiple" data-placeholder="<?php _e('Search for a product','yit') ?>">
         <?php
             if ( $value ) {
                 foreach ( $value as $product_id ) {
@@ -38,25 +38,27 @@ $multiple = ( $is_multiple ) ? ' multiple' : '';
 <script>
 
     (function ($) {
+
         // Ajax Chosen Product Selectors
-        $("select.ajax_chosen_select_products").ajaxChosen({
-            method: 	'GET',
-            url: 		woocommerce_admin_meta_boxes.ajax_url,
-            dataType: 	'json',
-            afterTypeDelay: 100,
-            data:		{
-                action: 		'woocommerce_json_search_products',
-                security: 		woocommerce_admin_meta_boxes.search_products_nonce
-            }
-        }, function (data) {
-            var terms = {};
 
-            $.each(data, function (i, val) {
-                terms[i] = val;
+            $("select.ajax_chosen_select_products").ajaxChosen({
+                method: 	'GET',
+                url: 		'<?php echo  admin_url('admin-ajax.php') ?>',
+                dataType: 	'json',
+                afterTypeDelay: 100,
+                data:		{
+                    action: 		'woocommerce_json_search_products',
+                    security: 		'<?php echo wp_create_nonce("search-products") ?>'
+                }
+            }, function (data) {
+                var terms = {};
+
+                $.each(data, function (i, val) {
+                    terms[i] = val;
+                });
+
+                return terms;
             });
-
-            return terms;
-        });
 
     })(jQuery);
 </script>
