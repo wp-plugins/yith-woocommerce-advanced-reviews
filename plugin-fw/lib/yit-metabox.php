@@ -158,7 +158,7 @@ if ( ! class_exists( 'YIT_Metabox' ) ) {
             wp_enqueue_style( 'jquery-ui-overcast', YIT_CORE_PLUGIN_URL . '/assets/css/overcast/jquery-ui-1.8.9.custom.css', false, '1.8.9', 'all' );
 
             if( function_exists( 'WC' ) ){
-                wp_enqueue_script( 'woocommerce_admin' );
+
                 wp_enqueue_script('ajax-chosen');
             }
         }

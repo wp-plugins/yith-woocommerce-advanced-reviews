@@ -32,7 +32,7 @@ $banned_products     = isset( $no_active_products[ '107' ] ) ? $no_active_produc
 
     <?php if( ! empty( $to_active_products ) ) : ?>
         <h3 class="to-active">
-            <?php _e( 'To Active', 'yit' ) ?>
+            <?php _e( 'Products to be activated', 'yit' ) ?>
             <span class="spinner"></span>
         </h3>
         <div class="to-active-wrapper">
@@ -95,7 +95,8 @@ $banned_products     = isset( $no_active_products[ '107' ] ) ? $no_active_produc
                         <td><a class="button-licence licence-renew" href="<?php echo $this->get_renewing_uri( $info['licence']['licence_key'] ) ?>" target="_blank"><?php _e( 'Renew', 'yit' ) ?></a></td>
                     </tr>
                 <?php endforeach; ?>
-        </tbody>
+            </tbody>
+        </table>
     <?php endif;?>
 
      <!-- Banned Products -->

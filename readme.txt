@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Furthermore, for each product is generated a summary with an indication of how m
 
 Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
 
-Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith_woocommerce_advanced_reviews/)** to know all plugin features.
+Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith-woocommerce-advanced-reviews)** to know all plugin features.
 
 = Installation =
 
@@ -61,6 +61,11 @@ No, you can use only the original templates of the plugin and you can't overwrit
 
 == Changelog ==
 
+= Version 1.0.7 - RELEASED: FEB 12, 2015 =
+
+* Added: Woocommerce 2.3 support
+* Tweak: String translation
+
 = Version 1.0.6 - RELEASED: FEB 06, 2015 = 
 
 * Tweak: Buttons with WooCommerce style
@@ -97,7 +102,7 @@ No, you can use only the original templates of the plugin and you can't overwrit
 
 == Upgrade Notice ==
 
-Last Stable Tag 1.0.6 - Released on Feb 06, 2015
+Last Stable Tag 1.0.7 - Released on Feb 12, 2015
 
 == Suggestions ==
 

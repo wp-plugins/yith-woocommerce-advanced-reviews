@@ -11,7 +11,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 } // Exit if accessed directly
-
+wp_enqueue_script( 'woocommerce_admin' );
 extract( $args );
 $is_multiple = isset( $multiple ) && $multiple;
 $multiple = ( $is_multiple ) ? ' multiple' : '';
