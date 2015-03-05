@@ -12,22 +12,19 @@ Extends the basic functionality of woocommerce reviews, adding rating reviews su
 
 == Description ==
 
-YITH Woocommerce Advanced Reviews offers something more than the classic visualization of the product review and rating.
-It allows your users to add a title and one or more attachments to their reviews.
-Furthermore, for each product is generated a summary with an indication of how many reviews have been inserted for each different rating.
+YITH Woocommerce Advanced Reviews offers something more than the traditional displaying of product review and rating. It allows your users to add a title and one or more attachments to their reviews. Furthermore, a summary is generated for each product with an indication of how many reviews have been written for each different rating.
 
-Research states that others user reviews are the primary information, with the product price obviously, that drive them to buy or not to buy an item.
-Let your user discover what others users says about the product.
+Research states that other users' reviews are the primary information, together with product price obviously, that drives them to buy an item or not. Let your users discover what other users say about the product.
 
 = Main features =
 
-* Add a title and one or more attachments to the product review.
+* Add a title and one or more attachments to product review.
 * Add review summary bar with statistics.
-* Customize the look and feel.
+* Customize look and feel.
 
-Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
+Discover all features of the plugin and install it in your theme: the result will be extremely satisfying.
 
-Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith-woocommerce-advanced-reviews)** to know all plugin features.
+Please, read the **[official plugin documentation](http://yithemes.com/docs-plugins/yith-woocommerce-advanced-reviews)** to learn about all plugin features.
 
 == Installation ==
 
@@ -36,34 +33,31 @@ Important: before of all you have to download and activate WooCommerce plugin, w
 = Configuration =
 
 YITH WooCommerce Advanced Reviews will add a new tab called "Advanced Reviews" inside the YIT Plugins menu item. There you are able to configure all plugin settings.
+
 1. Unzip the downloaded zip file.
 2. Upload the plugin folder into the `wp-content/plugins/` directory of your WordPress site.
 3. Activate `YITH WooCommerce Advanced Reviews` from Plugins page.
 
 == Screenshots ==
 
-1. This is the settings page for the plugin, you can find it inside the YIT Plugins menu item. You can configure what to show and some layout values.
+1. This is setting page for the plugin, you can find it in "YIT Plugins" menu item. There you can set what to show and configure layout.
 2. Submit form is extended to allow users to add a title and one or more attachments files.
-3. How an advanced review look like with additionals title and attachments thumbnail.
-4. Reviews summary is shown before the review list, showing statistics about the rating chosen by users submitting a review.
+3. This is how an advanced review with additional title and attached thumbnail looks like.
+4. Review summary is shown before review list. It displays statistics about the rating chosen by users submitting reviews.
 
 == Frequently Asked Questions ==
 
-* Can i upgrade free version plugin?
+* Can I upgrade free version plugin to premium?
 
-It's easy.Go to this page,purchase premium version and install it into your theme. Activating the premium version, you will automatically deactivate the free one.
+Of course. It's easy. Go to this page, purchase premium version and install it into your theme. Activating the premium version, you will automatically deactivate the free one.
 
 * Do I lose the settings of the free version if I activate the premium one?
 
-No, the premium version will keep in memory your settings, unlocking new features.
-
-* Does the plugin provide a panel in the administration where you can write CSS code to modify the style?
-
-Is not possible, but in premium version there are many options for customize content in every detail .
+No, the premium version will keep in memory your settings, while new features will be unlocked.
 
 * Can i overwrite templates plugin?
 
-No, you can use only the original templates of the plugin and you can't overwrite them.
+Of course, you can overwrite templates and add features through the specific hook.
 
 == Changelog ==
 
@@ -94,7 +88,7 @@ No, you can use only the original templates of the plugin and you can't overwrit
 
 = VERSION 1.0.2 - RELEASED: DEC 29, 2014 =
 
-* Fixed: Yit_Plugin_Panel_WooCommerce class not exists
+* Fixed: Yit_Plugin_Panel_WooCommerce class do not exists.
 
 = VERSION 1.0.1 - RELEASED: DEC 23, 20141.0.1 =
 
