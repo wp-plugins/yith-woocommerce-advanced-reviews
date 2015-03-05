@@ -8,7 +8,7 @@ Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Extends the basic functionality of woocommerce reviews, offering something more than the classic visualization of the product review and rating.
+Extends the basic functionality of woocommerce reviews, adding rating reviews summary for each product.
 
 == Description ==
 
@@ -16,20 +16,26 @@ YITH Woocommerce Advanced Reviews offers something more than the classic visuali
 It allows your users to add a title and one or more attachments to their reviews.
 Furthermore, for each product is generated a summary with an indication of how many reviews have been inserted for each different rating.
 
+Research states that others user reviews are the primary information, with the product price obviously, that drive them to buy or not to buy an item.
+Let your user discover what others users says about the product.
+
+= Main features =
+
+* Add a title and one or more attachments to the product review.
+* Add review summary bar with statistics.
+* Customize the look and feel.
+
 Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
 
 Please, read the the **[official plugin documentation](http://yithemes.com/docs-plugins/yith-woocommerce-advanced-reviews)** to know all plugin features.
 
-= Installation =
+== Installation ==
 
 Important: before of all you have to download and activate WooCommerce plugin, which is mandatory for Yith WooCommerce Advanced Reviews to be working. If WooCommerce plugin is active, you just need to activate the Yith WooCommerce Advanced Reviews plugin.
 
 = Configuration =
 
 YITH WooCommerce Advanced Reviews will add a new tab called "Advanced Reviews" inside the YIT Plugins menu item. There you are able to configure all plugin settings.
-
-== Installation ==
-
 1. Unzip the downloaded zip file.
 2. Upload the plugin folder into the `wp-content/plugins/` directory of your WordPress site.
 3. Activate `YITH WooCommerce Advanced Reviews` from Plugins page.
