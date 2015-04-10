@@ -3,7 +3,7 @@
 Contributors: yithemes
 Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment
 Requires at least: 4.0
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,19 +12,26 @@ Extends the basic functionality of woocommerce reviews, adding rating reviews su
 
 == Description ==
 
-YITH Woocommerce Advanced Reviews offers something more than the traditional displaying of product review and rating. It allows your users to add a title and one or more attachments to their reviews. Furthermore, a summary is generated for each product with an indication of how many reviews have been written for each different rating.
+How many times you found yourself in front of an item you would like to buy, but you doubted it? You doubted about the possibility it could turn out to be a good product. And if it were not the right product for you?
+
+= Detail, feedback and customisability in one plugin only =
+
+YITH Woocommerce Advanced Reviews offers something more than the traditional displaying of product review and rating.
+It allows your users to add a title and one or more attachments to their reviews. Furthermore, a summary is generated for each product with an indication of how many reviews have been written for each different rating.
 
 Research states that other users' reviews are the primary information, together with product price obviously, that drives them to buy an item or not. Let your users discover what other users say about the product.
 
 = Main features =
 
-* Add a title and one or more attachments to product review.
-* Add review summary bar with statistics.
+* Let your customers add a title when writing a product review.
+* Let you customers attach some image when writing a product review.
+* Add review summary bar with statistics about how many times a rating of 1,2,3,4 or 5 stars was submitted.
 * Customize look and feel.
 
-Discover all features of the plugin and install it in your theme: the result will be extremely satisfying.
+For a more detailed list of options and features of the plugin, please look at the [official documentation](http://yithemes.com/docs-plugins/yith-woocommerce-advanced-reviews/ "Yith WooCommerce Advanced Reviews official documentation").
 
-Please, read the **[official plugin documentation](http://yithemes.com/docs-plugins/yith-woocommerce-advanced-reviews)** to learn about all plugin features.
+Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
+
 
 == Installation ==
 
