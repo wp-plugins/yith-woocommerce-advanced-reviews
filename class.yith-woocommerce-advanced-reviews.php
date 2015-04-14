@@ -33,7 +33,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		/**
 		 * @var string Plugin official documentation
 		 */
-		protected $_official_documentation = 'http://yithemes.com/docs-plugins/yith_woocommerce_advanced_reviews/';
+		protected $_official_documentation = 'http://yithemes.com/docs-plugins/yith-woocommerce-advanced-reviews/';
 
 		/**
 		 * @var string Advanced Reviews panel page
@@ -184,6 +184,11 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @author Lorenzo giuffrida
 		 */
 		public function show_expanded_review_content( $text ) {
+
+			if ( ! is_product() && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
+				return $text;
+			}
+
 			global $current_user;
 			global $comment;
 
@@ -502,7 +507,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
                     <div class="star-rating" title="' . sprintf( __( "Rated %s out of 5", 'ywar' ), $average ) . '">
                         <span  style="width:' . ( ( $average / 5 ) * 100 ) . '%"></span>
                     </div>
-                    <span class="ywar_review_count">' . sprintf("%d %s", $count, _n( " review", " reviews", $count, 'ywar' )) . '</span><span class="review-rating-value"> ' . esc_html( $average ) . ' ' . __( "out of 5 stars", 'ywar' ) . '</span>
+                    <span class="ywar_review_count">' . sprintf( "%d %s", $count, _n( " review", " reviews", $count, 'ywar' ) ) . '</span><span class="review-rating-value"> ' . esc_html( $average ) . ' ' . __( "out of 5 stars", 'ywar' ) . '</span>
                 </div>';
 			}
 		}
@@ -535,9 +540,10 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			$review4_perc = ( $review_stats[5] == '0' ) ? 0 : floor( $review_stats[3] / $review_stats[5] * 100 );
 			$review5_perc = ( $review_stats[5] == '0' ) ? 0 : floor( $review_stats[4] / $review_stats[5] * 100 );
 
-			$review_perc_array = array($review1_perc, $review2_perc, $review3_perc, $review4_perc, $review5_perc);
+			$review_perc_array = array( $review1_perc, $review2_perc, $review3_perc, $review4_perc, $review5_perc );
 
 			wc_get_template( 'ywar-single-product-reviews.php', null, YITH_YWAR_TEMPLATES_DIR, YITH_YWAR_TEMPLATES_DIR );
+
 			//include( 'templates/ywar-single-product-reviews.php' );//cambia in wc_get_template
 
 			return $template;
@@ -611,7 +617,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			);
 
 			if ( defined( 'YITH_YWAR_PREMIUM' ) ) {
-				$admin_tabs['premium'] = __( 'Voting/Reviews settings', 'ywar' );
+				$admin_tabs['premium'] = __( 'Voting/Review settings', 'ywar' );
 			} else {
 				$admin_tabs['premium-landing'] = __( 'Premium Version', 'ywar' );
 			}
@@ -672,7 +678,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			$links[] = '<a href="' . admin_url( "admin.php?page={$this->_panel_page}" ) . '">' . __( 'Settings', 'ywar' ) . '</a>';
 
 			if ( defined( 'YITH_YWAR_FREE_INIT' ) ) {
-				$links[] = '<a href="' . $this->_premium_landing . '" target="_blank">' . __( 'Premium Version', 'ywar' ) . '</a>';
+				$links[] = '<a href="' . $this->get_premium_landing_uri() . '" target="_blank">' . __( 'Premium Version', 'ywar' ) . '</a>';
 			}
 
 			return $links;
@@ -711,7 +717,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			$premium_message = defined( 'YITH_YWAR_PREMIUM' )
 				? ''
 				: __( 'YITH WooCommerce Advanced Reviews is available in an outstanding PREMIUM version with many new options, discover it now.', 'ywar' ) .
-				  ' <a href="' . $this->_premium_landing . '">' . __( 'Premium version', 'ywar' ) . '</a>';
+				  ' <a href="' . $this->get_premium_landing_uri() . '">' . __( 'Premium version', 'ywar' ) . '</a>';
 
 			$args[] = array(
 				'screen_id'  => 'plugins',
@@ -719,7 +725,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 				'target'     => '#toplevel_page_yit_plugin_panel',
 				'content'    => sprintf( '<h3> %s </h3> <p> %s </p>',
 					__( 'YITH WooCommerce Advanced Reviews', 'ywar' ),
-					__( 'In the YIT Plugins tab you can find the YITH WooCommerce Advanced Reviews options. With this menu, you can access to all the settings of our plugins that you have activated.', 'ywar' ) . '<br>' . $premium_message
+					__( 'In YIT Plugins tab you can find YITH WooCommerce Advanced Reviews options. From this menu you can access all settings of YITH plugins activated.', 'ywar' ) . '<br>' . $premium_message
 				),
 				'position'   => array( 'edge' => 'left', 'align' => 'center' ),
 				'init'       => defined( 'YITH_YWAR_PREMIUM' ) ? YITH_YWAR_INIT : YITH_YWAR_FREE_INIT
@@ -731,13 +737,24 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 				'target'     => '#toplevel_page_yit_plugin_panel',
 				'content'    => sprintf( '<h3> %s </h3> <p> %s </p>',
 					__( 'YITH WooCommerce Advanced Reviews', 'ywar' ),
-					__( 'From now on, you can find all the options of YITH WooCommerce Advanced Reviews under YIT Plugin -> Advanced Reviews instead of WooCommerce -> Settings -> Advanced Reviews, as in the previous version. When one of our plugins updates, a new voice will be added to this menu.', 'ywar' ) . $premium_message
+					__( 'From now on, you can find all YITH WooCommerce Advanced Reviews options in YIT Plugin -> Advanced Reviews instead of WooCommerce -> Settings -> Advanced Reviews, as in the previous version. Any time one of our plugins is updated, a new entry will be added to this menu.', 'ywar' ) . $premium_message
 				),
 				'position'   => array( 'edge' => 'left', 'align' => 'center' ),
 				'init'       => defined( 'YITH_YWAR_PREMIUM' ) ? YITH_YWAR_INIT : YITH_YWAR_FREE_INIT
 			);
 
 			YIT_Pointers()->register( $args );
+		}
+
+		/**
+		 * Get the premium landing uri
+		 *
+		 * @since   1.0.0
+		 * @author  Andrea Grillo <andrea.grillo@yithemes.com>
+		 * @return  string The premium landing link
+		 */
+		public function get_premium_landing_uri() {
+			return defined( 'YITH_REFER_ID' ) ? $this->_premium_landing . '?refer_id=' . YITH_REFER_ID : $this->_premium_landing;
 		}
 
 

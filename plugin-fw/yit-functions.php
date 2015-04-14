@@ -65,7 +65,9 @@ if ( ! function_exists( 'yit_plugin_get_template' ) ) {
         }
 
         // include file located
-        include( $located );
+        if( file_exists( $located ) ){
+            include( $located );
+        }
 
         if ( $return ) {
             return ob_get_clean();
@@ -272,7 +274,7 @@ if ( ! function_exists( 'yit_plugin_get_attachment_id' ) ) {
 
         foreach ( $ids as $id ) {
             $attachment_image = wp_get_attachment_image_src( $id, 'full' );
-            if ( $url == str_replace( 'https://', 'http://', array_shift( $attachment_image ) ) ) {
+            if ( $url == array_shift( $attachment_image ) || $url == str_replace( 'https://', 'http://', array_shift( $attachment_image ) ) ) {
                 return $id;
             }
         }
@@ -336,6 +338,10 @@ if ( ! function_exists( 'yit_enqueue_style' ) ) {
             $enqueue = true;
             $who     = YIT_Asset()->get_stylesheet_handle( get_stylesheet_uri(), 'style' );
             $where   = 'before';
+
+            if( false == $who ){
+                $who = '';
+            }
 
             YIT_Asset()->set( 'style', $handle, compact( 'src', 'deps', 'ver', 'media', 'enqueue' ), $where, $who );
         }

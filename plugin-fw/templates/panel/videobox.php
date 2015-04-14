@@ -38,8 +38,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 *  ),
 */
 ?>
-<div id="normal-sortables" class="meta-box-sortables">
-    <div id="<?php echo $id ?>" class="postbox ">
+<div id="normal-sortables" class="meta-box-sortables yith-videobox-wrapper">
+    <div id="<?php echo $id ?>" class="postbox">
         <h3><span><?php echo $name ?></span></h3>
         <div class="inside">
             <div class="yith_videobox">

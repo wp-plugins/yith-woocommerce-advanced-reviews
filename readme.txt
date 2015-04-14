@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment
 Requires at least: 4.0
 Tested up to: 4.1.1
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,6 +67,10 @@ No, the premium version will keep in memory your settings, while new features wi
 Of course, you can overwrite templates and add features through the specific hook.
 
 == Changelog ==
+
+= Version 1.0.8 - RELEASED: APR 14, 2015 =
+
+* Added: updated documentation
 
 = Version 1.0.7 - RELEASED: FEB 12, 2015 =
 

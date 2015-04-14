@@ -99,8 +99,16 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
          * @author Andrea Grillo <andrea.grillo@yithemes.com>
          */
         public function get_home_url() {
-            return is_ssl() ? str_replace( 'https://', '', home_url() ) : str_replace( 'http://', '', home_url() );
+            $home_url   = home_url();
+            $schemes    = apply_filters( 'yit_licence_url_schemes', array( 'https://', 'http://' ) );
+
+            foreach( $schemes as $scheme ){
+                $home_url = str_replace( $scheme, '', $home_url );
+            }
+
+            return $home_url;
         }
+
 
         /**
          * Check if the request is ajax
@@ -528,8 +536,8 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
             $error_strings = array(
                 '100' => __( 'Invalid Request', 'yit' ),
                 '101' => __( 'Invalid licence key', 'yit' ),
-                '102' => __( 'Software has been deactivate', 'yit' ),
-                '103' => __( 'Exceeded maximum number of activations', 'yit' ),
+                '102' => __( 'Software has been deactivated', 'yit' ),
+                '103' => __( 'Maximum number of activations exceeded', 'yit' ),
                 '104' => __( 'Invalid instance ID', 'yit' ),
                 '105' => __( 'Invalid security key', 'yit' ),
                 '106' => __( 'Licence key has expired', 'yit' ),

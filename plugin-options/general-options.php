@@ -11,7 +11,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
-
+global $YWAR_AdvancedReview;
 
 $general_options = array(
 
@@ -67,7 +67,7 @@ if ( ! defined( 'YITH_YWAR_PREMIUM' ) ) {
 				'title_second_column'       => __( 'Get Support and Pro Features', 'yit' ),
 				'description_second_column' => __( 'By purchasing the premium version of the plugin, you will take advantage of the advanced features of the product and you will get one year of free updates and support through our platform available 24h/24.', 'yit' ),
 				'button'                    => array(
-					'href'  => 'http://yithemes.com/themes/plugins/yith-woocommerce-advanced-reviews',
+					'href'  => $YWAR_AdvancedReview->get_premium_landing_uri(),
 					'title' => 'Get Support and Pro Features'
 				)
 			),

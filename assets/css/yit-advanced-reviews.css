@@ -31,44 +31,44 @@ div.horizontalRule {
 }
 
 #tab-reviews a.ywar_votereview {
-    background: url("../images/sprites.png") no-repeat;
+    background: url("../images/sprites.png") no-repeat !important;
 }
 
 /*  upvote section */
 #tab-reviews .ywar_votereview.yes {
-    background-position: -44px -46px;
+    background-position: -44px -46px !important;
 }
 
 #tab-reviews a.ywar_votereview.yes:hover {
-    background-position: -44px 5px;
+    background-position: -44px 5px !important;
 }
 
 #tab-reviews .ywar_votereview.yes.vote_selected {
-    background-position: 8px -46px;
+    background-position: 8px -46px !important;
     border-color: #028439;
 }
 
 #tab-reviews .ywar_votereview.yes.vote_selected:hover {
-    background-position: 8px -46px;
+    background-position: 8px -46px !important;
     border-color: #0B6631;
 }
 
 /*  downvote section */
 #tab-reviews .ywar_votereview.not {
-    background-position: -93px -47px;
+    background-position: -93px -47px !important;
 }
 
 #tab-reviews a.ywar_votereview.not:hover {
-    background-position: -95px 5px;
+    background-position: -95px 5px !important;
 }
 
 #tab-reviews .ywar_votereview.not.vote_selected {
-    background-position: 10px 7px;
+    background-position: 10px 7px !important;
     border-color: #bd0000;
 }
 
 #tab-reviews .ywar_votereview.not.vote_selected:hover {
-    background-position: 10px 7px;
+    background-position: 10px 7px !important;
     border-color: #8E0505;
 }
 

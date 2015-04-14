@@ -50,7 +50,8 @@
     top: -30px;
 }
 /*handle*/
-.yit-options .ui-slider-horizontal .ui-slider-handle {
+.yit-options .ui-slider-horizontal .ui-slider-handle,
+.yit_options .ui-slider-horizontal .ui-slider-handle {
     background: transparent url(../images/slider/handle.png) no-repeat left top !important;
     border: 0px !important;
     top: -.35em !important;
@@ -59,7 +60,8 @@
 }
 
 /*bg on the left:grey*/
-.yit-options .ui-slider.ui-widget-content {
+.yit-options .ui-slider.ui-widget-content,
+.yit_options .ui-slider.ui-widget-content {
     background: url(../images/slider/grey.gif) repeat-x left center !important;
     border-color: #c1c1c0 !important;
     height: 10px !important;
@@ -83,9 +85,11 @@
 .plugin-option tr{
     border-bottom: 1px solid #ccc;
 }
-.plugin-option .yit_options{
+.plugin-option .yit_options,
+.plugin-option .yit-options{
     border-bottom: 0px;
 }
+.plugin-option .yit-options .option,
 .plugin-option .yit_options .option {
     width: 600px;
     float: left;
@@ -95,6 +99,7 @@
     padding: 25px 10px;
 }
 
+.yit_options .select_wrapper,
 .yit-options .select_wrapper {
     background: url("../images/select.png") no-repeat scroll right center #FAFAFA;
     border-color: #CCCCCC #EEEEEE #EEEEEE #CCCCCC;
@@ -143,6 +148,21 @@
 .chosen .select_wrapper .chosen-container .chosen-drop .chosen-search input{
     width: 100%!important;
 }
+
+/* === Multiple Chosen Customizzation === */
+
+.yith-choosen .chosen-choices {
+    line-height: 27px;
+    min-height: 27px;
+    border: 1px solid #ddd;
+}
+
+.yith-choosen .chosen-container-active .chosen-choices{
+    border: 1px solid #5b9dd9;
+    -webkit-box-shadow: 0 0 2px rgba(30,140,190,.8);
+    box-shadow: 0 0 2px rgba(30,140,190,.8);
+}
+
 .select_wrapper span {
     height: 26px;
     line-height: 26px;
@@ -150,10 +170,11 @@
     position: absolute;
     z-index: 2;
 }
-.ie8 .yit_options select {
+.ie8 .yit_options select,
+.ie8 .yit-options select {
     height: 26px;
 }
-.yit_options select, .the-metabox .select_wrapper select {
+.yit_options select, .yit-options select, .the-metabox .select_wrapper select {
     cursor: pointer;
     height: 28px;
     margin: 0;
@@ -165,8 +186,25 @@
     background-color: #FAFAFA;
 }
 
+/* === Single Chosen Customizzation === */
+
+.yith-choosen .chosen-container-single .chosen-default {
+    background: transparent;
+    border-color: #ddd;
+}
+
+.yith-choosen .chosen-search > input[type=text]{
+    width: 100% !important;
+}
+
+.yith-choosen .chosen-container-single .chosen-single {
+    background: transparent;
+    border-color: #ddd;
+}
+
 
 /* Style to woocommerce panel*/
+
 #plugin-fw-wc{
     padding-top: 20px;
 }
@@ -181,49 +219,59 @@
     padding:0px 10px 10px ;
     border-bottom: 1px solid #eee;
 }
-#plugin-fw-wc .yith_videobox .column{
+
+/* === VIDEO BOX === */
+
+.yith-videobox-wrapper {
+    padding-top: 20px;
+}
+.yith-videobox-wrapper h3{
+    padding:0px 10px 10px ;
+    border-bottom: 1px solid #eee;
+}
+
+.yith-videobox-wrapper .postbox {
+    display: inline-block;
+}
+.yith-videobox-wrapper .yith_videobox .column {
     width: 45%;
     float: left;
     padding-right: 2.5%;
     border-right: 1px solid #ebebeb;
     padding-bottom: 2em;
 }
-#plugin-fw-wc .yith_videobox .column.two{
+.yith-videobox-wrapper .yith_videobox .column.two {
     margin-right: 0;
     padding-right: 0;
     padding-left: 2.5%;
     border: 0;
     max-width: 49%;
 }
-#plugin-fw-wc .yith_videobox h2{
+.yith-videobox-wrapper .yith_videobox h2{
     font-size: 16px;
     margin-bottom: 20px;
 }
-#plugin-fw-wc .postbox .inside{
-    display: inline-block;
-}
-#plugin-fw-wc  .yith-video-link {
+.yith-videobox-wrapper .yith-video-link {
     width: 100%;
     max-width: 200px;
     float: left;
     margin: 0 1.5em 1.5em 0;
 }
-#plugin-fw-wc .yith-video-link {
+.yith-videobox-wrapper .yith-video-link {
     width: 100%;
     max-width: 200px;
     float: left;
     margin: 0 1.5em 1.5em 0;
 }
-#plugin-fw-wc .yith-image-frame img {
+.yith-videobox-wrapper .yith-image-frame img {
     max-width: 100%;
     height: auto;
 }
-
-#plugin-fw-wc .yith-video-link img {
+.yith-videobox-wrapper .yith-video-link img {
     max-width: 100%;
     height: auto;
 }
-#plugin-fw-wc .yith-video-iframe {
+.yith-videobox-wrapper .yith-video-iframe {
     display: none;
 
 }

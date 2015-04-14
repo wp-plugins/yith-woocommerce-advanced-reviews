@@ -292,9 +292,9 @@ class YIT_CPT_Unlimited {
 	}
 
 	public function filter_active( $wp_query ) {
-		if ( isset( $wp_query->query['suppress_filters'] ) )
+		if ( is_admin() && isset( $wp_query->query['suppress_filters'] ) )
 			$wp_query->query['suppress_filters'] = false;
-		if ( isset( $wp_query->query_vars['suppress_filters'] ) )
+		if ( is_admin() && isset( $wp_query->query_vars['suppress_filters'] ) )
 			$wp_query->query_vars['suppress_filters'] = false;
 		return $wp_query;
 	}
@@ -1056,7 +1056,7 @@ class YIT_CPT_Unlimited {
 
                         'rewrite'     => array(
                             'label' => __( 'Rewrite', 'yit' ),
-                            'desc'  => __( 'Word used in the URL of each project (slug from post if empty)', 'yit' ),
+                            'desc'  => __( 'Univocal identification name in the URL for each product (slug from post if empty)', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
@@ -1080,7 +1080,7 @@ class YIT_CPT_Unlimited {
 
                         'taxonomy_rewrite' => array(
                             'label' => __( 'Taxonomy Rewrite', 'yit' ),
-                            'desc'  => __( 'Set the word for each category page URL.', 'yit' ),
+                            'desc'  => __( 'Set univocal name for each category page URL.', 'yit' ),
                             'type'  => 'text',
                             'std'   => '' ),
 
@@ -1628,7 +1628,7 @@ class YIT_CPT_Unlimited {
                 var button = $('<a />', {
                     href: '#',
                     class: 'multi-uploader add-new-h2',
-                    'data-uploader_title': '<?php printf( __( 'Add %s by images', 'yit' ), $label_plural ) ?>',
+                    'data-uploader_title': '<?php printf( __( 'Add %s from images', 'yit' ), $label_plural ) ?>',
                     'data-uploader_button_text': '<?php printf( __( 'Add %s', 'yit' ), $label_plural ) ?>'
                 }).text('<?php _e( 'Add with multiupload', 'yit' ) ?>');
 
@@ -1751,7 +1751,7 @@ class YIT_CPT_Unlimited {
 
 
         // check if we are in archive template
-        if ( !( ! is_admin() && is_archive() && isset( $wp_query->post->post_type ) && $this->_is_valid( $wp_query->post->post_type ) ) ) {
+         if ( !( ! is_admin() && is_archive() && isset($wp_query->post) && $this->_is_valid( $wp_query->post->post_type ) ) ) {
             return;
         }
 
