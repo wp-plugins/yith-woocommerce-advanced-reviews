@@ -24,14 +24,14 @@ Research states that other users' reviews are the primary information, together 
 = Main features =
 
 * Let your customers add a title when writing a product review.
-* Let you customers attach some image when writing a product review.
+* Let you customers attach some image as attachment to the product review.
+* Choose how many files can be appended for a single product review.
 * Add review summary bar with statistics about how many times a rating of 1,2,3,4 or 5 stars was submitted.
 * Customize look and feel.
 
 For a more detailed list of options and features of the plugin, please look at the [official documentation](http://yithemes.com/docs-plugins/yith-woocommerce-advanced-reviews/ "Yith WooCommerce Advanced Reviews official documentation").
 
 Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
-
 
 == Installation ==
 
@@ -47,10 +47,11 @@ YITH WooCommerce Advanced Reviews will add a new tab called "Advanced Reviews" i
 
 == Screenshots ==
 
-1. This is setting page for the plugin, you can find it in "YIT Plugins" menu item. There you can set what to show and configure layout.
-2. Submit form is extended to allow users to add a title and one or more attachments files.
-3. This is how an advanced review with additional title and attached thumbnail looks like.
-4. Review summary is shown before review list. It displays statistics about the rating chosen by users submitting reviews.
+1. This is the general setting page, you can find it in "YIT Plugins" menu item. There you can set if a title should be shown on comment submit form and on review content. You can also set if enable attachments and how many files the client is allowed to append.
+2. Customize the summary bar background, foreground and text color and if the percentage value must be shown inside the percentage bars.
+3. Submit form is extended to allow users to add a title and one or more attachments files.
+4. This is how an advanced review with additional title and attached thumbnail looks like.
+5. Review summary is shown before review list. It displays statistics about the rating chosen by users submitting reviews.
 
 == Frequently Asked Questions ==
 
@@ -65,6 +66,10 @@ No, the premium version will keep in memory your settings, while new features wi
 * Can i overwrite templates plugin?
 
 Of course, you can overwrite templates and add features through the specific hook.
+
+* Can I customize the plugin for a better theme integration?
+
+You can customize some visual attribute from the plugin option. For better integration, you can both overwrite the template and customize the look and feel writing your own CSS rules.
 
 == Changelog ==
 
@@ -113,7 +118,7 @@ Of course, you can overwrite templates and add features through the specific hoo
 
 == Upgrade Notice ==
 
-Last Stable Tag 1.0.7 - Released on Feb 12, 2015
+Last Stable Tag 1.0.8 - Released on Apr 18, 2015
 
 == Suggestions ==
 
@@ -121,8 +126,8 @@ If you have suggestions about how to improve YITH WooCommerce Advanced Reviews, 
 
 == Translators ==
 
-= Available Languages =
-* English
-
 If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
-[use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Advanced Reviews languages. 
+[use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce Advanced Reviews languages.
+
+ = Available Languages =
+ * English
