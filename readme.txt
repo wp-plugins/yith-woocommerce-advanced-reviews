@@ -1,7 +1,7 @@
 === YITH WooCommerce Advanced Reviews ===
 
 Contributors: yithemes
-Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment
+Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment, reviews rating
 Requires at least: 4.0
 Tested up to: 4.1.1
 Stable tag: 1.0.8
@@ -23,6 +23,7 @@ Research states that other users' reviews are the primary information, together 
 
 = Main features =
 
+* Add rich snippets to the reviews.
 * Let your customers add a title when writing a product review.
 * Let you customers attach some image as attachment to the product review.
 * Choose how many files can be appended for a single product review.
