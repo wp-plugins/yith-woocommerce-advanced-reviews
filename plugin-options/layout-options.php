@@ -24,14 +24,14 @@ return array(
 			'id'   => 'ywar_settings_review_summary_title',
 		),
 		'review_summary_bar_color'               => array(
-			'name'    => __( 'Fixed bar color', 'ywar' ),
+			'name'    => __( 'Background bar color', 'ywar' ),
 			'type'    => 'color',
-			'desc'    => __( 'Background bar color', 'ywar' ),
+			'desc'    => '',
 			'id'      => 'ywar_summary_bar_color',
 			'default' => '#f4f4f4'
 		),
 		'reviews_summary_percentage_bar_color'   => array(
-			'name'    => __( 'Percentage bars color', 'ywar' ),
+			'name'    => __( 'Percentage bar color', 'ywar' ),
 			'type'    => 'color',
 			'desc'    => '',
 			'id'      => 'ywar_summary_percentage_bar_color',

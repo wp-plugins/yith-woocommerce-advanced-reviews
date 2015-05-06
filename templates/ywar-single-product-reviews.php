@@ -1,7 +1,6 @@
 <?php
-global $product;
-global $review_perc_array;
 global $review_stats;
+global $product;
 ?>
 
 <div id="reviews_summary">
@@ -11,19 +10,16 @@ global $review_stats;
 
 	<div class="reviews_bar">
 
-		<?php for ( $i = 0; $i < 5; $i ++ ) :
-			$index = 4 - $i;    //  number of stars for the loop item rating
-			$stars  = $index + 1;
-			$perc  = $review_perc_array[ $index ]; //  position of percentage value for current star rating
-
+		<?php for ( $i = 5; $i >= 1; $i-- ) :
+			$perc = ( $review_stats['total'] == '0' ) ? 0 : floor( $review_stats[ $i ] / $review_stats['total'] * 100 );
 			?>
 
 			<div class="ywar_review_row">
-				<?php do_action( 'ywar_summary_row_prepend', $stars, $product->id ) ?>
+				<?php do_action( 'ywar_summary_row_prepend', $i, $product->id ) ?>
 
 				<span
-					class="ywar_stars_value"><?php printf( _n( '%s star', '%s stars', $stars, 'ywar' ), $stars ); ?></span>
-				<span class="ywar_num_reviews"><?php echo $review_stats[ $index ]; ?></span>
+					class="ywar_stars_value"><?php printf( _n( '%s star', '%s stars', $i, 'ywar' ), $i ); ?></span>
+				<span class="ywar_num_reviews"><?php echo $review_stats[ $i ]; ?></span>
 				<span class="ywar_rating_bar">
 					<span style="background-color:<?php echo get_option( 'ywar_summary_bar_color' ); ?>"
 					      class="ywar_scala_rating">
@@ -36,7 +32,7 @@ global $review_stats;
 					</span>
 				</span>
 
-				<?php do_action( 'ywar_summary_row_append', $stars, $product->id ) ?>
+				<?php do_action( 'ywar_summary_row_append', $i, $product->id ) ?>
 			</div>
 		<?php endfor; ?>
 	</div>

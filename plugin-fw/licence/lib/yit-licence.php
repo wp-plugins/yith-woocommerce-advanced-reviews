@@ -62,7 +62,12 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
          * @since    1.0
          * @author   Andrea Grillo <andrea.grillo@yithemes.com>
          */
-        abstract public function __construct();
+        public function __construct(){
+            
+            if( defined( 'YIT_LICENCE_DEBUG' ) && YIT_LICENCE_DEBUG ){
+                $this->_api_uri = 'http://dev.yithemes.com';                
+            }
+        }
 
         /**
          * Premium products registration
@@ -135,9 +140,9 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
             /**
              * Support to YIT Framework < 2.0
              */
-            $filename   = function_exists( 'yit_load_js_file' ) ? yit_load_js_file( 'yit-licence.js' ) : 'yit-licence.js';
-            $script_path       = defined( 'YIT_CORE_PLUGIN_URL' ) ? YIT_CORE_PLUGIN_URL : get_template_directory_uri() . '/core/plugin-fw';
-            $style_path = defined( 'YIT_CORE_PLUGIN_URL' ) ? YIT_CORE_PLUGIN_URL : get_template_directory_uri() . '/core/plugin-fw';
+            $filename       = function_exists( 'yit_load_js_file' ) ? yit_load_js_file( 'yit-licence.js' ) : 'yit-licence.js';
+            $script_path    = defined( 'YIT_CORE_PLUGIN_URL' ) ? YIT_CORE_PLUGIN_URL : get_template_directory_uri() . '/core/plugin-fw';
+            $style_path     = defined( 'YIT_CORE_PLUGIN_URL' ) ? YIT_CORE_PLUGIN_URL : get_template_directory_uri() . '/core/plugin-fw';
 
             wp_enqueue_script( 'yit-licence', $script_path . '/licence/assets/js/' . $filename, array( 'jquery' ), '1.0.0', true );
             wp_enqueue_style( 'yit-theme-licence', $style_path . '/licence/assets/css/yit-licence.css' );
@@ -153,9 +158,9 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
          */
         public function localize_script() {
             wp_localize_script( 'yit-licence', 'licence_message', array(
-                    'error'  => __( '%field% field cannot be empty', 'yit' ),
-                    'errors' => __( '%field_1% and %field_2% fields cannot be empty', 'yit' ),
-                    'server' => __( 'Unable to contact the remote server, please try again later. Thanks!', 'yit' )
+                    'error'  => __( '%field% field cannot be empty', 'yith-plugin-fw' ),
+                    'errors' => __( '%field_1% and %field_2% fields cannot be empty', 'yith-plugin-fw' ),
+                    'server' => __( 'Unable to contact the remote server, please try again later. Thanks!', 'yith-plugin-fw' )
                 )
             );
         }
@@ -184,7 +189,7 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
                 'instance'    => $this->get_home_url()
             );
 
-            $api_uri  = add_query_arg( $args, $this->get_api_uri( 'activation' ) );
+            $api_uri  = esc_url_raw( add_query_arg( $args, $this->get_api_uri( 'activation' ) ) );
             $response = wp_remote_get( $api_uri );
 
             if ( is_wp_error( $response ) ) {
@@ -212,6 +217,9 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
                 $options[$product['product_id']] = $option[$product['product_id']];
 
                 update_option( $this->_licence_option, $options );
+
+                /* === Update Plugin Licence Information === */
+                YIT_Upgrade()->force_regenerate_update_transient();
 
                 /* === Licence Activation Template === */
                 $body['template'] = $this->show_activation_panel();
@@ -252,7 +260,7 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
                 'instance'    => $this->get_home_url()
             );
 
-            $api_uri  = add_query_arg( $args, $this->get_api_uri( 'check' ) );
+            $api_uri  = esc_url_raw( add_query_arg( $args, $this->get_api_uri( 'check' ) ) );
             $response = wp_remote_get( $api_uri );
 
             if ( ! is_wp_error( $response ) ) {
@@ -315,6 +323,9 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
 
                 /* === Update Plugin Licence Information === */
                 update_option( $this->_licence_option, $licence );
+
+                /* === Update Plugin Licence Information === */
+                YIT_Upgrade()->force_regenerate_update_transient();
             }
             return $status;
         }
@@ -336,7 +347,7 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
             }
 
             /* === Regenerate Update Plugins Transient === */
-            //YIT_Upgrade()->force_regenerate_update_transient();
+            YIT_Upgrade()->force_regenerate_update_transient();
 
             do_action( 'yit_licence_after_check' );
 
@@ -505,7 +516,7 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
          * @author Andrea Grillo <andrea.grillo@yithemes.com>
          */
         public function get_licence_activation_page_url() {
-            return add_query_arg( array( 'page' => $this->_settings['page'] ), admin_url( 'admin.php' ) );
+            return esc_url( add_query_arg( array( 'page' => $this->_settings['page'] ), admin_url( 'admin.php' ) ) );
         }
 
 
@@ -534,14 +545,14 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
         public function get_error_code_message( $code ) {
 
             $error_strings = array(
-                '100' => __( 'Invalid Request', 'yit' ),
-                '101' => __( 'Invalid licence key', 'yit' ),
-                '102' => __( 'Software has been deactivated', 'yit' ),
-                '103' => __( 'Maximum number of activations exceeded', 'yit' ),
-                '104' => __( 'Invalid instance ID', 'yit' ),
-                '105' => __( 'Invalid security key', 'yit' ),
-                '106' => __( 'Licence key has expired', 'yit' ),
-                '107' => __( 'Licence key has been banned', 'yit' )
+                '100' => __( 'Invalid Request', 'yith-plugin-fw' ),
+                '101' => __( 'Invalid licence key', 'yith-plugin-fw' ),
+                '102' => __( 'Software has been deactivated', 'yith-plugin-fw' ),
+                '103' => __( 'Maximum number of activations exceeded', 'yith-plugin-fw' ),
+                '104' => __( 'Invalid instance ID', 'yith-plugin-fw' ),
+                '105' => __( 'Invalid security key', 'yith-plugin-fw' ),
+                '106' => __( 'Licence key has expired', 'yith-plugin-fw' ),
+                '107' => __( 'Licence key has been banned', 'yith-plugin-fw' )
             );
 
             return isset( $error_strings[$code] ) ? $error_strings[$code] : false;

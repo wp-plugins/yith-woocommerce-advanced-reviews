@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YIT WooCommerce Advanced Reviews\n"
-"POT-Creation-Date: 2015-02-02 16:46+0100\n"
-"PO-Revision-Date: 2015-02-24 15:34+0100\n"
+"POT-Creation-Date: 2015-05-06 12:52+0100\n"
+"PO-Revision-Date: 2015-05-06 12:52+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.7.6\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;__ngettext:1,2;"
 "__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
 "_nx_noop:4c,1,2\n"
@@ -17,1161 +17,422 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../plugin-fw\n"
 
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:166
-#, php-format
-msgid "Reviews (%d)"
+#: ../class.yith-woocommerce-advanced-reviews.php:303
+#: ../class.yith-woocommerce-advanced-reviews.php:304
+#: ../class.yith-woocommerce-advanced-reviews.php:306
+#: ../class.yith-woocommerce-advanced-reviews.php:742
+#: ../templates/ywar-product-reviews.php:30
+msgid "Reviews"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:188
-msgid "Reply"
+#: ../class.yith-woocommerce-advanced-reviews.php:453
+msgid "Approve review"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:203
-msgid "This review is closed for replies"
-msgstr "This review is closed to replies"
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:203
-msgid "Stop reply"
+#: ../class.yith-woocommerce-advanced-reviews.php:453
+msgid "Approve"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:206
-msgid "This review is closed for comments"
-msgstr "This review is closed to comments"
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:209
-msgid "Open replies"
+#: ../class.yith-woocommerce-advanced-reviews.php:455
+msgid "Unapprove review"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:209
-msgid "Open reply"
+#: ../class.yith-woocommerce-advanced-reviews.php:455
+msgid "Unapprove"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:291
-msgid "Most recent reviews"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:292
-msgid "Most helpful reviews"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:338
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:748
-msgid "star"
-msgid_plural "stars"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:339
-#, php-format
-msgid "%d reviews with rating of %s %s (%s of %s)"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:341
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:753
-msgid "(Show unfiltered results)"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:359
-#, php-format
-msgid "Reviews with %s star"
-msgid_plural "Reviews with %s stars"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:543
-#, php-format
-msgid "%s of %s people found this review helpful"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:627
-msgid "Was this review helpful to you?"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:662
-msgid "Product id is not valid"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:668
-msgid "Product id is in invalid format"
-msgstr "Product id is an invalid format"
-
-#: ../class.yith-woocommerce-advanced-reviews-premium.php:687
-msgid "Impossible to filter by rating"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:171
-#: ../class.yith-woocommerce-advanced-reviews.php:393
-msgid "Title"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:353
-msgid "Attachments"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:354
-msgid "Choose file(s)"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:427
-msgid "Additional data"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:501
+#: ../class.yith-woocommerce-advanced-reviews.php:490
+#: ../class.yith-woocommerce-advanced-reviews.php:1453
+#: ../templates/ywar-rating.php:26
 #, php-format
 msgid "Rated %s out of 5"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews.php:504
+#: ../class.yith-woocommerce-advanced-reviews.php:493
 msgid " review"
 msgid_plural " reviews"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../class.yith-woocommerce-advanced-reviews.php:504
+#: ../class.yith-woocommerce-advanced-reviews.php:493
 msgid "out of 5 stars"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews.php:603
-msgid "General"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:604
-msgid "Layout"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:608
-msgid "Voting/Reviews settings"
-msgstr "Voting/Review settings"
-
-#: ../class.yith-woocommerce-advanced-reviews.php:610
-#: ../class.yith-woocommerce-advanced-reviews.php:669
-msgid "Premium Version"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:616
-#: ../class.yith-woocommerce-advanced-reviews.php:617
-msgid "Advanced Reviews"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:666
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1048
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1196
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1202
-#: ../plugin-fw/lib/yit-plugin-panel.php:62
-msgid "Settings"
-msgstr ""
-
-#: ../class.yith-woocommerce-advanced-reviews.php:695
+#: ../class.yith-woocommerce-advanced-reviews.php:534
 msgid "Plugin Documentation"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews.php:709
+#: ../class.yith-woocommerce-advanced-reviews.php:555
+msgid "Settings"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:558
+#: ../class.yith-woocommerce-advanced-reviews.php:635
+msgid "Premium Version"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:571
 msgid ""
 "YITH WooCommerce Advanced Reviews is available in an outstanding PREMIUM "
 "version with many new options, discover it now."
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews.php:710
+#: ../class.yith-woocommerce-advanced-reviews.php:572
 msgid "Premium version"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews.php:717
-#: ../class.yith-woocommerce-advanced-reviews.php:729
+#: ../class.yith-woocommerce-advanced-reviews.php:579
+#: ../class.yith-woocommerce-advanced-reviews.php:591
+#: ../plugin-options/general-options.php:66
 msgid "YITH WooCommerce Advanced Reviews"
 msgstr ""
 
-#: ../class.yith-woocommerce-advanced-reviews.php:718
+#: ../class.yith-woocommerce-advanced-reviews.php:580
 msgid ""
-"In the YIT Plugins tab you can find the YITH WooCommerce Advanced Reviews "
-"options. With this menu, you can access to all the settings of our plugins "
-"that you have activated."
-msgstr ""
 "In YIT Plugins tab you can find YITH WooCommerce Advanced Reviews options. "
 "From this menu you can access all settings of YITH plugins activated."
-
-#: ../class.yith-woocommerce-advanced-reviews.php:730
-msgid ""
-"From now on, you can find all the options of YITH WooCommerce Advanced "
-"Reviews under YIT Plugin -> Advanced Reviews instead of WooCommerce -> "
-"Settings -> Advanced Reviews, as in the previous version. When one of our "
-"plugins updates, a new voice will be added to this menu."
 msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:592
+msgid ""
 "From now on, you can find all YITH WooCommerce Advanced Reviews options in "
 "YIT Plugin -> Advanced Reviews instead of WooCommerce -> Settings -> "
 "Advanced Reviews, as in the previous version. Any time one of our plugins is "
 "updated, a new entry will be added to this menu."
+msgstr ""
 
-#: ../init.php:30
+#: ../class.yith-woocommerce-advanced-reviews.php:628
+msgid "General"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:629
+msgid "Layout"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:633
+msgid "Voting/Review settings"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:641
+#: ../class.yith-woocommerce-advanced-reviews.php:642
+msgid "Advanced Reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:740
+msgctxt "Post Type General Name"
+msgid "Reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:741
+msgctxt "Post Type Singular Name"
+msgid "Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:743
+msgid "Parent Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:744
+msgid "All reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:745
+msgid "View review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:746
+msgid "Add New Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:747
+msgid "Add New"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:748
+msgid "Edit Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:749
+msgid "Update Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:750
+msgid "Search Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:751
+msgid "Not Found"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:752
+msgid "Not found in bin"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:758
+msgid "YIT Product reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:759
+msgid "Advanced WooCommerce product reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1047
+msgid "Title"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1149
+msgid "Your Rate"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1151
+msgid "Rate&hellip;"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1152
+msgid "Perfect"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1153
+msgid "Good"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1154
+msgid "Average"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1155
+msgid "Not that bad"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1156
+msgid "Very Poor"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1163
+msgid "Attachments"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1164
+msgid "Choose file(s)"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1247
+#, php-format
+msgid "Reviews(%d)"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1291
+msgid "Review attributes"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1455
+#: ../lib/class.yith-advanced-reviews-list-table.php:467
+#: ../templates/ywar-review.php:43
+msgid "out of 5"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1485
+msgid "Convert reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1488
+msgid ""
+"If this is the first time you install the YITH Advanced Reviews plugin, or "
+"if you are using an older version prior to the 1.1.0, first you have to "
+"convert the older reviews if you want to use them."
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1508
+#: ../class.yith-woocommerce-advanced-reviews.php:1654
+#, php-format
+msgid "Task completed. %d reviews have been processed and converted."
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1510
+#: ../class.yith-woocommerce-advanced-reviews.php:1656
+msgid "Task completed. No review to convert has been found."
+msgstr ""
+
+#: ../init.php:22
 msgid ""
 "YITH WooCommerce Advanced Reviews is enabled but not effective. It requires "
-"Woocommerce in order to work."
+"WooCommerce in order to work."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:460
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:574
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:719
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1632
-#, php-format
-msgid "Add %s"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:461
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:575
-#, php-format
-msgid "Add New %s"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:462
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:576
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1267
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1304
-#, php-format
-msgid "Edit %s"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:463
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:577
-#, php-format
-msgid "New %s"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:464
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:578
-#, php-format
-msgid "All %s"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:465
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:579
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1251
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1305
-#, php-format
-msgid "View %s"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:466
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:580
-#, php-format
-msgid "Search %s"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:467
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:581
-#, php-format
-msgid "No %s found"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:468
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:582
-#, php-format
-msgid "No %s found in Trash"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:625
-#, php-format
-msgctxt "taxonomy general name"
-msgid "%s Categories"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:626
-msgctxt "taxonomy singular name"
-msgid "Category"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:627
-msgid "Search Categories"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:628
-msgid "All Categories"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:629
-msgid "Parent Category"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:630
-msgid "Parent Category:"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:631
-msgid "Edit Category"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:632
-msgid "Update Category"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:633
-msgid "Add New Category"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:634
-msgid "New Category Name"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:635
-msgid "Category"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:724
-msgid "Categories"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1042
-#, php-format
-msgid "%s Settings"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1051
-msgid "Type"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1052
-msgid "The layout for this "
-msgstr "Layout for this "
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1058
-msgid "Rewrite"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1059
-msgid "The word used for the URL of each project (the slug of post if empty)"
-msgstr ""
-"Univocal identification name in the URL for each product (slug from post if "
-"empty)"
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1064
-msgid "Label Singular"
-msgstr "Label in Singular"
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1065
+#: ../init.php:36
 msgid ""
-"Set the label in singular to use for each label (the title of portfolio if "
-"empty)"
-msgstr "Set a label in singular (title of portfolio if empty)"
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1070
-msgid "Label Plural"
-msgstr "Label in Plural"
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1071
-msgid ""
-"Set the label in plural to use for each label (the title of portfolio if "
-"empty)"
-msgstr "Set a label in plural (title of portfolio if empty)"
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1076
-msgid "Taxonomy"
+"You can't activate the free version of YITH WooCommerce Advanced Reviews "
+"while you are using the premium one."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1077
-msgid ""
-"If you want to use a category section for the portfolio, set the name of "
-"taxonomy. Name should be in slug form (must not contain capital letters or "
-"spaces) and not more than 32 characters long (database structure "
-"restriction)."
-msgstr ""
-"If you want to use categories in the portfolio, set a name for taxonomy. "
-"Name should be a slug (must not contain capital letters nor spaces) and must "
-"not be more than 32 characters long (database structure restriction)."
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1082
-msgid "Taxonomy Rewrite"
+#: ../lib/class.yith-advanced-reviews-list-table.php:62
+msgid "Review"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1083
-msgid "Set the word to use in the URL for each category page."
-msgstr "Set the word for each category page URL."
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1088
-msgid "Single layout"
+#: ../lib/class.yith-advanced-reviews-list-table.php:63
+msgid "Author"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1089
-msgid "The layout for single page of this portfolio"
-msgstr "Layout for single page of this portfolio"
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1130
-msgid "layout settings"
+#: ../lib/class.yith-advanced-reviews-list-table.php:64
+msgid "Date"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1222
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1235
-msgid "Quick links"
+#: ../lib/class.yith-advanced-reviews-list-table.php:65
+msgid "Rate"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1475
+#: ../lib/class.yith-advanced-reviews-list-table.php:66
+msgid "Product"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:352
+#: ../lib/class.yith-advanced-reviews-list-table.php:446
+msgid "Restore"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:354
+msgid "Move to bin"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:357
+#: ../lib/class.yith-advanced-reviews-list-table.php:451
+msgid "Delete permanently"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:358
+msgid "Approve reviews"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:359
+msgid "Unapprove reviews"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:373
+msgid "All"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:374
+#: ../lib/class.yith-advanced-reviews-list-table.php:448
+msgid "Bin"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:375
+msgid "Not approved"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:466
+#: ../templates/ywar-review.php:41
 #, php-format
-msgid "Show the frontend of the %s"
-msgstr "Show frontend of the %s"
-
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1482
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:46
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:90
-msgid "Name"
+msgid "Rated %d out of 5"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1631
+#: ../lib/class.yith-advanced-reviews-list-table.php:481
+msgid "Edit"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:484
+msgid "View"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:490
+#: ../templates/ywar-review.php:21
+msgid "Anonymous"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:496
+msgid "Y/m/d g:i:s a"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:503
 #, php-format
-msgid "Add %s by images"
+msgid "%s ago"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-cpt-unlimited.php:1633
-msgid "Add with multiupload"
+#: ../lib/class.yith-advanced-reviews-list-table.php:505
+msgid "Y/m/d"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel-wc.php:302
-msgid "The changes you made will be lost if you navigate away from this page."
-msgstr "The changes you made will be lost if you leave this page."
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:61
-msgid "Plugin Settings"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:92
-#: ../plugin-fw/lib/yit-plugin-subpanel.php:101
-msgid "YIT Plugins"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:269
-#: ../plugin-fw/lib/yit-plugin-subpanel.php:142
-#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:5
-msgid "Save Changes"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:272
-#: ../plugin-fw/lib/yit-plugin-subpanel.php:145
-#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
-msgid ""
-"If you continue with this action, you will reset all options are in this "
-"page."
-msgstr ""
-"If you go on with this action, you will reset all options in this page."
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:274
-#: ../plugin-fw/lib/yit-plugin-subpanel.php:147
-#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
-msgid "Reset Defaults"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:274
-#: ../plugin-fw/lib/yit-plugin-subpanel.php:147
-#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
-msgid "Are you sure of it?"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:408
-msgid ""
-"The element you have written is already exists. Please, add another name."
-msgstr "This element already exists. Please, enter a different name."
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:409
-msgid "Settings saved"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:410
-msgid "Settings reset"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:411
-msgid "Element deleted correctly."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:412
-#: ../plugin-fw/lib/yit-plugin-panel.php:413
-msgid "Element updated correctly."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:414
-msgid "Database imported correctly."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:415
-msgid "An error encoured during during import. Please try again."
-msgstr "An error has occurred during import. Please try again."
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:416
-msgid "The file you have insert doesn't valid."
-msgstr "The file inserted is not valid."
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:417
-msgid "I'm sorry, the import featured is disabled."
-msgstr "Sorry, import is disabled."
-
-#: ../plugin-fw/lib/yit-plugin-panel.php:418
-msgid "Sorting done correctly."
-msgstr "Sorting successful."
-
-#: ../plugin-fw/lib/yit-pointers.php:70
-msgid "Plugins Activated"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-pointers.php:71
-msgid ""
-"From now on, you can find all the options of your plugins under the YIT "
-"Plugin menu voice.\n"
-"                                     For every installation of our new "
-"plugins, a new voice will be added to access to the customization settings."
-msgstr ""
-"From now on, you can find all plugin options in YIT Plugin menu.\n"
-"                                     For each plugin installed, "
-"customization settings will be available as a new entry in YIT Plugin menu."
-
-#: ../plugin-fw/lib/yit-pointers.php:73 ../plugin-fw/lib/yit-pointers.php:89
-msgid "Discover all our plugins available on:"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-pointers.php:74 ../plugin-fw/lib/yit-pointers.php:90
-msgid "and"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-pointers.php:84
-msgid "Plugins Upgraded"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-pointers.php:85
-msgid ""
-"From now on, you can find all the options of your plugins under the YIT "
-"Plugin menu voice.\n"
-"                                    When one of our plugins updates, a new "
-"voice will be added to this menu.\n"
-"                                    For example, after the update, the "
-"options from the plugins (YITH WooCommerce Wishlist, YITH WooCommerce Ajax "
-"Search, etc.)\n"
-"                                    will be removed from the previous "
-"location and moved under the YIT Plugin tab."
-msgstr ""
-"From now on, you can find all the options of your plugins in YIT Plugin "
-"menu.\n"
-"                                    Any time one of our plugins is updated, "
-"a new entry will be added to this menu.\n"
-"                                    For example, after update, plugin "
-"options (such for YITH WooCommerce Wishlist, YITH WooCommerce Ajax Search, "
-"etc.)\n"
-"                                    will be moved from previous location to "
-"YIT Plugin tab."
-
-#: ../plugin-fw/lib/yit-upgrade.php:120
-msgid "There is a new version of %plugin_name% available."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:121
-msgid "View version %latest% details."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:122
-msgid "Automatic update is unavailable for this plugin,"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:123
-msgid ""
-"please <a href=\"%activate_link%\"> activate </a> your copy of %plugin_name%."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:124
-msgid "Update now."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:227
-msgid "Yithemes Repository"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:261
-msgid "Invalid URL Provided."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:274
-msgid "Could not create Temporary file."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:415
-#, php-format
-msgid ""
-"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
-"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:417
-#, php-format
-msgid ""
-"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
-"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>. <em>You "
-"have to activate the plugin on a single site of the network to benefit from "
-"the automatic updates.</em>"
-msgstr ""
-"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
-"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>. <em>You "
-"have to activate the plugin on a single site of the network to benefit from "
-"automatic updates.</em>"
-
-#: ../plugin-fw/lib/yit-upgrade.php:419
-#, php-format
-msgid ""
-"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
-"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a>. "
-"<em>Automatic update is unavailable for this plugin, please <a href=\"%5$s\" "
-"title=\"Licence activation\">activate</a> your copy of %6s.</em>"
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:421
-#, php-format
-msgid ""
-"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox "
-"yit-changelog-button\" title=\"%3$s\">View version %4$s details</a> or <a "
-"href=\"%5$s\">update now</a>."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:494
-msgid "You can't update plugins for this site."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:498
-msgid "You do not have sufficient permissions to update plugins for this site."
-msgstr ""
-
-#: ../plugin-fw/lib/yit-upgrade.php:505
-msgid "Update Plugin"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-licence.php:148
-#, php-format
-msgid "%field% field can not be empty"
-msgstr "%field% field cannot be empty"
-
-#: ../plugin-fw/licence/lib/yit-licence.php:149
-msgid "%field_1% and %field_2% fields can not be empty"
-msgstr "%field_1% and %field_2% fields cannot be empty"
-
-#: ../plugin-fw/licence/lib/yit-licence.php:150
-msgid "Unable to contact the remote server, please try again later. Thanks!"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-licence.php:529
-msgid "Invalid Request"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-licence.php:530
-msgid "Invalid licence key"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-licence.php:531
-msgid "Software has been deactive"
-msgstr "Software has been deactivated"
-
-#: ../plugin-fw/licence/lib/yit-licence.php:532
-msgid "Exceeded maximum number of activations"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-licence.php:533
-msgid "Invalid instance ID"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-licence.php:534
-msgid "Invalid security key"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-licence.php:535
-msgid "Licence key has expired"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-licence.php:536
-msgid "Licence key has be banned"
-msgstr "Licence key has been banned"
-
-#: ../plugin-fw/licence/lib/yit-plugin-licence.php:63
-#: ../plugin-fw/licence/lib/yit-plugin-licence.php:64
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:63
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:64
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:106
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:107
-msgid "Licence Activation"
-msgstr ""
-
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:114
-#: ../plugin-fw/licence/lib/yit-theme-licence.php:115
-#, php-format
-msgid "%s"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:19
-msgid "Yithemes Licence Activation"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:23
-msgid ""
-"Have you updated your licenses? Have you asked for an extension? Update "
-"information concerning your products."
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:25
-msgid "Update licence information"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:35
-msgid "To Active"
-msgstr "Activation"
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:54
-msgid "Activate"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:73
-msgid "Activated"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:77
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:108
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:132
-msgid "Product Name"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:78
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:109
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:133
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:145
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:337
-msgid "Email"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:79
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:110
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:134
-msgid "Licence Key"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:80
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:135
-msgid "Expires"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:81
-msgid "Remaining"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:82
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:95
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:136
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:146
-msgid "Renew"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:93
-#, php-format
-msgid "%1s out of %2s"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:104
-msgid "Banned"
-msgstr ""
-
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:128
-msgid "Expired"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/categories.php:36
-msgid "No categories."
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/categories.php:42
-msgid "+ Add New Category"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:5
-msgid "Text Input"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:6
-msgid "Checkbox"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:7
-msgid "Select"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:8
-msgid "Textarea"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:9
-msgid "Radio Input"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:10
-msgid "Password Field"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:11
-msgid "File Upload"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:45
-msgid "Theme Icon"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:46
-msgid "Custom Icon"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:47
-#: ../plugin-fw/templates/metaboxes/types/responsivesliders.php:24
-msgid "None"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:57
-msgid "Add field"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:66
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:258
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:37
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:82
-msgid "Remove"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:67
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:259
-msgid "Click to toggle"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:74
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:266
-msgid "Title Field"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:78
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:270
-msgid "Insert the title of field."
-msgstr "Insert title for the field."
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:83
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:275
-msgid "Data Name"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:87
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:279
-msgid ""
-"REQUIRED: The identification name of this field, that you can insert into "
-"body email configuration. <strong>Note:</strong>Use only lowercase "
-"characters and underscores."
-msgstr ""
-"REQUIRED: Field identification name to be entered into email body. "
-"<strong>Note:</strong>Use only lowercase characters and underscores."
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:92
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:284
-msgid "Type field"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:100
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:292
-msgid "Select the type of this field."
-msgstr "Select type for this field."
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:105
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:297
-msgid "Checked"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:109
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:301
-msgid "Select this if you want this field already checked."
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:114
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:306
-msgid "Add options "
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:115
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:307
-msgid "Add option"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:118
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:310
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:432
-msgid "Selected"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:121
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:313
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:432
-msgid "Delete option"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:127
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:319
-msgid "Message Error"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:131
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:323
-msgid "Insert the error message for validation."
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:136
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:328
-msgid "Required"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:140
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:332
-msgid "Select this if it must be required."
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:149
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:341
-msgid "Select this if it must be a valid email."
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:154
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:346
-msgid "Reply To"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:158
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:350
-msgid "Select this if it's the email where you can reply."
-msgstr "Select this if it is the email you can reply to."
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:163
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:355
-msgid "Class"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:167
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:359
-msgid ""
-"Insert an additional class(es) (separateb by comma) for more personalization."
-msgstr ""
-"Insert additional class(es) (separated by commas) for more personalization."
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:172
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:364
-msgid "Icon"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:200
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:388
-#: ../plugin-fw/templates/metaboxes/types/icon-list.php:69
-#: ../plugin-fw/templates/metaboxes/types/select-icon.php:33
-#: ../plugin-fw/templates/metaboxes/types/upload.php:21
-#: ../plugin-fw/templates/panel/types/upload.php:31
-#: ../plugin-fw/templates/panel/woocommerce/woocommerce-upload.php:35
-msgid "Upload"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:206
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:394
-#: ../plugin-fw/templates/metaboxes/types/icon-list.php:75
-#: ../plugin-fw/templates/metaboxes/types/select-icon.php:39
-msgid "Image preview"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:214
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:402
-msgid "Insert an icon for more personalization."
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:219
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:406
-msgid "Width"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:244
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:418
-msgid "Choose how much long will be the field."
-msgstr "Set field length."
-
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:28
-msgid "Close all"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:28
-msgid "Expand all"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:52
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:95
-msgid "Value"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:53
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:96
-msgid "The content of the tab. (HTML is supported)"
-msgstr "Content of the tab. (HTML is supported)"
-
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:65
-msgid "Add custom product tab"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/customtabs.php:107
-msgid "Do you want to remove the custom tab?"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/icon-list.php:89
-#, php-format
-msgid "(Default: %s <img src=\"%s\"/>)"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/icon-list.php:91
-#, php-format
-msgid "(Default: <i %s></i> )"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:35
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
-#: ../plugin-fw/templates/metaboxes/types/images.php:33
-#: ../plugin-fw/templates/metaboxes/types/images.php:59
-msgid "Delete image"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
-msgid "Add Images to Gallery"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
-msgid "Add to gallery"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
-msgid "Add images"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
-msgid "Delete"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/images.php:37
-msgid "Upload new images"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/images.php:70
-msgid "Are you sure you want to remove this image?"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:25
-#: ../plugin-fw/templates/metaboxes/types/sidebars.php:36
-msgid "Left sidebar"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:28
-#: ../plugin-fw/templates/metaboxes/types/sidebars.php:42
-#: ../plugin-fw/templates/metaboxes/types/sidebars.php:45
-msgid "No sidebar"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:28
-msgid "No sideabr"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:31
-#: ../plugin-fw/templates/metaboxes/types/sidebars.php:39
-msgid "Right sidebar"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:34
-#: ../plugin-fw/templates/metaboxes/types/sidebars.php:53
-#: ../plugin-fw/templates/metaboxes/types/sidebars.php:64
-msgid "Choose a sidebar"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/sidebars.php:51
-msgid "Sidebar Left"
-msgstr "Left sidebar"
-
-#: ../plugin-fw/templates/metaboxes/types/sidebars.php:62
-msgid "Sidebar Right"
-msgstr "Right sidebar"
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:42
-msgid "px"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:43
-msgid "em"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:44
-msgid "pt"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:45
-msgid "rem"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:59
-#: ../plugin-fw/templates/metaboxes/types/typography.php:153
-#: ../plugin-fw/templates/metaboxes/types/typography.php:217
-msgid "Web fonts"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:71
-msgid "Google fonts"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:96
-msgid "Regular"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:97
-msgid "Bold"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:98
-msgid "Extra bold"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:99
-msgid "Italic"
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/typography.php:100
-msgid "Italic bold"
+#: ../lib/class.yith-advanced-reviews-list-table.php:544
+msgid "No reviews found."
 msgstr ""
 
-#: ../plugin-options/general-options.php:21
+#: ../plugin-options/general-options.php:22
 msgid "General settings"
 msgstr ""
 
-#: ../plugin-options/general-options.php:26
+#: ../plugin-options/general-options.php:27
 msgid "Show title"
 msgstr ""
 
-#: ../plugin-options/general-options.php:28
-msgid "Add a title field on reviews."
-msgstr "Add a title field to reviews."
+#: ../plugin-options/general-options.php:29
+msgid "Add a title field in the reviews."
+msgstr ""
 
-#: ../plugin-options/general-options.php:33
+#: ../plugin-options/general-options.php:34
 msgid "Show attachments"
 msgstr ""
 
-#: ../plugin-options/general-options.php:35
-msgid "Append an attachment section on reviews."
+#: ../plugin-options/general-options.php:36
+msgid "Add an attachment section in the reviews."
 msgstr ""
 
-#: ../plugin-options/general-options.php:40
-msgid "Multiple attachments limit"
+#: ../plugin-options/general-options.php:41
+msgid "Multiple attachment limit"
 msgstr ""
 
-#: ../plugin-options/general-options.php:42
-msgid "Set maximum number of attachments selectable (0 = no limit)."
-msgstr "Set maximum number of attachments that can be selected (0 = no limit)."
+#: ../plugin-options/general-options.php:43
+msgid ""
+"Set the maximum number of attachments that can be selected (0 = no limit)."
+msgstr ""
+
+#: ../plugin-options/general-options.php:48
+msgid "Previous reviews"
+msgstr ""
+
+#: ../plugin-options/general-options.php:63
+msgid "Upgrade to the PREMIUM VERSION"
+msgstr ""
+
+#: ../plugin-options/general-options.php:67
+msgid "Discover Advanced Features"
+msgstr ""
+
+#: ../plugin-options/general-options.php:68
+msgid ""
+"Upgrade to the PREMIUM VERSION of YITH WOOCOMMERCE ADVANCED REVIEWS to "
+"benefit from all features!"
+msgstr ""
+
+#: ../plugin-options/general-options.php:72
+msgid ""
+"See the YITH WooCommerce Advanced Reviews plugin with full premium features "
+"in action"
+msgstr ""
+
+#: ../plugin-options/general-options.php:74
+msgid "Get Support and Pro Features"
+msgstr ""
+
+#: ../plugin-options/general-options.php:75
+msgid ""
+"By purchasing the premium version of the plugin, you will take advantage of "
+"the advanced features of the product and you will get one year of free "
+"updates and support through our platform available 24h/24."
+msgstr ""
 
 #: ../plugin-options/layout-options.php:21
-msgid "Reviews summary options"
-msgstr "Review summary options"
+msgid "Review summary options"
+msgstr ""
 
 #: ../plugin-options/layout-options.php:27
-msgid "Fixed bars color"
-msgstr "Fixed bar color"
+msgid "Background bar color"
+msgstr ""
 
 #: ../plugin-options/layout-options.php:34
-msgid "Percentage bars color"
-msgstr "Percentage bar color"
+msgid "Percentage bar color"
+msgstr ""
 
 #: ../plugin-options/layout-options.php:41
 msgid "Show percentage value"
@@ -1198,12 +459,12 @@ msgid "Allow user to upvote or downvote a review."
 msgstr ""
 
 #: ../plugin-options/premium-options.php:34
-msgid "Show people's votes"
-msgstr "Show review votes"
+msgid "Show review votes"
+msgstr ""
 
 #: ../plugin-options/premium-options.php:36
-msgid "Add a string stating how many people's found the review useful."
-msgstr "Add a string stating how many people found the review useful."
+msgid "Add a string stating how many people consider the review useful."
+msgstr ""
 
 #: ../plugin-options/premium-options.php:46
 msgid "Reviews settings"
@@ -1218,7 +479,7 @@ msgid "Limit how many reviews to show (0 for unlimited)."
 msgstr "Limit the number of reviews to display (0 for unlimited)."
 
 #: ../plugin-options/premium-options.php:61
-msgid "Show load more"
+msgid "Show the \"load more\" link"
 msgstr ""
 
 #: ../plugin-options/premium-options.php:63
@@ -1278,13 +539,315 @@ msgstr "Text to be shown in textual link or button."
 msgid "Load more"
 msgstr ""
 
-#: ../templates/ywar-single-product-reviews.php:6
-msgid "Customers reviews"
-msgstr "Customers' reviews"
+#: ../templates/ywar-product-reviews-table.php:18
+msgid "Product reviews"
+msgstr ""
 
-#: ../templates/ywar-single-product-reviews.php:18
+#: ../templates/ywar-product-reviews-table.php:24
+msgid "Search reviews"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:28
+#, php-format
+msgid "%s review for %s"
+msgid_plural "%s reviews for %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../templates/ywar-product-reviews.php:43
+msgid "There are no reviews yet."
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:56
+msgid "Add a review"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:56
+msgid "Be the first to review"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:57
+#, php-format
+msgid "Write a reply to %s"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:61
+msgid "Name"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:63
+msgid "Email"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:66
+msgid "Submit"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:71
+msgid "Your Review"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:82
+msgid ""
+"Only logged in customers who have purchased this product may write a review."
+msgstr ""
+
+#: ../templates/ywar-rating.php:29
+#, php-format
+msgid "out of %s5%s"
+msgstr ""
+
+#: ../templates/ywar-rating.php:30
+#, php-format
+msgid "based on %s customer rating"
+msgid_plural "based on %s customer ratings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../templates/ywar-rating.php:35
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../templates/ywar-review.php:50
+msgid "Your comment is waiting for approval"
+msgstr ""
+
+#: ../templates/ywar-review.php:59
+msgid "verified owner"
+msgstr ""
+
+#: ../templates/ywar-single-product-reviews.php:7
+msgid "Customers' reviews"
+msgstr ""
+
+#: ../templates/ywar-single-product-reviews.php:21
 #, php-format
 msgid "%s star"
 msgid_plural "%s stars"
 msgstr[0] ""
 msgstr[1] ""
+
+#~ msgid "This review is closed for replies"
+#~ msgstr "This review is closed to replies"
+
+#~ msgid "This review is closed for comments"
+#~ msgstr "This review is closed to comments"
+
+#~ msgid "Product id is in invalid format"
+#~ msgstr "Product id is an invalid format"
+
+#~ msgid "Voting/Reviews settings"
+#~ msgstr "Voting/Review settings"
+
+#~ msgid ""
+#~ "In the YIT Plugins tab you can find the YITH WooCommerce Advanced Reviews "
+#~ "options. With this menu, you can access to all the settings of our "
+#~ "plugins that you have activated."
+#~ msgstr ""
+#~ "In YIT Plugins tab you can find YITH WooCommerce Advanced Reviews "
+#~ "options. From this menu you can access all settings of YITH plugins "
+#~ "activated."
+
+#~ msgid ""
+#~ "From now on, you can find all the options of YITH WooCommerce Advanced "
+#~ "Reviews under YIT Plugin -> Advanced Reviews instead of WooCommerce -> "
+#~ "Settings -> Advanced Reviews, as in the previous version. When one of our "
+#~ "plugins updates, a new voice will be added to this menu."
+#~ msgstr ""
+#~ "From now on, you can find all YITH WooCommerce Advanced Reviews options "
+#~ "in YIT Plugin -> Advanced Reviews instead of WooCommerce -> Settings -> "
+#~ "Advanced Reviews, as in the previous version. Any time one of our plugins "
+#~ "is updated, a new entry will be added to this menu."
+
+#~ msgid "The layout for this "
+#~ msgstr "Layout for this "
+
+#~ msgid ""
+#~ "The word used for the URL of each project (the slug of post if empty)"
+#~ msgstr ""
+#~ "Univocal identification name in the URL for each product (slug from post "
+#~ "if empty)"
+
+#~ msgid "Label Singular"
+#~ msgstr "Label in Singular"
+
+#~ msgid ""
+#~ "Set the label in singular to use for each label (the title of portfolio "
+#~ "if empty)"
+#~ msgstr "Set a label in singular (title of portfolio if empty)"
+
+#~ msgid "Label Plural"
+#~ msgstr "Label in Plural"
+
+#~ msgid ""
+#~ "Set the label in plural to use for each label (the title of portfolio if "
+#~ "empty)"
+#~ msgstr "Set a label in plural (title of portfolio if empty)"
+
+#~ msgid ""
+#~ "If you want to use a category section for the portfolio, set the name of "
+#~ "taxonomy. Name should be in slug form (must not contain capital letters "
+#~ "or spaces) and not more than 32 characters long (database structure "
+#~ "restriction)."
+#~ msgstr ""
+#~ "If you want to use categories in the portfolio, set a name for taxonomy. "
+#~ "Name should be a slug (must not contain capital letters nor spaces) and "
+#~ "must not be more than 32 characters long (database structure restriction)."
+
+#~ msgid "Set the word to use in the URL for each category page."
+#~ msgstr "Set the word for each category page URL."
+
+#~ msgid "The layout for single page of this portfolio"
+#~ msgstr "Layout for single page of this portfolio"
+
+#~ msgid "Show the frontend of the %s"
+#~ msgstr "Show frontend of the %s"
+
+#~ msgid ""
+#~ "The changes you made will be lost if you navigate away from this page."
+#~ msgstr "The changes you made will be lost if you leave this page."
+
+#~ msgid ""
+#~ "If you continue with this action, you will reset all options are in this "
+#~ "page."
+#~ msgstr ""
+#~ "If you go on with this action, you will reset all options in this page."
+
+#~ msgid ""
+#~ "The element you have written is already exists. Please, add another name."
+#~ msgstr "This element already exists. Please, enter a different name."
+
+#~ msgid "An error encoured during during import. Please try again."
+#~ msgstr "An error has occurred during import. Please try again."
+
+#~ msgid "The file you have insert doesn't valid."
+#~ msgstr "The file inserted is not valid."
+
+#~ msgid "I'm sorry, the import featured is disabled."
+#~ msgstr "Sorry, import is disabled."
+
+#~ msgid "Sorting done correctly."
+#~ msgstr "Sorting successful."
+
+#~ msgid ""
+#~ "From now on, you can find all the options of your plugins under the YIT "
+#~ "Plugin menu voice.\n"
+#~ "                                     For every installation of our new "
+#~ "plugins, a new voice will be added to access to the customization "
+#~ "settings."
+#~ msgstr ""
+#~ "From now on, you can find all plugin options in YIT Plugin menu.\n"
+#~ "                                     For each plugin installed, "
+#~ "customization settings will be available as a new entry in YIT Plugin "
+#~ "menu."
+
+#~ msgid ""
+#~ "From now on, you can find all the options of your plugins under the YIT "
+#~ "Plugin menu voice.\n"
+#~ "                                    When one of our plugins updates, a "
+#~ "new voice will be added to this menu.\n"
+#~ "                                    For example, after the update, the "
+#~ "options from the plugins (YITH WooCommerce Wishlist, YITH WooCommerce "
+#~ "Ajax Search, etc.)\n"
+#~ "                                    will be removed from the previous "
+#~ "location and moved under the YIT Plugin tab."
+#~ msgstr ""
+#~ "From now on, you can find all the options of your plugins in YIT Plugin "
+#~ "menu.\n"
+#~ "                                    Any time one of our plugins is "
+#~ "updated, a new entry will be added to this menu.\n"
+#~ "                                    For example, after update, plugin "
+#~ "options (such for YITH WooCommerce Wishlist, YITH WooCommerce Ajax "
+#~ "Search, etc.)\n"
+#~ "                                    will be moved from previous location "
+#~ "to YIT Plugin tab."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox yit-changelog-button\" title=\"%3$s\">View version %4$s "
+#~ "details</a>. <em>You have to activate the plugin on a single site of the "
+#~ "network to benefit from the automatic updates.</em>"
+#~ msgstr ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox yit-changelog-button\" title=\"%3$s\">View version %4$s "
+#~ "details</a>. <em>You have to activate the plugin on a single site of the "
+#~ "network to benefit from automatic updates.</em>"
+
+#~ msgid "%field% field can not be empty"
+#~ msgstr "%field% field cannot be empty"
+
+#~ msgid "%field_1% and %field_2% fields can not be empty"
+#~ msgstr "%field_1% and %field_2% fields cannot be empty"
+
+#~ msgid "Software has been deactive"
+#~ msgstr "Software has been deactivated"
+
+#~ msgid "Licence key has be banned"
+#~ msgstr "Licence key has been banned"
+
+#~ msgid "To Active"
+#~ msgstr "Activation"
+
+#~ msgid "Insert the title of field."
+#~ msgstr "Insert title for the field."
+
+#~ msgid ""
+#~ "REQUIRED: The identification name of this field, that you can insert into "
+#~ "body email configuration. <strong>Note:</strong>Use only lowercase "
+#~ "characters and underscores."
+#~ msgstr ""
+#~ "REQUIRED: Field identification name to be entered into email body. "
+#~ "<strong>Note:</strong>Use only lowercase characters and underscores."
+
+#~ msgid "Select the type of this field."
+#~ msgstr "Select type for this field."
+
+#~ msgid "Select this if it's the email where you can reply."
+#~ msgstr "Select this if it is the email you can reply to."
+
+#~ msgid ""
+#~ "Insert an additional class(es) (separateb by comma) for more "
+#~ "personalization."
+#~ msgstr ""
+#~ "Insert additional class(es) (separated by commas) for more "
+#~ "personalization."
+
+#~ msgid "Choose how much long will be the field."
+#~ msgstr "Set field length."
+
+#~ msgid "The content of the tab. (HTML is supported)"
+#~ msgstr "Content of the tab. (HTML is supported)"
+
+#~ msgid "Sidebar Left"
+#~ msgstr "Left sidebar"
+
+#~ msgid "Sidebar Right"
+#~ msgstr "Right sidebar"
+
+#~ msgid "Add a title field on reviews."
+#~ msgstr "Add a title field to reviews."
+
+#~ msgid "Set maximum number of attachments selectable (0 = no limit)."
+#~ msgstr ""
+#~ "Set maximum number of attachments that can be selected (0 = no limit)."
+
+#~ msgid "Reviews summary options"
+#~ msgstr "Review summary options"
+
+#~ msgid "Fixed bars color"
+#~ msgstr "Fixed bar color"
+
+#~ msgid "Percentage bars color"
+#~ msgstr "Percentage bar color"
+
+#~ msgid "Show people's votes"
+#~ msgstr "Show review votes"
+
+#~ msgid "Add a string stating how many people's found the review useful."
+#~ msgstr "Add a string stating how many people found the review useful."
+
+#~ msgid "Customers reviews"
+#~ msgstr "Customers' reviews"

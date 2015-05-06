@@ -1,18 +1,18 @@
 === YITH WooCommerce Advanced Reviews ===
 
 Contributors: yithemes
-Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment, reviews rating
+Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment, amazon, amazon style, amazon reviews, review report, review reports, most voted reviews, best reviews
 Requires at least: 4.0
-Tested up to: 4.2
-Stable tag: 1.0.8
+Tested up to: 4.2.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Extends the basic functionality of woocommerce reviews, adding rating reviews summary for each product.
+Extends the basic functionality of woocommerce reviews and add a histogram table to the reviews of your products, as well as you see in most trendy e-commerce sites.
 
 == Description ==
 
-How many times you found yourself in front of an item you would like to buy, but you doubted it? You doubted about the possibility it could turn out to be a good product. And if it were not the right product for you?
+Add a histogram table to the reviews of your products, as well as you see in most trendy e-commerce sites, and give users the possibility to attach images to their reviews. Keep up-to-date about most trendy products thanks to the new options conceived to manage an advanced review system.
 
 = Detail, feedback and customisability in one plugin only =
 
@@ -23,6 +23,7 @@ Research states that other users' reviews are the primary information, together 
 
 = Main features =
 
+* Convert standard reviews in YITH WooCommerce Advanced Reviews new format.
 * Add rich snippets to the reviews.
 * Let your customers add a title when writing a product review.
 * Let you customers attach some image as attachment to the product review.
@@ -48,13 +49,21 @@ YITH WooCommerce Advanced Reviews will add a new tab called "Advanced Reviews" i
 
 == Screenshots ==
 
-1. This is the general setting page, you can find it in "YIT Plugins" menu item. There you can set if a title should be shown on comment submit form and on review content. You can also set if enable attachments and how many files the client is allowed to append.
-2. Customize the summary bar background, foreground and text color and if the percentage value must be shown inside the percentage bars.
-3. Submit form is extended to allow users to add a title and one or more attachments files.
-4. This is how an advanced review with additional title and attached thumbnail looks like.
-5. Review summary is shown before review list. It displays statistics about the rating chosen by users submitting reviews.
+1. This is the general setting page, you can find it in "YIT Plugins" menu item. There you can set if a title should be shown on review submit form and on review content. You can also set if enable attachments and how many files the client is allowed to append.
+2. Convert all previously created reviews to YITH WooCommerce Advanced Reviews format, without losing any data.
+3. Customize the summary bar background, foreground and text color and if the percentage value must be shown inside the percentage bars.
+4. Manage all reviews from a dedicated page.
+5. Order reviews by rating from highest to lowest, and vice versa.
+6. Edit reviews with bulk actions.
+7. Submit form is extended to allow users to add a title and one or more attachments files.
+8. This is how an advanced review with additional title and attached thumbnail looks like.
+9. Review summary is shown before review list. It displays statistics about the rating chosen by users submitting reviews.
 
 == Frequently Asked Questions ==
+
+* What happens to the already available reviews if I activate your plugin?
+
+All the already available reviews of the system are easily convertible in the YITH WooCommerce Advanced Reviews format with the specific feature.
 
 * Can I upgrade free version plugin to premium?
 
@@ -73,6 +82,12 @@ Of course, you can overwrite templates and add features through the specific hoo
 You can customize some visual attribute from the plugin option. For better integration, you can both overwrite the template and customize the look and feel writing your own CSS rules.
 
 == Changelog ==
+
+= Version 1.1.0 - RELEASED: MAY 06 , 2015 =
+
+* Added: advanced reviews custom post type.
+* Added: check the review status from a single page.
+* Added: filter the reviews by status or update the status with bulk actions
 
 = Version 1.0.8 - RELEASED: APR 14, 2015 =
 
@@ -119,7 +134,7 @@ You can customize some visual attribute from the plugin option. For better integ
 
 == Upgrade Notice ==
 
-Last Stable Tag 1.0.8 - Released on Apr 18, 2015
+Last Stable Tag 1.1.0 - Released on May 06, 2015
 
 == Suggestions ==
 

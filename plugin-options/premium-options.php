@@ -31,9 +31,9 @@ return array(
 			'default'           => 'yes'
 		),
 		'vote_system_show_peoples_choice'  => array(
-			'name'              => __( 'Show people\'s votes', 'ywar' ),
+			'name'              => __( 'Show review votes', 'ywar' ),
 			'type'              => 'checkbox',
-			'desc'              => __( 'Add a string stating how many people\'s found the review useful.', 'ywar' ),
+			'desc'              => __( 'Add a string stating how many people consider the review useful.', 'ywar' ),
 			'id'                => 'ywar_show_peoples_vote',
 			'custom_attributes' => $custom_attributes,
 			'default'           => 'yes'
@@ -58,7 +58,7 @@ return array(
 			'default'           => '0'
 		),
 		'show_load_more'                   => array(
-			'name'              => __( 'Show load more', 'ywar' ),
+			'name'              => __( 'Show the "load more" link', 'ywar' ),
 			'type'              => 'select',
 			'desc'              => __( 'Choose to show a textual link or a button to load additionally reviews.', 'ywar' ),
 			'id'                => 'ywar_show_load_more',

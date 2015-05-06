@@ -11,6 +11,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } // Exit if accessed directly
+
 global $YWAR_AdvancedReview;
 
 $general_options = array(
@@ -25,23 +26,29 @@ $general_options = array(
 		'review_settings_enable_title'      => array(
 			'name'    => __( 'Show title', 'ywar' ),
 			'type'    => 'checkbox',
-			'desc'    => __( 'Add a title field on reviews.', 'ywar' ),
+			'desc'    => __( 'Add a title field in the reviews.', 'ywar' ),
 			'id'      => 'ywar_enable_review_title',
 			'default' => 'yes'
 		),
 		'review_settings_enable_attachment' => array(
 			'name'    => __( 'Show attachments', 'ywar' ),
 			'type'    => 'checkbox',
-			'desc'    => __( 'Append an attachment section on reviews.', 'ywar' ),
+			'desc'    => __( 'Add an attachment section in the reviews.', 'ywar' ),
 			'id'      => 'ywar_enable_attachments',
 			'default' => 'yes'
 		),
 		'review_settings_attachment_limit'  => array(
 			'name'    => __( 'Multiple attachment limit', 'ywar' ),
 			'type'    => 'number',
-			'desc'    => __( 'Set maximum number of attachments selectable (0 = no limit).', 'ywar' ),
+			'desc'    => __( 'Set the maximum number of attachments that can be selected (0 = no limit).', 'ywar' ),
 			'id'      => 'ywar_max_attachments',
 			'default' => '0'
+		),
+		'review_settings_import'      => array(
+			'name'    => __( 'Previous reviews', 'ywar' ),
+			'type'    => 'ywar_import_previous_reviews',
+			'id'      => 'ywar_import_review',
+			'default' => 'yes'
 		),
 		'section_general_settings_end'      => array(
 			'type' => 'sectionend',
