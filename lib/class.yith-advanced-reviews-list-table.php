@@ -24,7 +24,6 @@ if ( ! class_exists( 'YITH_Advanced_Reviews_List_Table' ) ) {
 	 *
 	 */
 	class YITH_Advanced_Reviews_List_Table extends WP_List_Table {
-
 		/**
 		 * @var object store the Advanced reviews class object, used as shortcut to full singleton name
 		 */
@@ -210,6 +209,19 @@ if ( ! class_exists( 'YITH_Advanced_Reviews_List_Table' ) ) {
 		 */
 		public function process_bulk_action() {
 			switch ( $this->current_action() ) {
+
+				case 'untrash' :
+					foreach ( $_GET['reviews'] as $review_id ) {
+						$my_post = array(
+							'ID'          => $review_id,
+							'post_status' => 'publish'
+						);
+
+						// Update the post into the database
+						wp_update_post( $my_post );
+					}
+
+					break;
 
 				case 'trash' :
 					foreach ( $_GET['reviews'] as $review_id ) {
