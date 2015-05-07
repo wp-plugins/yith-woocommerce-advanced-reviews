@@ -4,7 +4,7 @@ global $product;
 ?>
 
 <div id="reviews_summary">
-	<h3><?php _e( 'Customers\' reviews', 'ywar' ) ?></h3>
+	<h3><?php _e( 'Customers\' review', 'ywar' ) ?></h3>
 
 	<?php do_action( 'ywar_summary_prepend', $product ) ?>
 

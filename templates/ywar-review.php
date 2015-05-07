@@ -1,6 +1,6 @@
 <?php
 /**
- * Review Comments Template
+ * Advanced Review Template
  *
  * Closing li is left out on purpose!
  *

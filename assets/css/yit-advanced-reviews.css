@@ -424,30 +424,6 @@ div.reply {
     border: none;
 }
 
-#tab-reviews a.comment-reply-link {
-
-}
-
-#tab-reviews a.comment-reply-link:hover {
-
-}
-
-#tab-reviews a.ywar_show_more.ywar_button {
-}
-
-#tab-reviews a.ywar_show_more.ywar_button:hover {
-
-}
-
-#tab-reviews a.stop-reply,
-#tab-reviews a.open-reply {
-}
-
-#tab-reviews a.stop-reply:hover,
-#tab-reviews a.open-reply:hover {
-
-}
-
 #review_form_wrapper {
     margin-top: 35px;
 }

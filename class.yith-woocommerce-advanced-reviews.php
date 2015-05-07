@@ -357,6 +357,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 
 				case "admin_action_{$this->unapprove_review_action}" :
 					update_post_meta( $review_id, $this->meta_key_approved, 0 );
+
 					break;
 
 				case "admin_action_{$this->untrash_review_action}" :
@@ -367,9 +368,10 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 
 					// Update the post into the database
 					wp_update_post( $my_post );
-					break;
 
+					break;
 			}
+
 			wp_redirect( esc_url_raw( remove_query_arg( array( 'action', 'action2' ), $_SERVER['HTTP_REFERER'] ) ) );
 		}
 
@@ -898,7 +900,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 				'review'   => $review,
 				'featured' => $featured,
 				'classes'  => $classes
-			), YITH_YWAR_TEMPLATES_DIR, YITH_YWAR_TEMPLATES_DIR );
+			), '', YITH_YWAR_TEMPLATES_DIR );
 		}
 
 		//endregion
