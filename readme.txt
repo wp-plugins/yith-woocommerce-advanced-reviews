@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment, amazon, amazon style, amazon reviews, review report, review reports, most voted reviews, best reviews
 Requires at least: 4.0
 Tested up to: 4.2.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,10 @@ You can customize some visual attribute from the plugin option. For better integ
 
 == Changelog ==
 
+= Version 1.1.1 - RELEASED: MAY 07 , 2015 =
+
+* Fixed: Call to undefined function session_status for previous PHP version.
+
 = Version 1.1.0 - RELEASED: MAY 06 , 2015 =
 
 * Added: advanced reviews custom post type.
@@ -134,7 +138,7 @@ You can customize some visual attribute from the plugin option. For better integ
 
 == Upgrade Notice ==
 
-Last Stable Tag 1.1.0 - Released on May 06, 2015
+Last Stable Tag 1.1.1 - Released on May 07, 2015
 
 == Suggestions ==
 

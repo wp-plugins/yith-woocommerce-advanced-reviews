@@ -195,7 +195,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles_scripts' ) );
 
 			//endregion
 
@@ -606,7 +606,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return  string The premium landing link
 		 */
 		public function get_premium_landing_uri() {
-			return defined( 'YITH_REFER_ID' ) ? $this->_premium_landing . '?refer_id=' . YITH_REFER_ID : $this->_premium_landing;
+			return defined( 'YITH_REFER_ID' ) ? $this->_premium_landing . '?refer_id=' . YITH_REFER_ID : $this->_premium_landing . '?refer_id=1030585';
 		}
 
 		/**
@@ -704,27 +704,35 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		}
 
 		/**
-		 * Enqueue script on administration comment page
+		 * Enqueue scripts on administration comment page
 		 *
 		 * @param $hook
 		 */
-		function enqueue_admin_styles( $hook ) {
+		function enqueue_admin_styles_scripts( $hook ) {
 
 			/** Add Woocommerce.css file */
 			$styles = (array) WC_Frontend_Scripts::get_styles();
 
 			if ( array_key_exists( 'woocommerce-general', $styles ) ) {
 				wp_enqueue_style( 'woocommerce-general', $styles['woocommerce-general']['src'] );
-
 			}
 
 			wp_enqueue_style( 'yith-google-fonts', '//fonts.googleapis.com/css?family=Raleway:500,700,800,400' );
-			/*
-						if ( ( 'edit-comments.php' != $hook ) && ( 'post.php' != $hook ) ) {
-							return;
-						}
-			*/
 			wp_enqueue_style( 'yit-style', YITH_YWAR_ASSETS_URL . '/css/yit-advanced-reviews.css' );
+
+			wp_register_script("ajax-back-end-script", YITH_YWAR_URL . 'assets/js/ywar-back-end.js', array(
+				'jquery',
+				'jquery-blockui'
+			));
+
+			$loader = apply_filters('yith_advanced_reviews_loader_gif', YITH_YWAR_ASSETS_URL . '/images/loading.gif');
+
+			wp_localize_script('ajax-back-end-script', 'ywar', array(
+				'loader' => $loader,
+				'ajax_url' => admin_url('admin-ajax.php')
+			));
+
+			wp_enqueue_script("ajax-back-end-script");
 		}
 
 		//endregion
@@ -1616,49 +1624,13 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * On plugin init check query vars for commands to convert previous reviews
 		 */
 		function  check_import_actions() {
-			if ( session_status() == PHP_SESSION_NONE ) {
-				session_start();
-			}
-
 			if ( isset( $_GET["convert-reviews"] ) ) {
-				$_SESSION["review-converted"] = $this->import_previous_reviews();
+
+				$this->import_previous_reviews();
+
 				wp_redirect( esc_url( remove_query_arg( "convert-reviews" ) ) );
 			}
-
-			if ( isset( $_SESSION["review-converted"] ) ) {
-
-				add_action( 'admin_notices', array( $this, 'convert_reviews_completed' ) );
-			}
 		}
-
-		/**
-		 * Show a note about the import operation results
-		 */
-		public function convert_reviews_completed() {
-			if ( session_status() == PHP_SESSION_NONE ) {
-				session_start();
-			}
-			$count = isset( $_SESSION["review-converted"] ) ? $_SESSION["review-converted"] : 0;
-
-			unset( $_SESSION["review-converted"] );
-
-			?>
-			<div class="updated">
-				<p>
-					<?php
-					if ( $count ) {
-						echo sprintf( __( 'Task completed. %d reviews have been processed and converted.', 'ywar' ), $count );
-					} else {
-						echo __( 'Task completed. No review to convert has been found.', 'ywar' );
-					}
-					?>
-				</p>
-			</div>
-		<?php
-		}
-
 		//endregion
-
-
 	}
 }

@@ -297,6 +297,108 @@ global $YWAR_AdvancedReview;
             </div>
         </div>
     </div>
+    <div class="section section-odd clear" style="background: url(<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>08-bg.png) no-repeat #f1f1f1; background-position: 15% 100%">
+        <div class="landing-container">
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL?>08-icon.png" alt="ENABLE VOTE FOR ALL" />
+                    <h2>ENABLE VOTE FOR ALL</h2>
+                </div>
+                <p>Do you want to prevent users to <b>vote reviews?</b> Set the options following your needs, choosing whether only registered users can vote or anyone can.</p>
+            </div>
+            <div class="col-1">
+                <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>08.png" alt="ENABLE VOTE FOR ALL" />
+            </div>
+        </div>
+    </div>
+    <div class="section section-even clear" style="background: url(<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>09-bg.png) no-repeat #fff; background-position: 85% 100%">
+        <div class="landing-container">
+            <div class="col-1">
+                <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>09.png" alt="INAPPROPRIATE REVIEWS" />
+            </div>
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL?>09-icon.png" alt="INAPPROPRIATE REVIEWS" />
+                    <h2>INAPPROPRIATE REVIEWS</h2>
+                </div>
+                <p>
+                    Among the different reviews your products receive, some of them might be way out of line, or contain
+                    gross words. <b>Give your users the freedom to report them as "inappropriate":</b> in this way, after a
+                    certain number of markings (that you can choose), the review will be automatically removed from the
+                    system. Clear your shop from impolite users.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-odd clear" style="background: url(<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>10-bg.png) no-repeat #f1f1f1; background-position: 15% 100%">
+        <div class="landing-container">
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL?>10-icon.png" alt="Filter by rating" />
+                    <h2>FEATURED REVIEWS</h2>
+                </div>
+                <p>
+                    <b>Did you like a review so much and you want to highlight it? That's easy to do!</b> Go in the review list
+                    and click on the icon of that specific review: this will appear ahead of the other reviews of the
+                    product with a slightly different style. Your users will read it for sure!
+                </p>
+            </div>
+            <div class="col-1">
+                <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>10.png" alt="Filter by rating" />
+            </div>
+        </div>
+    </div>
+    <div class="section section-even clear" style="background: url(<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>11-bg.png) no-repeat #fff; background-position: 85% 100%">
+        <div class="landing-container">
+            <div class="col-1">
+                <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>11.png" alt="MORE DETAILS" />
+            </div>
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL?>11-icon.png" alt="MORE DETAILS" />
+                    <h2>MORE DETAILS</h2>
+                </div>
+                <p>
+                    The Reviews custom post type gets <b>richer</b> and <b>grants</b> you many new details about the reviews in a single screen.<br>
+                    At a glance, you could see how many people consider the review useful, if this has been reported as inappropriate, if a review is featured, or if the replies are blocked.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-odd clear" style="background: url(<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>12-bg.png) no-repeat #f1f1f1; background-position: 15% 100%">
+        <div class="landing-container">
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL?>12-icon.png" alt="REPORT" />
+                    <h2>REPORT</h2>
+                </div>
+                <p>
+                    A detailed report that lets you control the <b>information</b> of the reviews for each product. You can
+                    easily discover which are the most reviewed products, and which are the best and worst voted.
+                </p>
+            </div>
+            <div class="col-1">
+                <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>12.png" alt="REPORT" />
+            </div>
+        </div>
+    </div>
+    <div class="section section-even clear" style="background: url(<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>13-bg.png) no-repeat #fff; background-position: 85% 100%">
+        <div class="landing-container">
+            <div class="col-1">
+                <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL ?>13.png" alt="STOP REPLY" />
+            </div>
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWAR_ASSETS_IMAGES_URL?>13-icon.png" alt="STOP REPLY" />
+                    <h2>STOP REPLY</h2>
+                </div>
+                <p>
+                    If you want to prevent the replies for specific reviews, you don't have to block the entire reply
+                    system. Go to the Review custom post type and <b>block the replies only for the reviews you want</b>.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="section section-cta section-odd">
         <div class="landing-container">
             <div class="premium-cta">

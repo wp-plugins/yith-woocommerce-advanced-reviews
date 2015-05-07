@@ -89,7 +89,7 @@ jQuery(document).ready(function ($) {
         // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
         $.post(ywar.ajax_url, data, function (response) {
             $("span.converted-items").remove();
-            $("div.convert-reviews").append('<span class="converted-items">' + response.value + '</span>');
+            $("div.convert-reviews").append('<div class="converted-items"><span class="converted-items">' + response.value + '</span></div>');
 
             clicked_item.unblock();
         });
