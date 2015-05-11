@@ -930,7 +930,8 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		public function show_advanced_reviews_template( $template ) {
 
 			if ( get_post_type() === 'product' ) {
-				return apply_filters( 'ywar_show_advanced_reviews_template', YITH_YWAR_TEMPLATES_DIR . "ywar-product-reviews.php" );
+				//  return apply_filters( 'ywar_show_advanced_reviews_template', YITH_YWAR_TEMPLATES_DIR . "ywar-product-reviews.php" );
+				return wc_locate_template( "ywar-product-reviews.php", '', YITH_YWAR_TEMPLATES_DIR );
 			}
 
 			return $template;
@@ -1053,7 +1054,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			}
 
 			if ( $this->enable_title ) {
-				echo '<p class="comment-form-title"><label for="title">' . __( 'Title', 'ywar' ) . '</label><input type="text" name="title" id="title"/></p>';
+				echo '<p class="comment-form-title"><label for="title">' . __( 'Review title', 'ywar' ) . '</label><input type="text" name="title" id="title"/></p>';
 			}
 		}
 
@@ -1193,25 +1194,23 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @since  1.0
 		 * @author Lorenzo giuffrida
 		 */
-		public function show_expanded_review_content( $text ) {
+		public function show_expanded_review_content( $review ) {
 
 			if ( ! is_product() && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
-				return $text;
+				return $review->post_content;
 			}
 
-			global $ywar_review;
-
 			$review_title  = '';
-			$thumbnail_div = $this->get_thumbnails( $ywar_review );
+			$thumbnail_div = $this->get_thumbnails( $review );
 
 			if ( $this->enable_title ) {
 				//  Add review title before review content text
-				if ( ! empty( $ywar_review->post_title ) ) {
-					$review_title = '<span class="review_title"> ' . esc_attr( $ywar_review->post_title ) . '</span> ';
+				if ( ! empty( $review->post_title ) ) {
+					$review_title = '<span class="review_title"> ' . esc_attr( $review->post_title ) . '</span> ';
 				}
 			}
 
-			return $review_title . $text . $thumbnail_div;
+			return $review_title . $review->post_content . $thumbnail_div;
 		}
 
 		/**
@@ -1285,7 +1284,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 				'total' => count( $this->get_product_reviews_by_rating( $product->id ) )
 			);
 
-			wc_get_template( 'ywar-single-product-reviews.php', null, YITH_YWAR_TEMPLATES_DIR, YITH_YWAR_TEMPLATES_DIR );
+			wc_get_template( 'ywar-single-product-reviews.php', null, '', YITH_YWAR_TEMPLATES_DIR );
 		}
 
 		/**
@@ -1442,13 +1441,17 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		//endregion
 
 		public function  wc_get_template( $located, $template_name, $args, $template_path, $default_path ) {
-
 			if ( "single-product/rating.php" != $template_name ) {
 				return $located;
 			}
 
-			//return wc_get_template( 'ywar-rating.php', null, YITH_YWAR_TEMPLATES_DIR, YITH_YWAR_TEMPLATES_DIR );
-			return apply_filters( 'yith_advanced_reviews_rating_template', YITH_YWAR_TEMPLATES_DIR . "ywar-rating.php" );
+			$located = wc_locate_template( "ywar-rating.php", $template_path, $default_path );
+
+			if ( file_exists( $located ) ) {
+				return $located;
+			}
+
+			return YITH_YWAR_TEMPLATES_DIR . 'ywar-rating.php';
 		}
 
 		public function get_product_rating_html( $rating_html, $rating ) {

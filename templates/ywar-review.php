@@ -19,7 +19,6 @@ $product_id = $YWAR_AdvancedReview->get_meta_value_product_id( $review->ID );
 $review_date = mysql2date( get_option( 'date_format' ), $review->post_date );
 $user        = get_userdata( $review->post_author );
 $author_name = $user ? $user->display_name : __( 'Anonymous', 'ywar' );
-
 ?>
 
 <?php apply_filters( 'yith_advanced_reviews_before_review', $review ); ?>
@@ -30,8 +29,7 @@ $author_name = $user ? $user->display_name : __( 'Anonymous', 'ywar' );
 
 		<?php if ( $user ):
 			echo get_avatar( $user->ID, apply_filters( 'woocommerce_review_gravatar_size', '60' ), '', $user->user_email );
-		endif;
-		?>
+		endif; ?>
 
 		<div class="comment-text">
 
@@ -69,7 +67,7 @@ $author_name = $user ? $user->display_name : __( 'Anonymous', 'ywar' );
 			<?php endif; ?>
 
 			<div itemprop="description" class="description">
-				<p><?php echo apply_filters( 'yith_advanced_reviews_review_content', $review->post_content ); ?></p>
+				<p><?php echo apply_filters( 'yith_advanced_reviews_review_content', $review ); ?></p>
 			</div>
 		</div>
 	</div>

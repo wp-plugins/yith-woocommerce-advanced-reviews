@@ -3,12 +3,12 @@
 Contributors: yithemes
 Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment, amazon, amazon style, amazon reviews, review report, review reports, most voted reviews, best reviews
 Requires at least: 4.0
-Tested up to: 4.2.1
-Stable tag: 1.1.1
+Tested up to: 4.2.2
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Extends the functionality of woocommerce reviews and add a histogram table to the reviews of your products, as well as in most trendy e-commerce sites.
+Extends the basic functionality of woocommerce reviews and add a histogram table to the reviews of your products, as well as you see in most trendy e-commerce sites.
 
 == Description ==
 
@@ -83,6 +83,10 @@ You can customize some visual attribute from the plugin option. For better integ
 
 == Changelog ==
 
+= Version 1.1.2 - RELEASED: MAY 11 , 2015 =
+
+* New: Custom template are fully overwritable from theme files.
+
 = Version 1.1.1 - RELEASED: MAY 07 , 2015 =
 
 * Fixed: Call to undefined function session_status for previous PHP version.
@@ -138,7 +142,7 @@ You can customize some visual attribute from the plugin option. For better integ
 
 == Upgrade Notice ==
 
-Last Stable Tag 1.1.1 - Released on May 07, 2015
+Last Stable Tag 1.1.2 - Released on May 11, 2015
 
 == Suggestions ==
 

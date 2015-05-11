@@ -20,7 +20,6 @@ $reviews_count = count( $YWAR_AdvancedReview->get_product_reviews_by_rating( $pr
 ?>
 
 <?php do_action( 'yith_advanced_reviews_before_reviews' ); ?>
-
 <div id="reviews">
 	<div id="comments">
 		<h2><?php
@@ -71,7 +70,6 @@ $reviews_count = count( $YWAR_AdvancedReview->get_product_reviews_by_rating( $pr
 				$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . __( 'Your Review', 'ywar' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
 
 				$comment_form['comment_field'] .= '<input type="hidden" name="action" value="submit-form" />';
-
 				comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
 				?>
 			</div>
