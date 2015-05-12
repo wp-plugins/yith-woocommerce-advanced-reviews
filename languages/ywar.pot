@@ -1,0 +1,851 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YIT WooCommerce Advanced Reviews\n"
+"POT-Creation-Date: 2015-05-11 14:27+0100\n"
+"PO-Revision-Date: 2015-05-11 14:28+0100\n"
+"Last-Translator: \n"
+"Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../plugin-fw\n"
+
+#: ../class.yith-woocommerce-advanced-reviews.php:303
+#: ../class.yith-woocommerce-advanced-reviews.php:304
+#: ../class.yith-woocommerce-advanced-reviews.php:306
+#: ../class.yith-woocommerce-advanced-reviews.php:752
+#: ../templates/ywar-product-reviews.php:29
+msgid "Reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:455
+msgid "Approve review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:455
+msgid "Approve"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:457
+msgid "Unapprove review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:457
+msgid "Unapprove"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:492
+#: ../class.yith-woocommerce-advanced-reviews.php:1465
+#: ../templates/ywar-rating.php:25
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:495
+msgid " review"
+msgid_plural " reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:495
+msgid "out of 5 stars"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:536
+msgid "Plugin Documentation"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:557
+msgid "Settings"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:560
+#: ../class.yith-woocommerce-advanced-reviews.php:637
+msgid "Premium Version"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:573
+msgid ""
+"YITH WooCommerce Advanced Reviews is available in an outstanding PREMIUM "
+"version with many new options, discover it now."
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:574
+msgid "Premium version"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:581
+#: ../class.yith-woocommerce-advanced-reviews.php:593
+#: ../plugin-options/general-options.php:66
+msgid "YITH WooCommerce Advanced Reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:582
+msgid ""
+"In YIT Plugins tab you can find YITH WooCommerce Advanced Reviews options. "
+"From this menu you can access all settings of YITH plugins activated."
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:594
+msgid ""
+"From now on, you can find all YITH WooCommerce Advanced Reviews options in "
+"YIT Plugin -> Advanced Reviews instead of WooCommerce -> Settings -> "
+"Advanced Reviews, as in the previous version. Any time one of our plugins is "
+"updated, a new entry will be added to this menu."
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:630
+msgid "General"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:631
+msgid "Layout"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:635
+msgid "Voting/Review settings"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:643
+#: ../class.yith-woocommerce-advanced-reviews.php:644
+msgid "Advanced Reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:750
+msgctxt "Post Type General Name"
+msgid "Reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:751
+msgctxt "Post Type Singular Name"
+msgid "Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:753
+msgid "Parent Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:754
+msgid "All reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:755
+msgid "View review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:756
+msgid "Add New Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:757
+msgid "Add New"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:758
+msgid "Edit Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:759
+msgid "Update Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:760
+msgid "Search Review"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:761
+msgid "Not Found"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:762
+msgid "Not found in bin"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:768
+msgid "YIT Product reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:769
+msgid "Advanced WooCommerce product reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1057
+msgid "Review title"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1159
+msgid "Your Rate"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1161
+msgid "Rate&hellip;"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1162
+msgid "Perfect"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1163
+msgid "Good"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1164
+msgid "Average"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1165
+msgid "Not that bad"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1166
+msgid "Very Poor"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1173
+msgid "Attachments"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1174
+msgid "Choose file(s)"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1255
+#, php-format
+msgid "Reviews(%d)"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1299
+msgid "Review attributes"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1467
+#: ../lib/class.yith-advanced-reviews-list-table.php:463
+#: ../templates/ywar-review.php:41
+msgid "out of 5"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1497
+msgid "Convert reviews"
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1500
+msgid ""
+"If this is the first time you install the YITH Advanced Reviews plugin, or "
+"if you are using an older version prior to the 1.1.0, first you have to "
+"convert the older reviews if you want to use them."
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1520
+#, php-format
+msgid "Task completed. %d reviews have been processed and converted."
+msgstr ""
+
+#: ../class.yith-woocommerce-advanced-reviews.php:1522
+msgid "Task completed. No review to convert has been found."
+msgstr ""
+
+#: ../init.php:22
+msgid ""
+"YITH WooCommerce Advanced Reviews is enabled but not effective. It requires "
+"WooCommerce in order to work."
+msgstr ""
+
+#: ../init.php:36
+msgid ""
+"You can't activate the free version of YITH WooCommerce Advanced Reviews "
+"while you are using the premium one."
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:58
+msgid "Review"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:59
+msgid "Author"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:60
+msgid "Date"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:61
+msgid "Rate"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:62
+msgid "Product"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:352
+#: ../lib/class.yith-advanced-reviews-list-table.php:442
+msgid "Restore"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:353
+msgid "Move to bin"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:355
+#: ../lib/class.yith-advanced-reviews-list-table.php:447
+msgid "Delete permanently"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:356
+msgid "Approve reviews"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:357
+msgid "Unapprove reviews"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:370
+msgid "All"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:371
+#: ../lib/class.yith-advanced-reviews-list-table.php:444
+msgid "Bin"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:372
+msgid "Not approved"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:462
+#: ../templates/ywar-review.php:39
+#, php-format
+msgid "Rated %d out of 5"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:477
+msgid "Edit"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:480
+msgid "View"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:486
+#: ../templates/ywar-review.php:21
+msgid "Anonymous"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:492
+msgid "Y/m/d g:i:s a"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:499
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:501
+msgid "Y/m/d"
+msgstr ""
+
+#: ../lib/class.yith-advanced-reviews-list-table.php:538
+msgid "No reviews found."
+msgstr ""
+
+#: ../plugin-options/general-options.php:22
+msgid "General settings"
+msgstr ""
+
+#: ../plugin-options/general-options.php:27
+msgid "Show title"
+msgstr ""
+
+#: ../plugin-options/general-options.php:29
+msgid "Add a title field in the reviews."
+msgstr ""
+
+#: ../plugin-options/general-options.php:34
+msgid "Show attachments"
+msgstr ""
+
+#: ../plugin-options/general-options.php:36
+msgid "Add an attachment section in the reviews."
+msgstr ""
+
+#: ../plugin-options/general-options.php:41
+msgid "Multiple attachment limit"
+msgstr ""
+
+#: ../plugin-options/general-options.php:43
+msgid ""
+"Set the maximum number of attachments that can be selected (0 = no limit)."
+msgstr ""
+
+#: ../plugin-options/general-options.php:48
+msgid "Previous reviews"
+msgstr ""
+
+#: ../plugin-options/general-options.php:63
+msgid "Upgrade to the PREMIUM VERSION"
+msgstr ""
+
+#: ../plugin-options/general-options.php:67
+msgid "Discover Advanced Features"
+msgstr ""
+
+#: ../plugin-options/general-options.php:68
+msgid ""
+"Upgrade to the PREMIUM VERSION of YITH WOOCOMMERCE ADVANCED REVIEWS to "
+"benefit from all features!"
+msgstr ""
+
+#: ../plugin-options/general-options.php:72
+msgid ""
+"See the YITH WooCommerce Advanced Reviews plugin with full premium features "
+"in action"
+msgstr ""
+
+#: ../plugin-options/general-options.php:74
+msgid "Get Support and Pro Features"
+msgstr ""
+
+#: ../plugin-options/general-options.php:75
+msgid ""
+"By purchasing the premium version of the plugin, you will take advantage of "
+"the advanced features of the product and you will get one year of free "
+"updates and support through our platform available 24h/24."
+msgstr ""
+
+#: ../plugin-options/layout-options.php:21
+msgid "Review summary options"
+msgstr ""
+
+#: ../plugin-options/layout-options.php:27
+msgid "Background bar color"
+msgstr ""
+
+#: ../plugin-options/layout-options.php:34
+msgid "Percentage bar color"
+msgstr ""
+
+#: ../plugin-options/layout-options.php:41
+msgid "Show percentage value"
+msgstr ""
+
+#: ../plugin-options/layout-options.php:43
+msgid "Show % value on percentage bars."
+msgstr ""
+
+#: ../plugin-options/layout-options.php:48
+msgid "Percentage value color"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:21
+msgid "Voting system"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:26
+msgid "Show vote section"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:28
+msgid "Allow user to upvote or downvote a review."
+msgstr ""
+
+#: ../plugin-options/premium-options.php:34
+msgid "Show review votes"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:36
+msgid "Add a string stating how many people consider the review useful."
+msgstr ""
+
+#: ../plugin-options/premium-options.php:46
+msgid "Reviews settings"
+msgstr "Review settings"
+
+#: ../plugin-options/premium-options.php:52
+msgid "How many reviews to show"
+msgstr "Number of reviews to display"
+
+#: ../plugin-options/premium-options.php:54
+msgid "Limit how many reviews to show (0 for unlimited)."
+msgstr "Limit the number of reviews to display (0 for unlimited)."
+
+#: ../plugin-options/premium-options.php:61
+msgid "Show the \"load more\" link"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:63
+msgid "Choose to show a textual link or a button to load additionally reviews."
+msgstr ""
+"Decide whether to show a textual link or a button to load additional reviews."
+
+#: ../plugin-options/premium-options.php:66
+msgid "Don't show"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:67
+msgid "Show textual link"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:68
+msgid "Show button"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:75
+msgid "Modal window"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:77
+msgid "Show reviews filtered by users rating in a modal window."
+msgstr "Display reviews filtered by rating in a modal window."
+
+#: ../plugin-options/premium-options.php:84
+msgid "Reply to review"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:86
+msgid "Choose who can reply to a review."
+msgstr "Choose users who can reply to a review."
+
+#: ../plugin-options/premium-options.php:89
+msgid "No one can reply"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:90
+msgid "Only administrators can reply"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:91
+msgid "Everyone can reply"
+msgstr ""
+
+#: ../plugin-options/premium-options.php:98
+msgid "Load more text"
+msgstr "\"Load more\" text"
+
+#: ../plugin-options/premium-options.php:100
+msgid "Text to show inside textual link or button."
+msgstr "Text to be shown in textual link or button."
+
+#: ../plugin-options/premium-options.php:104
+msgid "Load more"
+msgstr ""
+
+#: ../templates/ywar-product-reviews-table.php:18
+msgid "Product reviews"
+msgstr ""
+
+#: ../templates/ywar-product-reviews-table.php:24
+msgid "Search reviews"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:27
+#, php-format
+msgid "%s review for %s"
+msgid_plural "%s reviews for %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../templates/ywar-product-reviews.php:42
+msgid "There are no reviews yet."
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:55
+msgid "Add a review"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:55
+msgid "Be the first to review"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:56
+#, php-format
+msgid "Write a reply to %s"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:60
+msgid "Name"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:62
+msgid "Email"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:65
+msgid "Submit"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:70
+msgid "Your Review"
+msgstr ""
+
+#: ../templates/ywar-product-reviews.php:80
+msgid ""
+"Only logged in customers who have purchased this product may write a review."
+msgstr ""
+
+#: ../templates/ywar-rating.php:28
+#, php-format
+msgid "out of %s5%s"
+msgstr ""
+
+#: ../templates/ywar-rating.php:29
+#, php-format
+msgid "based on %s customer rating"
+msgid_plural "based on %s customer ratings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../templates/ywar-rating.php:34
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../templates/ywar-review.php:48
+msgid "Your comment is waiting for approval"
+msgstr ""
+
+#: ../templates/ywar-review.php:57
+msgid "verified owner"
+msgstr ""
+
+#: ../templates/ywar-single-product-reviews.php:7
+msgid "Customers' review"
+msgstr ""
+
+#: ../templates/ywar-single-product-reviews.php:21
+#, php-format
+msgid "%s star"
+msgid_plural "%s stars"
+msgstr[0] ""
+msgstr[1] ""
+
+#~ msgid "This review is closed for replies"
+#~ msgstr "This review is closed to replies"
+
+#~ msgid "This review is closed for comments"
+#~ msgstr "This review is closed to comments"
+
+#~ msgid "Product id is in invalid format"
+#~ msgstr "Product id is an invalid format"
+
+#~ msgid "Voting/Reviews settings"
+#~ msgstr "Voting/Review settings"
+
+#~ msgid ""
+#~ "In the YIT Plugins tab you can find the YITH WooCommerce Advanced Reviews "
+#~ "options. With this menu, you can access to all the settings of our "
+#~ "plugins that you have activated."
+#~ msgstr ""
+#~ "In YIT Plugins tab you can find YITH WooCommerce Advanced Reviews "
+#~ "options. From this menu you can access all settings of YITH plugins "
+#~ "activated."
+
+#~ msgid ""
+#~ "From now on, you can find all the options of YITH WooCommerce Advanced "
+#~ "Reviews under YIT Plugin -> Advanced Reviews instead of WooCommerce -> "
+#~ "Settings -> Advanced Reviews, as in the previous version. When one of our "
+#~ "plugins updates, a new voice will be added to this menu."
+#~ msgstr ""
+#~ "From now on, you can find all YITH WooCommerce Advanced Reviews options "
+#~ "in YIT Plugin -> Advanced Reviews instead of WooCommerce -> Settings -> "
+#~ "Advanced Reviews, as in the previous version. Any time one of our plugins "
+#~ "is updated, a new entry will be added to this menu."
+
+#~ msgid "The layout for this "
+#~ msgstr "Layout for this "
+
+#~ msgid ""
+#~ "The word used for the URL of each project (the slug of post if empty)"
+#~ msgstr ""
+#~ "Univocal identification name in the URL for each product (slug from post "
+#~ "if empty)"
+
+#~ msgid "Label Singular"
+#~ msgstr "Label in Singular"
+
+#~ msgid ""
+#~ "Set the label in singular to use for each label (the title of portfolio "
+#~ "if empty)"
+#~ msgstr "Set a label in singular (title of portfolio if empty)"
+
+#~ msgid "Label Plural"
+#~ msgstr "Label in Plural"
+
+#~ msgid ""
+#~ "Set the label in plural to use for each label (the title of portfolio if "
+#~ "empty)"
+#~ msgstr "Set a label in plural (title of portfolio if empty)"
+
+#~ msgid ""
+#~ "If you want to use a category section for the portfolio, set the name of "
+#~ "taxonomy. Name should be in slug form (must not contain capital letters "
+#~ "or spaces) and not more than 32 characters long (database structure "
+#~ "restriction)."
+#~ msgstr ""
+#~ "If you want to use categories in the portfolio, set a name for taxonomy. "
+#~ "Name should be a slug (must not contain capital letters nor spaces) and "
+#~ "must not be more than 32 characters long (database structure restriction)."
+
+#~ msgid "Set the word to use in the URL for each category page."
+#~ msgstr "Set the word for each category page URL."
+
+#~ msgid "The layout for single page of this portfolio"
+#~ msgstr "Layout for single page of this portfolio"
+
+#~ msgid "Show the frontend of the %s"
+#~ msgstr "Show frontend of the %s"
+
+#~ msgid ""
+#~ "The changes you made will be lost if you navigate away from this page."
+#~ msgstr "The changes you made will be lost if you leave this page."
+
+#~ msgid ""
+#~ "If you continue with this action, you will reset all options are in this "
+#~ "page."
+#~ msgstr ""
+#~ "If you go on with this action, you will reset all options in this page."
+
+#~ msgid ""
+#~ "The element you have written is already exists. Please, add another name."
+#~ msgstr "This element already exists. Please, enter a different name."
+
+#~ msgid "An error encoured during during import. Please try again."
+#~ msgstr "An error has occurred during import. Please try again."
+
+#~ msgid "The file you have insert doesn't valid."
+#~ msgstr "The file inserted is not valid."
+
+#~ msgid "I'm sorry, the import featured is disabled."
+#~ msgstr "Sorry, import is disabled."
+
+#~ msgid "Sorting done correctly."
+#~ msgstr "Sorting successful."
+
+#~ msgid ""
+#~ "From now on, you can find all the options of your plugins under the YIT "
+#~ "Plugin menu voice.\n"
+#~ "                                     For every installation of our new "
+#~ "plugins, a new voice will be added to access to the customization "
+#~ "settings."
+#~ msgstr ""
+#~ "From now on, you can find all plugin options in YIT Plugin menu.\n"
+#~ "                                     For each plugin installed, "
+#~ "customization settings will be available as a new entry in YIT Plugin "
+#~ "menu."
+
+#~ msgid ""
+#~ "From now on, you can find all the options of your plugins under the YIT "
+#~ "Plugin menu voice.\n"
+#~ "                                    When one of our plugins updates, a "
+#~ "new voice will be added to this menu.\n"
+#~ "                                    For example, after the update, the "
+#~ "options from the plugins (YITH WooCommerce Wishlist, YITH WooCommerce "
+#~ "Ajax Search, etc.)\n"
+#~ "                                    will be removed from the previous "
+#~ "location and moved under the YIT Plugin tab."
+#~ msgstr ""
+#~ "From now on, you can find all the options of your plugins in YIT Plugin "
+#~ "menu.\n"
+#~ "                                    Any time one of our plugins is "
+#~ "updated, a new entry will be added to this menu.\n"
+#~ "                                    For example, after update, plugin "
+#~ "options (such for YITH WooCommerce Wishlist, YITH WooCommerce Ajax "
+#~ "Search, etc.)\n"
+#~ "                                    will be moved from previous location "
+#~ "to YIT Plugin tab."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox yit-changelog-button\" title=\"%3$s\">View version %4$s "
+#~ "details</a>. <em>You have to activate the plugin on a single site of the "
+#~ "network to benefit from the automatic updates.</em>"
+#~ msgstr ""
+#~ "There is a new version of %1$s available. <a href=\"%2$s\" class="
+#~ "\"thickbox yit-changelog-button\" title=\"%3$s\">View version %4$s "
+#~ "details</a>. <em>You have to activate the plugin on a single site of the "
+#~ "network to benefit from automatic updates.</em>"
+
+#~ msgid "%field% field can not be empty"
+#~ msgstr "%field% field cannot be empty"
+
+#~ msgid "%field_1% and %field_2% fields can not be empty"
+#~ msgstr "%field_1% and %field_2% fields cannot be empty"
+
+#~ msgid "Software has been deactive"
+#~ msgstr "Software has been deactivated"
+
+#~ msgid "Licence key has be banned"
+#~ msgstr "Licence key has been banned"
+
+#~ msgid "To Active"
+#~ msgstr "Activation"
+
+#~ msgid "Insert the title of field."
+#~ msgstr "Insert title for the field."
+
+#~ msgid ""
+#~ "REQUIRED: The identification name of this field, that you can insert into "
+#~ "body email configuration. <strong>Note:</strong>Use only lowercase "
+#~ "characters and underscores."
+#~ msgstr ""
+#~ "REQUIRED: Field identification name to be entered into email body. "
+#~ "<strong>Note:</strong>Use only lowercase characters and underscores."
+
+#~ msgid "Select the type of this field."
+#~ msgstr "Select type for this field."
+
+#~ msgid "Select this if it's the email where you can reply."
+#~ msgstr "Select this if it is the email you can reply to."
+
+#~ msgid ""
+#~ "Insert an additional class(es) (separateb by comma) for more "
+#~ "personalization."
+#~ msgstr ""
+#~ "Insert additional class(es) (separated by commas) for more "
+#~ "personalization."
+
+#~ msgid "Choose how much long will be the field."
+#~ msgstr "Set field length."
+
+#~ msgid "The content of the tab. (HTML is supported)"
+#~ msgstr "Content of the tab. (HTML is supported)"
+
+#~ msgid "Sidebar Left"
+#~ msgstr "Left sidebar"
+
+#~ msgid "Sidebar Right"
+#~ msgstr "Right sidebar"
+
+#~ msgid "Add a title field on reviews."
+#~ msgstr "Add a title field to reviews."
+
+#~ msgid "Set maximum number of attachments selectable (0 = no limit)."
+#~ msgstr ""
+#~ "Set maximum number of attachments that can be selected (0 = no limit)."
+
+#~ msgid "Reviews summary options"
+#~ msgstr "Review summary options"
+
+#~ msgid "Fixed bars color"
+#~ msgstr "Fixed bar color"
+
+#~ msgid "Percentage bars color"
+#~ msgstr "Percentage bar color"
+
+#~ msgid "Show people's votes"
+#~ msgstr "Show review votes"
+
+#~ msgid "Add a string stating how many people's found the review useful."
+#~ msgstr "Add a string stating how many people found the review useful."
+
+#~ msgid "Customers reviews"
+#~ msgstr "Customers' reviews"
