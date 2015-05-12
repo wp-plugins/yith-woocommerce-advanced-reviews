@@ -74,7 +74,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
             <div class="inside">
 
                 <div class="the-metabox text clearfix">
-                    <label for="<?php echo $id ?>_title_<?php echo $index ?>"><?php _e( 'Title Field', 'yith-plugin-fw' ) ?></label>
+                    <label for="<?php echo $id ?>_title_<?php echo $index ?>"><?php _e( 'Field Title', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <input type="text" value="<?php echo esc_attr( $value[$index]['title'] ) ?>" id="<?php echo $id ?>_title_<?php echo $index ?>" name="<?php echo $name ?>[<?php echo $index ?>][title]" />
@@ -92,7 +92,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
                 </div>
 
                 <div class="the-metabox select clearfix text-field-type">
-                    <label for="<?php echo $id ?>_type_<?php echo $index ?>"><?php _e( 'Type field', 'yith-plugin-fw' ) ?></label>
+                    <label for="<?php echo $id ?>_type_<?php echo $index ?>"><?php _e( 'Field Type', 'yith-plugin-fw' ) ?></label>
 
                     <p>
                         <select id="<?php echo $id ?>_type_<?php echo $index ?>" name="<?php echo $name . '[' . $index . ']' ?>[type]">
@@ -266,7 +266,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
     <div class="inside">
 
         <div class="the-metabox text clearfix">
-            <label for="<?php echo $id ?>_title"><?php _e( 'Title Field', 'yith-plugin-fw' ) ?></label>
+            <label for="<?php echo $id ?>_title"><?php _e( 'Field Title', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <input disabled type="text" value="" id="<?php echo $id ?>_title" name="<?php echo $name ?>[][title]" />
@@ -284,7 +284,7 @@ $options["icon"] = YIT_Plugin_Common::get_awesome_icons();
         </div>
 
         <div class="the-metabox select clearfix text-field-type">
-            <label for="<?php echo $id ?>_type"><?php _e( 'Type field', 'yith-plugin-fw' ) ?></label>
+            <label for="<?php echo $id ?>_type"><?php _e( 'Field Type', 'yith-plugin-fw' ) ?></label>
 
             <p>
                 <select disabled id="<?php echo $id ?>_type" name="<?php echo $name ?>[][type]">

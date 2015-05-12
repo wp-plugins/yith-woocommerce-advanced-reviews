@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment, amazon, amazon style, amazon reviews, review report, review reports, most voted reviews, best reviews
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,6 +83,10 @@ You can customize some visual attribute from the plugin option. For better integ
 
 == Changelog ==
 
+= Version 1.1.3 - RELEASED: MAY 12 , 2015 =
+
+* Fix: when the review author is unknown, it was shown admin user as content author.
+
 = Version 1.1.2 - RELEASED: MAY 11 , 2015 =
 
 * New: Custom template are fully overwritable from theme files.
@@ -142,7 +146,7 @@ You can customize some visual attribute from the plugin option. For better integ
 
 == Upgrade Notice ==
 
-Last Stable Tag 1.1.2 - Released on May 11, 2015
+Last Stable Tag 1.1.3 - Released on May 12, 2015
 
 == Suggestions ==
 

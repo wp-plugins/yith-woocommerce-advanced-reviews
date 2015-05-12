@@ -158,8 +158,8 @@ if ( ! class_exists( 'YIT_Licence' ) ) {
          */
         public function localize_script() {
             wp_localize_script( 'yit-licence', 'licence_message', array(
-                    'error'  => __( '%field% field cannot be empty', 'yith-plugin-fw' ),
-                    'errors' => __( '%field_1% and %field_2% fields cannot be empty', 'yith-plugin-fw' ),
+                    'error'  => sprintf( _x( '%s field cannot be empty', '%s = field name', 'yith-plugin-fw' ), '%field%' ),  // sprintf must be used to avoid errors with '%field%' string in translation in .po file
+                    'errors' => sprintf( __( '%s and %s fields cannot be empty', 'yith-plugin-fw' ), '%field_1%', '%field_2' ),
                     'server' => __( 'Unable to contact the remote server, please try again later. Thanks!', 'yith-plugin-fw' )
                 )
             );

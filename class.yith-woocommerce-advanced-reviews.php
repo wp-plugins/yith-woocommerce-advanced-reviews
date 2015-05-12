@@ -100,6 +100,31 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 */
 		public $meta_key_stop_reply = "_ywar_stop_reply";
 
+		/**
+		 * @var string meta_key used for saving review's user id
+		 */
+		public $meta_key_review_user_id = "_ywar_review_user_id";
+
+		/**
+		 * @var string meta_key used for saving review's author
+		 */
+		public $meta_key_review_author = "_ywar_review_author";
+
+		/**
+		 * @var string meta_key used for saving review author's email
+		 */
+		public $meta_key_review_author_email = "_ywar_review_author_email";
+
+		/**
+		 * @var string meta_key used for saving review author's url
+		 */
+		public $meta_key_review_author_url = "_ywar_review_author_url";
+
+		/**
+		 * @var string meta_key used for saving review author's IP
+		 */
+		public $meta_key_review_author_IP = "_ywar_review_author_IP";
+
 		public $custom_column_review = "review-text";
 
 		public $custom_column_rating = "review-rating";
@@ -211,18 +236,6 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			add_filter( 'yith_advanced_reviews_row_actions', array( $this, 'add_review_actions' ), 10, 2 );
 
 			add_filter( 'post_class', array( $this, 'add_review_table_class' ), 10, 3 );
-
-			/**
-			 * Set the order by params for sortable columns
-			 */
-			//todo try without this
-			/* add_action( 'pre_get_posts', array(
-				$this,
-				'sort_review_columns'
-			) );
-			*/
-
-			//todo not more used add_action( 'admin_head-edit.php', array( $this, 'move_review_row_actions' ) );
 
 			/**
 			 * intercept approve and unapprove actions
@@ -722,19 +735,19 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			wp_enqueue_style( 'yith-google-fonts', '//fonts.googleapis.com/css?family=Raleway:500,700,800,400' );
 			wp_enqueue_style( 'yit-style', YITH_YWAR_ASSETS_URL . '/css/yit-advanced-reviews.css' );
 
-			wp_register_script("ajax-back-end-script", YITH_YWAR_URL . 'assets/js/ywar-back-end.js', array(
+			wp_register_script( "ajax-back-end-script", YITH_YWAR_URL . 'assets/js/ywar-back-end.js', array(
 				'jquery',
 				'jquery-blockui'
-			));
+			) );
 
-			$loader = apply_filters('yith_advanced_reviews_loader_gif', YITH_YWAR_ASSETS_URL . '/images/loading.gif');
+			$loader = apply_filters( 'yith_advanced_reviews_loader_gif', YITH_YWAR_ASSETS_URL . '/images/loading.gif' );
 
-			wp_localize_script('ajax-back-end-script', 'ywar', array(
-				'loader' => $loader,
-				'ajax_url' => admin_url('admin-ajax.php')
-			));
+			wp_localize_script( 'ajax-back-end-script', 'ywar', array(
+				'loader'   => $loader,
+				'ajax_url' => admin_url( 'admin-ajax.php' )
+			) );
 
-			wp_enqueue_script("ajax-back-end-script");
+			wp_enqueue_script( "ajax-back-end-script" );
 		}
 
 		//endregion
@@ -952,18 +965,26 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 
 			$post_parent = apply_filters( 'yith_advanced_reviews_post_parent', $_POST["comment_parent"] );
 
+			$comment = get_comment( $comment_id );
+
 			// Create post object
 			$my_post = array(
-				'post_title'        => $review_title,
-				'post_content'      => $_POST["comment"],
-				'post_status'       => 'publish',
-				'post_author'       => get_current_user_id(),
-				'post_type'         => $this->post_type_name,
-				'post_parent'       => $post_parent,
-				'review_rating'     => ( isset( $_POST["rating"] ) ? $_POST["rating"] : 0 ),
-				'review_product_id' => $_POST["comment_post_ID"],
-				'review_comment_id' => $comment_id,
-				'review_approved'   => apply_filters( 'yith_advanced_reviews_approve_new_review', true )
+				'post_author'         => $comment->user_id,
+				'post_title'          => $review_title,
+				'post_content'        => $comment->comment_content,
+				'post_status'         => 'publish',
+				'post_author'         => get_current_user_id(),
+				'post_type'           => $this->post_type_name,
+				'post_parent'         => $post_parent,
+				'review_user_id'      => $comment->user_id,
+				'review_rating'       => ( isset( $_POST["rating"] ) ? $_POST["rating"] : 0 ),
+				'review_product_id'   => $comment->comment_post_ID,
+				'review_comment_id'   => $comment_id,
+				'review_approved'     => apply_filters( 'yith_advanced_reviews_approve_new_review', true ),
+				'review_author'       => $comment->comment_author,
+				'review_author_email' => $comment->comment_author_email,
+				'review_author_IP'    => $comment->comment_author_IP,
+				'review_author_url'   => $comment->comment_author_url
 			);
 
 			// Insert the post into the database
@@ -978,9 +999,10 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 				'post_title'                 => '',
 				'post_content'               => '',
 				'post_status'                => 'publish',
-				'post_author'                => get_current_user_id(),
+				'post_author'                => 0,
 				'post_type'                  => $this->post_type_name,
 				'post_parent'                => 0,
+				'review_user_id'             => 0,
 				'review_approved'            => 1,
 				'review_rating'              => 0,
 				'review_product_id'          => 0,
@@ -992,7 +1014,11 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 				'review_inappropriate_count' => 0,
 				'review_is_featured'         => 0,
 				'review_is_reply_blocked'    => 0,
-				'review_thumbnails'          => array()
+				'review_thumbnails'          => array(),
+				'review_author'              => '',
+				'review_author_email'        => '',
+				'review_author_url'          => '',
+				'review_author_IP'           => ''
 			);
 
 			$args = wp_parse_args( $args, $defaults );
@@ -1022,6 +1048,12 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			update_post_meta( $review_id, $this->meta_key_featured, $args["review_is_featured"] );
 			update_post_meta( $review_id, $this->meta_key_stop_reply, $args["review_is_reply_blocked"] );
 
+			update_post_meta( $review_id, $this->meta_key_review_user_id, $args["review_user_id"] );
+			update_post_meta( $review_id, $this->meta_key_review_author, $args["review_author"] );
+			update_post_meta( $review_id, $this->meta_key_review_author_email, $args["review_author_email"] );
+			update_post_meta( $review_id, $this->meta_key_review_author_url, $args["review_author_url"] );
+			update_post_meta( $review_id, $this->meta_key_review_author_IP, $args["review_author_IP"] );
+
 			return $review_id;
 		}
 
@@ -1029,8 +1061,6 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 *    redirect to product page on comment submitted
 		 */
 		public function redirect_after_submit_review( $location, $comment ) {
-			//todo should be deleted? wp_delete_comment( $comment->comment_ID, $force_delete = true );
-
 			// Set the new comment as imported so it will not imported when clicking on "convert reviews", creating duplicated entries
 			update_comment_meta( $comment->comment_ID, $this->meta_key_imported, 1 );
 
@@ -1438,6 +1468,23 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 			return get_post_meta( $review_id, $this->meta_key_product_id, true );
 		}
 
+		/**
+		 * Retrieve information about the review author
+		 *
+		 * @param $review_id    review id from which retrieve the meta_value
+		 *
+		 * @return array author's information
+		 */
+		function get_meta_value_author( $review_id ) {
+			return array(
+				'review_user_id'      => get_post_meta( $review_id, $this->meta_key_review_user_id, true ),
+				'review_author'       => get_post_meta( $review_id, $this->meta_key_review_author, true ),
+				'review_author_email' => get_post_meta( $review_id, $this->meta_key_review_author_email, true ),
+				'review_author_url'   => get_post_meta( $review_id, $this->meta_key_review_author_url, true ),
+				'review_author_IP'    => get_post_meta( $review_id, $this->meta_key_review_author_IP, true )
+			);
+		}
+
 		//endregion
 
 		public function  wc_get_template( $located, $template_name, $args, $template_path, $default_path ) {
@@ -1526,10 +1573,23 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		}
 
 		/**
+		 * Set a maximum execution time
+		 *
+		 * @param $seconds time in seconds
+		 */
+		private function set_time_limit( $seconds ) {
+			$check_safe_mode = ini_get( 'safe_mode' );
+			if ( ( ! $check_safe_mode ) || ( 'OFF' == strtoupper( $check_safe_mode ) ) ) {
+				@set_time_limit( $seconds );
+			}
+		}
+
+		/**
 		 * Read and convert previous reviews into new advanced reviews using custom post type
 		 */
 		public function import_previous_reviews() {
 			global $wpdb;
+
 			$review_converted = 0;
 
 			$query = "SELECT *
@@ -1547,9 +1607,38 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 
 				// Check if comment_meta exists for previous reviews and is not still imported
 				if ( "1" === get_comment_meta( $comment->comment_ID, $this->meta_key_imported, true ) ) {
-					//  comment still imported, skip it!
+					//  comment still imported, update only author data (Fix for upgrade from 1.1.2 to 1.2.3 then skip it!
+
+					//  Retrieve review(post) id linked to current comment
+					$args    = array(
+						'post_type'  => 'ywar_reviews',
+						'meta_query' => array(
+							array(
+								'key'     => $this->meta_key_comment_id,
+								'value'   => $comment->comment_ID,
+								'compare' => '=',
+								'type'    => 'numeric'
+							)
+						)
+					);
+					$reviews = get_posts( $args );
+
+					if ( isset( $reviews ) ) {
+						$review = $reviews[0];
+
+						// Update review meta
+						update_post_meta( $review->ID, $this->meta_key_review_user_id, $comment->user_id );
+						update_post_meta( $review->ID, $this->meta_key_review_author, $comment->comment_author );
+						update_post_meta( $review->ID, $this->meta_key_review_author_email, $comment->comment_author_email );
+						update_post_meta( $review->ID, $this->meta_key_review_author_url, $comment->comment_author_url );
+						update_post_meta( $review->ID, $this->meta_key_review_author_IP, $comment->comment_author_IP );
+					}
+
 					continue;
 				}
+
+				//  Set execution time
+				$this->set_time_limit( 30 );
 
 				$val   = get_comment_meta( $comment->comment_ID, "title", true );
 				$title = $val ? $val : '';
@@ -1580,6 +1669,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 					'post_date_gmt'           => $comment->comment_date_gmt,
 					'post_content'            => $comment->comment_content,
 					'post_title'              => $title,
+					'review_user_id'          => $comment->user_id,
 					'review_approved'         => $comment->comment_approved,
 					'review_product_id'       => $comment->comment_post_ID,
 					'review_thumbnails'       => $thumb_ids,
@@ -1589,7 +1679,10 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 					'review_votes'            => $votes,
 					'review_upvotes'          => $yes_votes,
 					'review_downvotes'        => $no_votes,
-
+					'review_author'           => $comment->comment_author,
+					'review_author_email'     => $comment->comment_author_email,
+					'review_author_url'       => $comment->comment_author_url,
+					'review_author_IP'        => $comment->comment_author_IP
 				);
 
 				// Insert the post into the database
