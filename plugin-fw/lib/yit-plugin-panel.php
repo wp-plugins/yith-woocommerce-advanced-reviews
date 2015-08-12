@@ -92,7 +92,8 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          * @author   Andrea Grillo <andrea.grillo@yithemes.com>
          */
         public function add_menu_page() {
-            add_menu_page( 'yit_plugin_panel', __( 'YIT Plugins', 'yith-plugin-fw' ), 'manage_options', 'yit_plugin_panel', NULL, YIT_CORE_PLUGIN_URL . '/assets/images/yithemes-icon.png', 62 );
+            $position = apply_filters( 'yit_plugins_menu_item_position', '62.32' );
+            add_menu_page( 'yit_plugin_panel', __( 'YIT Plugins', 'yith-plugin-fw' ), 'manage_options', 'yit_plugin_panel', NULL, YIT_CORE_PLUGIN_URL . '/assets/images/yithemes-icon.png', $position );
         }
 
         /**
@@ -285,7 +286,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 <h2><?php echo $this->get_tab_title() ?></h2>
                 <?php if ( $this->is_show_form() ) : ?>
                     <form method="post" action="options.php">
-                        <?php do_settings_sections( 'yith-plugin-fw' ); ?>
+                        <?php do_settings_sections( 'yit' ); ?>
                         <p>&nbsp;</p>
                         <?php settings_fields( 'yit_' . $this->settings['parent'] . '_options' ); ?>
                         <input type="hidden" name="<?php echo $this->get_name_field( 'current_tab' ) ?>" value="<?php echo esc_attr( $current_tab ) ?>" />
@@ -294,7 +295,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                     <form method="post">
                         <?php $warning = __( 'If you continue with this action, you will reset all options in this page.', 'yith-plugin-fw' ) ?>
                         <input type="hidden" name="yit-action" value="reset" />
-                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to Default', 'yith-plugin-fw' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yith-plugin-fw' ) ?>');" />
+                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to default', 'yith-plugin-fw' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yith-plugin-fw' ) ?>');" />
                     </form>
                     <p>&nbsp;</p>
                 <?php endif ?>
@@ -344,10 +345,10 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 return;
             }
             foreach ( $yit_options[$current_tab] as $section => $data ) {
-                add_settings_section( "yit_settings_{$current_tab}_{$section}", $this->get_section_title( $section ), $this->get_section_description( $section ), 'yith-plugin-fw' );
+                add_settings_section( "yit_settings_{$current_tab}_{$section}", $this->get_section_title( $section ), $this->get_section_description( $section ), 'yit' );
                 foreach ( $data as $option ) {
                     if ( isset( $option['id'] ) && isset( $option['type'] ) && isset( $option['name'] ) ) {
-                        add_settings_field( "yit_setting_" . $option['id'], $option['name'], array( $this, 'render_field' ), 'yith-plugin-fw', "yit_settings_{$current_tab}_{$section}", array( 'option' => $option, 'label_for' => $this->get_id_field( $option['id'] ) ) );
+                        add_settings_field( "yit_setting_" . $option['id'], $option['name'], array( $this, 'render_field' ), 'yit', "yit_settings_{$current_tab}_{$section}", array( 'option' => $option, 'label_for' => $this->get_id_field( $option['id'] ) ) );
                     }
                 }
             }

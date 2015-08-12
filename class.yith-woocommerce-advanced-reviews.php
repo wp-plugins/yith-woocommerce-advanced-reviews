@@ -176,7 +176,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * Initialize plugin and registers actions and filters to be used
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		protected function __construct() {
 			if ( ! function_exists( 'WC' ) ) {
@@ -696,7 +696,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * Add scripts
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function enqueue_scripts() {
 			//  register and enqueue ajax calls related script file
@@ -712,7 +712,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * Enqueue css file
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function enqueue_styles() {
 			wp_enqueue_style( 'yit-style', YITH_YWAR_ASSETS_URL . '/css/yit-advanced-reviews.css' );
@@ -954,7 +954,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * Create new Advanced Review post type when a comment is saved to database
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function submit_review( $comment_id ) {
 			if ( ! isset( $_POST ) ) {
@@ -1075,7 +1075,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return void
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function add_custom_fields_on_comment_form() {
 
@@ -1100,7 +1100,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return  void
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function submit_attachments( $review_id ) {
 			//  check if attachments are enabled
@@ -1153,7 +1153,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return  void
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function insert_attachment( $fileHandler, $postId ) {
 			if ( $_FILES[ $fileHandler ]['error'] !== UPLOAD_ERR_OK ) {
@@ -1175,7 +1175,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return object $comment_form
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function add_fields_to_comment_form( $comment_form ) {
 			$current_content = $comment_form['comment_field'];
@@ -1222,7 +1222,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return  string  customized comment content
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function show_expanded_review_content( $review ) {
 
@@ -1296,7 +1296,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return  object  $template
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function load_reviews_summary( $template ) {
 			if ( ! is_product() ) {
@@ -1323,7 +1323,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return void
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function add_plugin_metabox() {
 			add_meta_box( 'reviews-metabox', __( 'Review attributes', 'ywar' ), array(
@@ -1338,7 +1338,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * @return  void
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function display_plugin_metabox() {
 			global $post;
@@ -1556,7 +1556,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Advanced_Reviews' ) ) {
 		 * Convert previous reviews into new YITH Advanced review type
 		 *
 		 * @since 1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function convert_reviews_callback() {
 

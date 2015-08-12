@@ -169,6 +169,7 @@
     padding-left: 6px;
     position: absolute;
     z-index: 2;
+    overflow: hidden;
 }
 .ie8 .yit_options select,
 .ie8 .yit-options select {
@@ -623,6 +624,11 @@
 
 #adminmenu .wp-submenu a.yit-pointer-selected-row:hover {
     color: #45bbe6;
+}
+
+/* WooCommerce 2.4 Support */
+.woocommerce table.form-table .colorpick{
+    width: 6em;
 }
 
 /* === Responsive === */

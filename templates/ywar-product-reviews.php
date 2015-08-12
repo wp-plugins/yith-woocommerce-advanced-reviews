@@ -32,10 +32,10 @@ $reviews_count = count( $YWAR_AdvancedReview->get_product_reviews_by_rating( $pr
 		</h2>
 
 		<?php if ( $reviews_count ) : ?>
+			<?php do_action( 'yith_advanced_reviews_before_review_list', $product ); ?>
 
 			<ol class="commentlist">
 				<?php $YWAR_AdvancedReview->reviews_list( $product->id ); ?>
-
 			</ol>
 		<?php else : ?>
 

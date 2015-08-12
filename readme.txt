@@ -1,10 +1,10 @@
 === YITH WooCommerce Advanced Reviews ===
 
 Contributors: yithemes
-Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment, amazon, amazon style, amazon reviews, review report, review reports, most voted reviews, best reviews
+Tags: reviews, woocommerce, products, themes, yit, yith, e-commerce, shop, advanced reviews, reviews attachments, rating summary, product comment, review replies, advanced comments, product comments, vote review, vote comment, amazon, amazon style, amazon reviews, review report, review reports, most voted reviews, best reviews, rate review, rate product
 Requires at least: 4.0
-Tested up to: 4.2.2
-Stable tag: 1.1.3
+Tested up to: 4.2.4
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,9 @@ Extends the basic functionality of woocommerce reviews and add a histogram table
 
 == Description ==
 
-Add a histogram table to the reviews of your products, as well as you see in most trendy e-commerce sites, and give users the possibility to attach images to their reviews. Keep up-to-date about most trendy products thanks to the new options conceived to manage an advanced review system.
+Add a histogram table to the reviews of you
+
+r products, as well as you see in most trendy e-commerce sites, and give users the possibility to attach images to their reviews. Keep up-to-date about most trendy products thanks to the new options conceived to manage an advanced review system.
 
 = Detail, feedback and customisability in one plugin only =
 
@@ -82,6 +84,10 @@ Of course, you can overwrite templates and add features through the specific hoo
 You can customize some visual attribute from the plugin option. For better integration, you can both overwrite the template and customize the look and feel writing your own CSS rules.
 
 == Changelog ==
+
+= Version 1.1.4 - RELEASED: AUG 12, 2015 =
+
+* Tweak: update YITH Plugin framework.
 
 = Version 1.1.3 - RELEASED: MAY 12 , 2015 =
 
