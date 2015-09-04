@@ -57,7 +57,7 @@ if ( ! class_exists( 'YIT_Video' ) ) {
                 return;
             }
 
-            if( ! $echo ) ob_start();
+            ob_start();
 
             $id = preg_replace( '/[&|&amp;]feature=([\w\-]*)/', '', $id );
             $id = preg_replace( '/(youtube|vimeo):/', '', $id ); ?>
@@ -67,7 +67,11 @@ if ( ! class_exists( 'YIT_Video' ) ) {
             </div>
 
             <?php
-            if( ! $echo ) return ob_get_clean();
+            $html = apply_filters( 'yit_video_youtube', ob_get_clean() );
+
+            if( $echo ) echo $html;
+
+            return $html;
         }
 
         /**
@@ -97,7 +101,7 @@ if ( ! class_exists( 'YIT_Video' ) ) {
                 $id = self::video_id_by_url( $url );
             }
 
-            if( ! $echo ) ob_start();
+            ob_start();
 
             $id = preg_replace( '/[&|&amp;]feature=([\w\-]*)/', '', $id );
             $id = preg_replace( '/(youtube|vimeo):/', '', $id ); ?>
@@ -107,7 +111,11 @@ if ( ! class_exists( 'YIT_Video' ) ) {
             </div>
 
             <?php
-            if( ! $echo ) return ob_get_clean();
+            $html = apply_filters( 'yit_video_vimeo', ob_get_clean() );
+
+            if( $echo ) echo $html;
+
+            return $html;
         }
 
         /**

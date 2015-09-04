@@ -12,7 +12,7 @@
     // Author code here
 
     // open media box
-    $('.wrap h2').on( 'click', 'a.multi-uploader', function(event){
+    $('.wrap h1, .wrap h2').on( 'click', 'a.multi-uploader', function(event){
         event.preventDefault();
 
         var file_frame,

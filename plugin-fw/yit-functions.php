@@ -634,8 +634,13 @@ if ( ! function_exists( 'yit_check_plugin_support' ) ) {
      * @author Andrea Grillo <andrea.grillo@yithemes.com>
      */
     function yit_check_plugin_support() {
+
         $headers['core']   = wp_get_theme()->get( 'Core Framework Version' );
         $headers['author'] = wp_get_theme()->get( 'Author' );
+
+        if( ! $headers['core'] && defined( 'YIT_CORE_VERSION' ) ) {
+            $headers['core'] = YIT_CORE_VERSION;
+        }
 
         if ( ( ! empty( $headers['core'] ) && version_compare( $headers['core'], '2.0.0', '<=' ) ) || $headers['author'] != 'Your Inspiration Themes' ) {
             return true;

@@ -5,7 +5,7 @@ Plugin URI: http://yithemes.com/themes/plugins/yith-woocommerce-advanced-reviews
 Description: Extends the basic functionality of woocommerce reviews and add a histogram table to the reviews of your products, as well as you see in most trendy e-commerce sites.
 Author: Yithemes
 Text Domain: ywar
-Version: 1.1.4
+Version: 1.1.5
 Author URI: http://yithemes.com/
 */
 
@@ -57,7 +57,7 @@ if ( ! defined( 'YITH_YWAR_FREE_INIT' ) ) {
 }
 
 if ( ! defined( 'YITH_YWAR_VERSION' ) ) {
-	define( 'YITH_YWAR_VERSION', '1.1.4' );
+	define( 'YITH_YWAR_VERSION', '1.1.5' );
 }
 
 if ( ! defined( 'YITH_YWAR_FILE' ) ) {

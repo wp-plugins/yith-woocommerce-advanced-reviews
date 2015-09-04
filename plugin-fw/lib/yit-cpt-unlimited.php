@@ -1637,7 +1637,7 @@ class YIT_CPT_Unlimited {
                     style: 'float: none;'
                 });
 
-                button.appendTo('.wrap h2').after(spinner);
+                button.appendTo('.wrap h2, .wrap h1').after(spinner);
 
             })(jQuery);
         </script>
