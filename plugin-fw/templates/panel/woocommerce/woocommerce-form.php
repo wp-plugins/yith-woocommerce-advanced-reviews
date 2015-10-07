@@ -7,6 +7,7 @@
     <form id="plugin-fw-wc-reset" method="post">
         <?php $warning = __( 'If you continue with this action, you will reset all options in this page.', 'yith-plugin-fw' ) ?>
         <input type="hidden" name="yit-action" value="wc-options-reset" />
+        <?php wp_nonce_field( 'yith_wc_reset_options_'.$this->settings['page'], 'yith_wc_reset_options_nonce' ); ?>
         <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset Defaults', 'yith-plugin-fw' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yith-plugin-fw' ) ?>');" />
     </form>
 </div>

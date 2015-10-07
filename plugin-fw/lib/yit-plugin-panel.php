@@ -708,8 +708,9 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 }
 
                 $custom_attributes = implode( ' ', $custom_attributes );
+                $std = isset( $option['std'] ) ? $option['std'] : '';
+                $db_value = ( isset( $db_options[$option['id']] ) ) ? $db_options[$option['id']] : $std;
 
-                $db_value = ( isset( $db_options[$option['id']] ) ) ? $db_options[$option['id']] : '';
                 if ( isset( $option['deps'] ) ) {
                     $deps = $option['deps'];
                 }

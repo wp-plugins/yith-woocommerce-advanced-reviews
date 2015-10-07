@@ -18,34 +18,34 @@ return array(
 	'layout' => array(
 
 		'reviews_summary_section_title'          => array(
-			'name' => __( 'Review summary options', 'ywar' ),
+			'name' => __( 'Review summary options', 'yith-woocommerce-advanced-reviews' ),
 			'type' => 'title',
 			'desc' => '',
 			'id'   => 'ywar_settings_review_summary_title',
 		),
 		'review_summary_bar_color'               => array(
-			'name'    => __( 'Background bar color', 'ywar' ),
+			'name'    => __( 'Background bar color', 'yith-woocommerce-advanced-reviews' ),
 			'type'    => 'color',
 			'desc'    => '',
 			'id'      => 'ywar_summary_bar_color',
 			'default' => '#f4f4f4'
 		),
 		'reviews_summary_percentage_bar_color'   => array(
-			'name'    => __( 'Percentage bar color', 'ywar' ),
+			'name'    => __( 'Percentage bar color', 'yith-woocommerce-advanced-reviews' ),
 			'type'    => 'color',
 			'desc'    => '',
 			'id'      => 'ywar_summary_percentage_bar_color',
 			'default' => '#a9709d'
 		),
 		'reviews_summary_percentage_value'       => array(
-			'name'    => __( 'Show percentage value', 'ywar' ),
+			'name'    => __( 'Show percentage value', 'yith-woocommerce-advanced-reviews' ),
 			'type'    => 'checkbox',
-			'desc'    => __( 'Show % value on percentage bars.', 'ywar' ),
+			'desc'    => __( 'Show % value on percentage bars.', 'yith-woocommerce-advanced-reviews' ),
 			'id'      => 'ywar_summary_percentage_value',
 			'default' => 'yes'
 		),
 		'reviews_summary_percentage_value_color' => array(
-			'name'    => __( 'Percentage value color', 'ywar' ),
+			'name'    => __( 'Percentage value color', 'yith-woocommerce-advanced-reviews' ),
 			'type'    => 'color',
 			'desc'    => '',
 			'id'      => 'ywar_summary_percentage_value_color',

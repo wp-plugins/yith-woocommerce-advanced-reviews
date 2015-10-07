@@ -4,8 +4,8 @@ Plugin Name: YITH WooCommerce Advanced Reviews
 Plugin URI: http://yithemes.com/themes/plugins/yith-woocommerce-advanced-reviews/
 Description: Extends the basic functionality of woocommerce reviews and add a histogram table to the reviews of your products, as well as you see in most trendy e-commerce sites.
 Author: Yithemes
-Text Domain: ywar
-Version: 1.1.5
+Text Domain: yith-woocommerce-advanced-reviews
+Version: 1.1.7
 Author URI: http://yithemes.com/
 */
 
@@ -19,7 +19,7 @@ if ( ! function_exists( 'WC' ) ) {
 	function yith_ywar_install_woocommerce_admin_notice() {
 		?>
 		<div class="error">
-			<p><?php _e( 'YITH WooCommerce Advanced Reviews is enabled but not effective. It requires WooCommerce in order to work.', 'ywar' ); ?></p>
+			<p><?php _e( 'YITH WooCommerce Advanced Reviews is enabled but not effective. It requires WooCommerce in order to work.', 'yith-woocommerce-advanced-reviews' ); ?></p>
 		</div>
 	<?php
 	}
@@ -33,7 +33,7 @@ if ( defined( 'YITH_YWAR_PREMIUM' ) ) {
 	function yith_ywar_install_free_admin_notice() {
 		?>
 		<div class="error">
-			<p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Advanced Reviews while you are using the premium one.', 'ywar' ); ?></p>
+			<p><?php _e( 'You can\'t activate the free version of YITH WooCommerce Advanced Reviews while you are using the premium one.', 'yith-woocommerce-advanced-reviews' ); ?></p>
 		</div>
 	<?php
 	}
@@ -57,7 +57,7 @@ if ( ! defined( 'YITH_YWAR_FREE_INIT' ) ) {
 }
 
 if ( ! defined( 'YITH_YWAR_VERSION' ) ) {
-	define( 'YITH_YWAR_VERSION', '1.1.5' );
+	define( 'YITH_YWAR_VERSION', '1.1.7' );
 }
 
 if ( ! defined( 'YITH_YWAR_FILE' ) ) {
@@ -92,7 +92,7 @@ if ( ! defined( 'YITH_YWAR_ASSETS_IMAGES_URL' ) ) {
 /**
  * Load text domain and start plugin
  */
-load_plugin_textdomain( 'ywar', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+load_plugin_textdomain( 'yith-woocommerce-advanced-reviews', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 /**
  * Init default plugin settings

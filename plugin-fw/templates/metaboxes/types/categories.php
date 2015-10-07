@@ -43,7 +43,7 @@ $categories = yit_get_model('cpt_unlimited')->get_setting( 'categories', $post->
 		</h4>   
 		<p class="category-add-field" id="<?php echo $id ?>-category-field">
 		    <input type="text" class="newcategory" name="newcategory" style="width:100%;" id="<?php echo $id ?>-new-category" />
-            <input type="button" value="<?php esc_attr_e( 'Add' ); ?>" class="add:categorychecklist:category-add button category-add-submit" id="<?php echo $id ?>-category-add-submit" /> 
+            <input type="button" value="<?php esc_attr_e( 'Add', 'yit' ); ?>" class="add:categorychecklist:category-add button category-add-submit" id="<?php echo $id ?>-category-add-submit" />
         </p>
 	</div>
 </div>                   

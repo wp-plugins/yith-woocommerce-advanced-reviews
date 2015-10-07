@@ -1049,7 +1049,7 @@ class YIT_CPT_Unlimited {
                     'fields' => apply_filters( 'yit_cptu_fields', array(
                         'type'      => array(
                             'label' => __( 'Type', 'yith-plugin-fw' ),
-                            'desc'  => __( 'Layout for this '.strtolower( $this->_labels['singular'] ) , 'yith-plugin-fw' ),
+                            'desc'  => sprintf( __( 'Layout for this %s' , 'yith-plugin-fw' ), strtolower( $this->_labels['singular'] ) ),
                             'type'  => 'select',
                             'options' => isset( $layouts ) ? $layouts : array(),
                             'std'   => '' ),

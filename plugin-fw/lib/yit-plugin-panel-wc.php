@@ -282,7 +282,8 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
 
                 do_action( 'yit_panel_wc_after_update' );
 
-            } elseif( isset( $_REQUEST['yit-action'] ) && $_REQUEST['yit-action'] == 'wc-options-reset' ){
+            } elseif( isset( $_REQUEST['yit-action'] ) && $_REQUEST['yit-action'] == 'wc-options-reset'
+                && isset( $_POST['yith_wc_reset_options_nonce'] ) && wp_verify_nonce( $_POST['yith_wc_reset_options_nonce'], 'yith_wc_reset_options_'.$this->settings['page'] )){
 
                 $yit_options = $this->get_main_array_options();
                 $current_tab = $this->get_current_tab();
@@ -364,8 +365,8 @@ if ( ! class_exists( 'YIT_Plugin_Panel_WooCommerce' ) ) {
          * @return array Filtered body classes
          */
         public function admin_body_class( $admin_body_classes ){
-            $admin_body_classes .= ' woocommerce ';
-            return $admin_body_classes;
+            global $pagenow;
+            return 'admin.php' == $pagenow && substr_count( $admin_body_classes, 'woocommerce' ) == 0 ? $admin_body_classes .= ' woocommerce ' : $admin_body_classes;
         }
 
         /**

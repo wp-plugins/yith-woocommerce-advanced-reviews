@@ -23,7 +23,7 @@ if ( $user ) {
 } else if ( isset( $author["review_user_id"] ) ) {
 	$author_name = $author["review_author"];
 } else {
-	$author_name = __( 'Anonymous', 'ywar' );
+	$author_name = __( 'Anonymous', 'yith-woocommerce-advanced-reviews' );
 }
 
 ?>
@@ -44,16 +44,16 @@ if ( $user ) {
 
 			<?php if ( $rating && get_option( 'woocommerce_enable_review_rating' ) == 'yes' ) : ?>
 
-				<div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo sprintf( __( 'Rated %d out of 5', 'ywar' ), $rating ) ?>">
+				<div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo sprintf( __( 'Rated %d out of 5', 'yith-woocommerce-advanced-reviews' ), $rating ) ?>">
 					<span style="width:<?php echo ( $rating / 5 ) * 100; ?>%"><strong
-							itemprop="ratingValue"><?php echo $rating; ?></strong> <?php _e( 'out of 5', 'ywar' ); ?></span>
+							itemprop="ratingValue"><?php echo $rating; ?></strong> <?php _e( 'out of 5', 'yith-woocommerce-advanced-reviews' ); ?></span>
 				</div>
 
 			<?php endif; ?>
 
 			<?php if ( $approved == '0' ) : ?>
 
-				<p class="meta"><em><?php _e( 'Your comment is waiting for approval', 'ywar' ); ?></em></p>
+				<p class="meta"><em><?php _e( 'Your comment is waiting for approval', 'yith-woocommerce-advanced-reviews' ); ?></em></p>
 
 			<?php else : ?>
 
@@ -62,7 +62,7 @@ if ( $user ) {
 
 					if ( $user && get_option( 'woocommerce_review_rating_verification_label' ) === 'yes' ) {
 						if ( wc_customer_bought_product( $user->user_email, $user->ID, $product_id ) ) {
-							echo '<em class="verified">(' . __( 'verified owner', 'ywar' ) . ')</em> ';
+							echo '<em class="verified">(' . __( 'verified owner', 'yith-woocommerce-advanced-reviews' ) . ')</em> ';
 						}
 					}
 

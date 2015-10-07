@@ -313,10 +313,10 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
         public function add_menu_item() {
 
             $args = apply_filters('yith_wc_product_vendors_commissions_menu_items', array(
-                    'page_title' => __('Reviews', 'ywar'),
-                    'menu_title' => __('Reviews', 'ywar'),
+                    'page_title' => __('Reviews', 'yith-woocommerce-advanced-reviews'),
+                    'menu_title' => __('Reviews', 'yith-woocommerce-advanced-reviews'),
                     'capability' => 'edit_products',
-                    'menu_slug' => __('Reviews', 'ywar'),
+                    'menu_slug' => __('Reviews', 'yith-woocommerce-advanced-reviews'),
                     'function' => array($this, 'show_reviews_table'),
                     'icon' => 'dashicons-star-filled',
                     'position' => 8 /* After WC Products */
@@ -465,9 +465,9 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
             unset($actions['inline hide-if-no-js']);
 
             if (!$approved) {
-                $actions['approve-review'] = '<a href="' . $this->approve_review_url($post) . '" title="' . esc_attr(__('Approve review', 'ywar')) . '" rel="permalink">' . __('Approve', 'ywar') . '</a>';
+                $actions['approve-review'] = '<a href="' . $this->approve_review_url($post) . '" title="' . esc_attr(__('Approve review', 'yith-woocommerce-advanced-reviews')) . '" rel="permalink">' . __('Approve', 'yith-woocommerce-advanced-reviews') . '</a>';
             } elseif ($approved) {
-                $actions['unapprove-review'] = '<a href="' . $this->unapprove_review_url($post) . '" title="' . esc_attr(__('Unapprove review', 'ywar')) . '" rel="permalink">' . __('Unapprove', 'ywar') . '</a>';
+                $actions['unapprove-review'] = '<a href="' . $this->unapprove_review_url($post) . '" title="' . esc_attr(__('Unapprove review', 'yith-woocommerce-advanced-reviews')) . '" rel="permalink">' . __('Unapprove', 'yith-woocommerce-advanced-reviews') . '</a>';
             }
 
             return apply_filters('yith_advanced_reviews_review_actions', $actions, $post);
@@ -502,10 +502,10 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
 
             if ($count > 0) {
                 echo '<div class="woocommerce-product-rating">
-                    <div class="star-rating" title="' . sprintf(__('Rated %s out of 5', 'ywar'), $average) . '">
+                    <div class="star-rating" title="' . sprintf(__('Rated %s out of 5', 'yith-woocommerce-advanced-reviews'), $average) . '">
                         <span  style="width:' . (($average / 5) * 100) . '%"></span>
                     </div>
-                    <span class="ywar_review_count">' . sprintf("%d %s", $count, _n(" review", " reviews", $count, 'ywar')) . '</span><span class="review-rating-value"> ' . esc_html($average) . ' ' . __("out of 5 stars", 'ywar') . '</span>
+                    <span class="ywar_review_count">' . sprintf("%d %s", $count, _n(" review", " reviews", $count, 'yith-woocommerce-advanced-reviews')) . '</span><span class="review-rating-value"> ' . esc_html($average) . ' ' . __("out of 5 stars", 'yith-woocommerce-advanced-reviews') . '</span>
                 </div>';
             }
         }
@@ -546,7 +546,7 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
             if ((defined('YITH_YWAR_INIT') && (YITH_YWAR_INIT == $plugin_file)) ||
                 (defined('YITH_YWAR_FREE_INIT') && (YITH_YWAR_FREE_INIT == $plugin_file))
             ) {
-                $plugin_meta[] = '<a href="' . $this->_official_documentation . '" target="_blank">' . __('Plugin Documentation', 'ywar') . '</a>';
+                $plugin_meta[] = '<a href="' . $this->_official_documentation . '" target="_blank">' . __('Plugin Documentation', 'yith-woocommerce-advanced-reviews') . '</a>';
             }
 
             return $plugin_meta;
@@ -567,10 +567,10 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
          */
         public function action_links($links) {
 
-            $links[] = '<a href="' . admin_url("admin.php?page={$this->_panel_page}") . '">' . __('Settings', 'ywar') . '</a>';
+            $links[] = '<a href="' . admin_url("admin.php?page={$this->_panel_page}") . '">' . __('Settings', 'yith-woocommerce-advanced-reviews') . '</a>';
 
             if (defined('YITH_YWAR_FREE_INIT')) {
-                $links[] = '<a href="' . $this->get_premium_landing_uri() . '" target="_blank">' . __('Premium Version', 'ywar') . '</a>';
+                $links[] = '<a href="' . $this->get_premium_landing_uri() . '" target="_blank">' . __('Premium Version', 'yith-woocommerce-advanced-reviews') . '</a>';
             }
 
             return $links;
@@ -583,16 +583,16 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
 
             $premium_message = defined('YITH_YWAR_PREMIUM')
                 ? ''
-                : __('YITH WooCommerce Advanced Reviews is available in an outstanding PREMIUM version with many new options, discover it now.', 'ywar') .
-                ' <a href="' . $this->get_premium_landing_uri() . '">' . __('Premium version', 'ywar') . '</a>';
+                : __('YITH WooCommerce Advanced Reviews is available in an outstanding PREMIUM version with many new options, discover it now.', 'yith-woocommerce-advanced-reviews') .
+                ' <a href="' . $this->get_premium_landing_uri() . '">' . __('Premium version', 'yith-woocommerce-advanced-reviews') . '</a>';
 
             $args[] = array(
                 'screen_id' => 'plugins',
                 'pointer_id' => 'yith_ywar_panel',
                 'target' => '#toplevel_page_yit_plugin_panel',
                 'content' => sprintf('<h3> %s </h3> <p> %s </p>',
-                    __('YITH WooCommerce Advanced Reviews', 'ywar'),
-                    __('In YIT Plugins tab you can find YITH WooCommerce Advanced Reviews options. From this menu you can access all settings of YITH plugins activated.', 'ywar') . '<br>' . $premium_message
+                    __('YITH WooCommerce Advanced Reviews', 'yith-woocommerce-advanced-reviews'),
+                    __('In YIT Plugins tab you can find YITH WooCommerce Advanced Reviews options. From this menu you can access all settings of YITH plugins activated.', 'yith-woocommerce-advanced-reviews') . '<br>' . $premium_message
                 ),
                 'position' => array('edge' => 'left', 'align' => 'center'),
                 'init' => defined('YITH_YWAR_PREMIUM') ? YITH_YWAR_INIT : YITH_YWAR_FREE_INIT
@@ -603,8 +603,8 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
                 'pointer_id' => 'yith_ywar_panel',
                 'target' => '#toplevel_page_yit_plugin_panel',
                 'content' => sprintf('<h3> %s </h3> <p> %s </p>',
-                    __('YITH WooCommerce Advanced Reviews', 'ywar'),
-                    __('From now on, you can find all YITH WooCommerce Advanced Reviews options in YIT Plugin -> Advanced Reviews instead of WooCommerce -> Settings -> Advanced Reviews, as in the previous version. Any time one of our plugins is updated, a new entry will be added to this menu.', 'ywar') . $premium_message
+                    __('YITH WooCommerce Advanced Reviews', 'yith-woocommerce-advanced-reviews'),
+                    __('From now on, you can find all YITH WooCommerce Advanced Reviews options in YIT Plugin -> Advanced Reviews instead of WooCommerce -> Settings -> Advanced Reviews, as in the previous version. Any time one of our plugins is updated, a new entry will be added to this menu.', 'yith-woocommerce-advanced-reviews') . $premium_message
                 ),
                 'position' => array('edge' => 'left', 'align' => 'center'),
                 'init' => defined('YITH_YWAR_PREMIUM') ? YITH_YWAR_INIT : YITH_YWAR_FREE_INIT
@@ -640,21 +640,21 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
             }
 
             $admin_tabs = array(
-                'general' => __('General', 'ywar'),
-                'layout' => __('Layout', 'ywar')
+                'general' => __('General', 'yith-woocommerce-advanced-reviews'),
+                'layout' => __('Layout', 'yith-woocommerce-advanced-reviews')
             );
 
             if (defined('YITH_YWAR_PREMIUM')) {
-                $admin_tabs['premium'] = __('Voting/Review settings', 'ywar');
+                $admin_tabs['premium'] = __('Voting/Review settings', 'yith-woocommerce-advanced-reviews');
             } else {
-                $admin_tabs['premium-landing'] = __('Premium Version', 'ywar');
+                $admin_tabs['premium-landing'] = __('Premium Version', 'yith-woocommerce-advanced-reviews');
             }
 
             $args = array(
                 'create_menu_page' => true,
                 'parent_slug' => '',
-                'page_title' => __('Advanced Reviews', 'ywar'),
-                'menu_title' => __('Advanced Reviews', 'ywar'),
+                'page_title' => __('Advanced Reviews', 'yith-woocommerce-advanced-reviews'),
+                'menu_title' => __('Advanced Reviews', 'yith-woocommerce-advanced-reviews'),
                 'capability' => 'manage_options',
                 'parent' => '',
                 'parent_page' => 'yit_plugin_panel',
@@ -762,26 +762,26 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
         public function register_post_type() {
             // Set UI labels for Custom Post Type
             $labels = array(
-                'name' => _x('Reviews', 'Post Type General Name', 'ywar'),
-                'singular_name' => _x('Review', 'Post Type Singular Name', 'ywar'),
-                'menu_name' => __('Reviews', 'ywar'),
-                'parent_item_colon' => __('Parent Review', 'ywar'),
-                'all_items' => __('All reviews', 'ywar'),
-                'view_item' => __('View review', 'ywar'),
-                'add_new_item' => __('Add New Review', 'ywar'),
-                'add_new' => __('Add New', 'ywar'),
-                'edit_item' => __('Edit Review', 'ywar'),
-                'update_item' => __('Update Review', 'ywar'),
-                'search_items' => __('Search Review', 'ywar'),
-                'not_found' => __('Not Found', 'ywar'),
-                'not_found_in_trash' => __('Not found in bin', 'ywar'),
+                'name' => _x('Reviews', 'Post Type General Name', 'yith-woocommerce-advanced-reviews'),
+                'singular_name' => _x('Review', 'Post Type Singular Name', 'yith-woocommerce-advanced-reviews'),
+                'menu_name' => __('Reviews', 'yith-woocommerce-advanced-reviews'),
+                'parent_item_colon' => __('Parent Review', 'yith-woocommerce-advanced-reviews'),
+                'all_items' => __('All reviews', 'yith-woocommerce-advanced-reviews'),
+                'view_item' => __('View review', 'yith-woocommerce-advanced-reviews'),
+                'add_new_item' => __('Add New Review', 'yith-woocommerce-advanced-reviews'),
+                'add_new' => __('Add New', 'yith-woocommerce-advanced-reviews'),
+                'edit_item' => __('Edit Review', 'yith-woocommerce-advanced-reviews'),
+                'update_item' => __('Update Review', 'yith-woocommerce-advanced-reviews'),
+                'search_items' => __('Search Review', 'yith-woocommerce-advanced-reviews'),
+                'not_found' => __('Not Found', 'yith-woocommerce-advanced-reviews'),
+                'not_found_in_trash' => __('Not found in bin', 'yith-woocommerce-advanced-reviews'),
             );
 
 // Set other options for Custom Post Type
 
             $args = array(
-                'label' => __('YIT Product reviews', 'ywar'),
-                'description' => __('Advanced WooCommerce product reviews', 'ywar'),
+                'label' => __('YIT Product reviews', 'yith-woocommerce-advanced-reviews'),
+                'description' => __('Advanced WooCommerce product reviews', 'yith-woocommerce-advanced-reviews'),
                 'labels' => $labels,
 // Features this CPT supports in Post Editor
                 'supports' => array(
@@ -1086,7 +1086,7 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
             }
 
             if ($this->enable_title) {
-                echo '<p class="comment-form-title"><label for="title">' . __('Review title', 'ywar') . '</label><input type="text" name="title" id="title"/></p>';
+                echo '<p class="comment-form-title"><label for="title">' . __('Review title', 'yith-woocommerce-advanced-reviews') . '</label><input type="text" name="title" id="title"/></p>';
             }
         }
 
@@ -1188,22 +1188,22 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
 
             if (get_option('woocommerce_enable_review_rating') === 'yes') {
                 $comment_form['comment_field'] = '<p class="' . $hide_rating . ' comment-form-rating">
-				<label for="rating">' . __('Your Rate', 'ywar') . '</label>
+				<label for="rating">' . __('Your Rate', 'yith-woocommerce-advanced-reviews') . '</label>
 				<select name="rating" id="rating">
-							<option value="">' . __('Rate&hellip;', 'ywar') . '</option>
-							<option value="5">' . __('Perfect', 'ywar') . '</option>
-							<option value="4">' . __('Good', 'ywar') . '</option>
-							<option value="3">' . __('Average', 'ywar') . '</option>
-							<option value="2">' . __('Not that bad', 'ywar') . '</option>
-							<option value="1" ' . $selected . '>' . __('Very Poor', 'ywar') . '</option>';
+							<option value="">' . __('Rate&hellip;', 'yith-woocommerce-advanced-reviews') . '</option>
+							<option value="5">' . __('Perfect', 'yith-woocommerce-advanced-reviews') . '</option>
+							<option value="4">' . __('Good', 'yith-woocommerce-advanced-reviews') . '</option>
+							<option value="3">' . __('Average', 'yith-woocommerce-advanced-reviews') . '</option>
+							<option value="2">' . __('Not that bad', 'yith-woocommerce-advanced-reviews') . '</option>
+							<option value="1" ' . $selected . '>' . __('Very Poor', 'yith-woocommerce-advanced-reviews') . '</option>';
 
                 $comment_form['comment_field'] .= '</select></p>' . $current_content;
             }
 
             if ($this->enable_attachments) {
                 $comment_form['comment_field'] .= '<p class="upload_section ' . $hide_rating . '" >
-					<label for="uploadFile" > ' . __('Attachments', 'ywar') . ' </label >
-					<input type = "button" value = "' . __('Choose file(s)', 'ywar') . '" id = "do_uploadFile" />
+					<label for="uploadFile" > ' . __('Attachments', 'yith-woocommerce-advanced-reviews') . ' </label >
+					<input type = "button" value = "' . __('Choose file(s)', 'yith-woocommerce-advanced-reviews') . '" id = "do_uploadFile" />
 					<input type = "file" name = "uploadFile[]" id = "uploadFile" accept = "image/*" multiple = "2" />
 				</p>
 				<p>
@@ -1284,7 +1284,7 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
             global $product;
 
             if (isset($tabs['reviews'])) {
-                $tabs['reviews']['title'] = sprintf(__('Reviews(%d)', 'ywar'), count($this->get_product_reviews_by_rating($product->id)));
+                $tabs['reviews']['title'] = sprintf(__('Reviews(%d)', 'yith-woocommerce-advanced-reviews'), count($this->get_product_reviews_by_rating($product->id)));
             }
 
             return $tabs;
@@ -1328,7 +1328,7 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
          * @author Lorenzo Giuffrida
          */
         public function add_plugin_metabox() {
-            add_meta_box('reviews-metabox', __('Review attributes', 'ywar'), array(
+            add_meta_box('reviews-metabox', __('Review attributes', 'yith-woocommerce-advanced-reviews'), array(
                 $this,
                 'display_plugin_metabox'
             ), $this->post_type_name, 'normal', 'high');
@@ -1511,9 +1511,9 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
 
             if ($rating > 0) {
 
-                $rating_html = '<div class="star-rating" title="' . sprintf(__('Rated %s out of 5', 'ywar'), $rating) . '">';
+                $rating_html = '<div class="star-rating" title="' . sprintf(__('Rated %s out of 5', 'yith-woocommerce-advanced-reviews'), $rating) . '">';
 
-                $rating_html .= '<span style="width:' . (($rating / 5) * 100) . '%"><strong class="rating">' . $rating . '</strong> ' . __('out of 5', 'ywar') . '</span>';
+                $rating_html .= '<span style="width:' . (($rating / 5) * 100) . '%"><strong class="rating">' . $rating . '</strong> ' . __('out of 5', 'yith-woocommerce-advanced-reviews') . '</span>';
 
                 $rating_html .= '</div>';
             }
@@ -1543,10 +1543,10 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
                 <td class="forminp forminp-color plugin-option">
                     <div class="convert-reviews">
                         <a href="<?php echo esc_url(add_query_arg("convert-reviews", "start")); ?>"
-                           class="button convert-reviews"><?php _e("Convert reviews", "ywar"); ?></a>
+                           class="button convert-reviews"><?php _e("Convert reviews", "yith-woocommerce-advanced-reviews"); ?></a>
 
                         <div style="display: inline-block; width: 65%; margin-left: 15px;"><span
-                                class="description"><?php _e("If this is the first time you install the YITH Advanced Reviews plugin, or if you are using an older version prior to the 1.1.0, first you have to convert the older reviews if you want to use them.", "ywar"); ?></span>
+                                class="description"><?php _e("If this is the first time you install the YITH Advanced Reviews plugin, or if you are using an older version prior to the 1.1.0, first you have to convert the older reviews if you want to use them.", "yith-woocommerce-advanced-reviews"); ?></span>
                         </div>
                     </div>
                 </td>
@@ -1566,9 +1566,9 @@ if (!class_exists('YITH_WooCommerce_Advanced_Reviews')) {
             $response = '';
 
             if ($review_converted) {
-                $response = sprintf(__('Task completed. %d reviews have been processed and converted.', 'ywar'), $review_converted);
+                $response = sprintf(__('Task completed. %d reviews have been processed and converted.', 'yith-woocommerce-advanced-reviews'), $review_converted);
             } else {
-                $response = __('Task completed. No review to convert has been found.', 'ywar');
+                $response = __('Task completed. No review to convert has been found.', 'yith-woocommerce-advanced-reviews');
             }
 
             wp_send_json(array("value" => $response));

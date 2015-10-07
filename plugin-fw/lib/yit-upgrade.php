@@ -134,7 +134,8 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
                 $update_url[ $init ]    = wp_nonce_url( self_admin_url('update.php?action=upgrade-plugin-multisite&plugin=') . $init, 'upgrade-plugin-multisite_' . $init );
                 $changelog_id           = str_replace( array( '/', '.php', '.' ), array( '-', '', '-' ), $init );
                 $details_url[ $init ]   = '#TB_inline' . esc_url( add_query_arg( array( 'width' => 722, 'height' => 914, 'inlineId' => $changelog_id ) , '' ) );
-                $changelogs[ $init ]    = $this->in_theme_update_message( $this->_plugins[ $init ], $this->_plugins[ $init ]['info']['changelog'], $changelog_id, false );
+                $plugin_changelog       = isset( $this->_plugins[ $init ]['info']['changelog'] ) ? $this->_plugins[ $init ]['info']['changelog'] : '';
+                $changelogs[ $init ]    = $this->in_theme_update_message( $this->_plugins[ $init ], $plugin_changelog, $changelog_id, false );
             }
 
             $localize_script_args = array(
@@ -189,15 +190,34 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
          * @author   Andrea Grillo <andrea.grillo@yithemes.com>
          */
         protected function _upgrader_pre_download( $reply, $package, $upgrader ) {
+            $plugin = false;
+            $is_bulk = $upgrader->skin instanceof Bulk_Plugin_Upgrader_Skin;
+
+            if( ! $is_bulk ){
+                $plugin = isset( $upgrader->skin->plugin ) ? $upgrader->skin->plugin : false;
+            }
+
+            else {
+                //Bulk action upgrade
+                $action_url = parse_url( $upgrader->skin->options['url'] );
+                parse_str( rawurldecode( htmlspecialchars_decode( $action_url['query'] ) ) );
+                $plugins = explode( ',', $plugins );
+                foreach( $plugins as $plugin_init ){
+                    $to_upgrade = get_plugin_data( WP_PLUGIN_DIR . DIRECTORY_SEPARATOR .  $plugin_init );
+                    if( $to_upgrade['Name'] == $upgrader->skin->plugin_info['Name'] ){
+                        $plugin = $plugin_init;
+                    }
+                }
+            }
 
             /**
              * It isn't YITH Premium plugins, please wordpress update it for me!
              */
-            if( ! isset( $upgrader->skin->plugin ) ) {
+            if( ! $plugin ) {
                 return $reply;
             }
                 
-             $plugin_info = YIT_Plugin_Licence()->get_product( $upgrader->skin->plugin );
+            $plugin_info = YIT_Plugin_Licence()->get_product( $plugin );
 
             /**
              * False ? It isn't YITH Premium plugins, please wordpress update it for me!
@@ -261,7 +281,7 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
 
             //WARNING: The file is not automatically deleted, The script must unlink() the file.
             if ( ! $url ) {
-                return new WP_Error( 'http_no_url', __( 'Invalid URL Provided.' ) );
+                return new WP_Error( 'http_no_url', __( 'Invalid URL Provided.', 'yit' ) );
             }
 
             $tmpfname = wp_tempnam( $url );
@@ -274,7 +294,7 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
             );
 
             if ( ! $tmpfname ) {
-                return new WP_Error( 'http_no_file', __( 'Could not create Temporary file.' ) );
+                return new WP_Error( 'http_no_file', __( 'Could not create Temporary file.', 'yit' ) );
             }
 
             $response = wp_safe_remote_post( $url, $args );
@@ -506,7 +526,7 @@ if ( ! class_exists( 'YIT_Upgrade' ) ) {
 
             check_admin_referer( 'upgrade-plugin-multisite_' . $plugin );
 
-            $title        = __( 'Update Plugin' );
+            $title        = __( 'Update Plugin', 'yith-plugin-fw' );
             $parent_file  = 'plugins.php';
             $submenu_file = 'plugins.php';
 

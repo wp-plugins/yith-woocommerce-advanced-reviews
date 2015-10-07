@@ -19,33 +19,33 @@ $general_options = array(
 	'general' => array(
 
 		'section_general_settings'          => array(
-			'name' => __( 'General settings', 'ywar' ),
+			'name' => __( 'General settings', 'yith-woocommerce-advanced-reviews' ),
 			'type' => 'title',
 			'id'   => 'ywar_section_general'
 		),
 		'review_settings_enable_title'      => array(
-			'name'    => __( 'Show title', 'ywar' ),
+			'name'    => __( 'Show title', 'yith-woocommerce-advanced-reviews' ),
 			'type'    => 'checkbox',
-			'desc'    => __( 'Add a title field in the reviews.', 'ywar' ),
+			'desc'    => __( 'Add a title field in the reviews.', 'yith-woocommerce-advanced-reviews' ),
 			'id'      => 'ywar_enable_review_title',
 			'default' => 'yes'
 		),
 		'review_settings_enable_attachment' => array(
-			'name'    => __( 'Show attachments', 'ywar' ),
+			'name'    => __( 'Show attachments', 'yith-woocommerce-advanced-reviews' ),
 			'type'    => 'checkbox',
-			'desc'    => __( 'Add an attachment section in the reviews.', 'ywar' ),
+			'desc'    => __( 'Add an attachment section in the reviews.', 'yith-woocommerce-advanced-reviews' ),
 			'id'      => 'ywar_enable_attachments',
 			'default' => 'yes'
 		),
 		'review_settings_attachment_limit'  => array(
-			'name'    => __( 'Multiple attachment limit', 'ywar' ),
+			'name'    => __( 'Multiple attachment limit', 'yith-woocommerce-advanced-reviews' ),
 			'type'    => 'number',
-			'desc'    => __( 'Set the maximum number of attachments that can be selected (0 = no limit).', 'ywar' ),
+			'desc'    => __( 'Set the maximum number of attachments that can be selected (0 = no limit).', 'yith-woocommerce-advanced-reviews' ),
 			'id'      => 'ywar_max_attachments',
 			'default' => '0'
 		),
 		'review_settings_import'      => array(
-			'name'    => __( 'Previous reviews', 'ywar' ),
+			'name'    => __( 'Previous reviews', 'yith-woocommerce-advanced-reviews' ),
 			'type'    => 'ywar_import_previous_reviews',
 			'id'      => 'ywar_import_review',
 			'default' => 'yes'

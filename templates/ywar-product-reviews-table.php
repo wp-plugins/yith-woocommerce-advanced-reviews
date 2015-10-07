@@ -15,13 +15,13 @@
 
 <div class="wrap">
 
-    <h2><?php _e( 'Product reviews', 'ywar' ) ?></h2>
+    <h2><?php _e( 'Product reviews', 'yith-woocommerce-advanced-reviews' ) ?></h2>
 
     <?php $product_reviews->views(); ?>
 
     <form id="ywar-reviews" method="get">
         <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
-        <?php $product_reviews->search_box( __( 'Search reviews', 'ywar' ), 'ywar' ); ?>
+        <?php $product_reviews->search_box( __( 'Search reviews', 'yith-woocommerce-advanced-reviews' ), 'yith-woocommerce-advanced-reviews' ); ?>
         <?php $product_reviews->display(); ?>
     </form>
 </div>
